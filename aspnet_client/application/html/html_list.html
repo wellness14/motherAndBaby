@@ -1,0 +1,385 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+ ****************************************************************************
+ * 프로젝트
+ * v1.0 파일 리스트
+ * 작성자 :강대한
+ * 작성일 : 14-04-15
+ *******************************************************************************
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title> baby 모바일 페이지</title>
+
+<style type="text/css">
+
+	/** 공통 **/
+	*{margin:0; padding:0;}
+	#wrap{
+		position:relative;
+		padding:20px 15px 20px 15px;
+		border-top:5px solid #506542;
+		border-bottom:5px solid #506542;
+		line-height:17px;
+		background-color:#DAEBCF;
+		font-size:12px;
+		font-family:"dotum", "san-serif";
+	}
+
+	h1{margin: 0 0 40px 0;}
+	h2{margin: 0 0 10px 0;}
+	strong {color:red;}
+	strong.allfile{color:green;}
+	/* 테이블 */
+	table	{border-collapse:collapse; width:85%; margin:0 0 40px 0; }
+	table	th, table	td	{border:1px solid #c1c1c1;}
+	table	th	{padding:5px 0 2px;}
+	table thead th {padding:6px 5px 3px 5px; color:#fff; background-color:#000066;}
+	table tbody td {padding:6px 5px 3px 5px; border:1px solid #ccc; background-color:#FFFFFF;}
+	table td.depth1{font-weight:bold; background-color:#e6e6e6;}
+
+	table a{margin: 0 0 0 10px; text-decoration:none; font-weight:bold; color:#F9BED7;}
+			a:hover{color:#000; text-decoration:underline; font-weight:bold;}
+
+.center {text-align:center;}
+
+	/** 파일 정보박스 **/
+	#info{
+		/*
+		position:fixed; _position:absolute;
+		top:30px; left:1050px;
+		_top:expression(documentElement.scrollTop + 30+"px");
+		*/
+		left:85%;
+		width:200px;
+		padding:10px;
+		border:1px solid #ccc;
+
+		text-align:left;
+		background-color:#FFFFFF;
+	}
+	#info ul{padding: 10px 0 10px 15px;}
+	#info li{margin: 0 0 5px 0;}
+	#info a{text-decoration:none; font-weight:bold; color:#9F9C9C;}
+	#info a:hover{color:#000; text-decoration:underline; font-weight:bold;}
+
+	.list_txt{display:none; margin: 0 0 30px 0;}
+	.list_txt strong{font-size:14px;}
+
+	#ok_tot{color:#FF0000;}
+	#tot_icom{color:#0000FF;}
+	.incompletion{font-size:12px; color:red;font-weight:bold;}
+	.coding_complete{font-size:12px; color:green;font-weight:bold;}
+	.coding_modi{font-size:12px; color:blue;font-weight:bold;}
+	.no_cont{font-size:12px;color:#993333; font-weight:bold;}
+	.sian{font-size:12px;color:#00FFFF; font-weight:bold;}
+	.deb2{font-size:12px; color:#CC33CC; font-weight:bold;}
+	.deb3{font-size:12px; color:blue; font-weight:bold;}
+	.commu{font-size:12px; color:#FF6600; font-weight:bold;}
+</style>
+
+<script type="text/javascript">
+<!--
+var tot_file=0;
+var ok_file=0;
+var tot_com=0;
+var tot_icom=0;
+function start(){
+	 totEle();
+	 tableSize();
+}
+function totEle(){
+	var obj = document.getElementById("list");
+	var ele = obj.getElementsByTagName("a");
+	var eleTr = obj.getElementsByTagName("tr");
+
+	for(var i=0; i<ele.length;i++){
+
+		if(ele[i].className !="no_blank"){
+			ele[i].setAttribute("target","_self");
+		}
+
+	}
+
+	for(var i=0; i<eleTr.length;i++){
+	 if(eleTr[i].className !="title"){ // tr태그에 class 네임이 title 인것은 배제하고 총파일을 알아낸다.
+		tot_file+=1;
+	 }
+	}
+
+	for(var i=0; i<ele.length;i++){
+		if(ele[i].className == "coding_complete"){
+			tot_com+=1;
+		}
+	}
+
+	for(var i=0; i<ele.length;i++){
+		if(ele[i].className == "incompletion"){
+			tot_icom+=1;
+		}
+	}
+
+
+		document.getElementById("tot_file").innerHTML =  tot_file;
+		document.getElementById("tot_com").innerHTML =  tot_com;
+		document.getElementById("tot_icom").innerHTML =  tot_icom;
+	//완료된 파일은 링크를 건다. id="list"영역안에..있는건만
+	//document.getElementById("ok_tot").innerHTML =  obj.getElementsByTagName("a").className("coding_complete").length ;
+ }
+	function tableSize(){
+
+		var eleTable = document.getElementsByTagName("table");
+
+		for(var i=0;i<eleTable.length;i++)
+		{
+			eleTable[i].getElementsByTagName("td")[0].style.width="14%";
+			eleTable[i].getElementsByTagName("td")[1].style.width="14%";
+			eleTable[i].getElementsByTagName("td")[2].style.width="14%";
+			eleTable[i].getElementsByTagName("td")[3].style.width="25%";
+			eleTable[i].getElementsByTagName("td")[4].style.width="20%";
+			eleTable[i].getElementsByTagName("td")[5].style.width="10%";
+			eleTable[i].getElementsByTagName("td")[6].style.width="10%";
+		}
+	}
+
+// Quick menu
+function initMoving(target, position, topLimit, btmLimit) {
+	if (!target) return false;
+
+	try { document.execCommand("BackgroundImageCache", false, true);}
+	catch(err){}
+
+	var obj = target;
+	obj.initTop = position;
+	obj.topLimit = topLimit;
+	obj.bottomLimit = document.documentElement.scrollHeight - btmLimit;
+
+	obj.style.position = "absolute";
+	obj.top = obj.initTop;
+	obj.left = obj.initLeft;
+
+	if (typeof(window.pageYOffset) == "number") {
+		obj.getTop = function() {
+			return window.pageYOffset;
+		}
+	} else if (typeof(document.documentElement.scrollTop) == "number") {
+		obj.getTop = function() {
+			return document.documentElement.scrollTop;
+		}
+	} else {
+		obj.getTop = function() {
+			return 0;
+		}
+	}
+
+	if (self.innerHeight) {
+		obj.getHeight = function() {
+			return self.innerHeight;
+		}
+	} else if(document.documentElement.clientHeight) {
+		obj.getHeight = function() {
+			return document.documentElement.clientHeight;
+		}
+	} else {
+		obj.getHeight = function() {
+			return 500;
+		}
+	}
+
+	obj.move = setInterval(function() {
+		if (obj.initTop > 0) {
+			pos = obj.getTop() + obj.initTop;
+		} else {
+			pos = obj.getTop() + obj.getHeight() + obj.initTop;
+			//pos = obj.getTop() + obj.getHeight() / 2 - 15;
+		}
+
+		if (pos > obj.bottomLimit)
+			pos = obj.bottomLimit;
+		if (pos < obj.topLimit)
+			pos = obj.topLimit;
+
+		interval = obj.top - pos;
+		obj.top = obj.top - interval / 3;
+		obj.style.top = obj.top - 10 + "px";
+	}, 30)
+}
+
+//-->
+</script>
+</head>
+
+<body onload="start()">
+<div id="wrap">
+
+	<fieldset id="info" >
+		<legend>파일정보</legend>
+		- 총파일 <strong id="tot_file" class="allfile"></strong><br />
+		- 작업중 <strong id="tot_icom" ></strong> <br />
+		- 완료파일 <strong id="tot_com" ></strong>
+
+		<hr />
+		<!-- <ul>
+			<li><a href="#s1">1. 파트너 관리자</a></li>
+			<li><a href="#s2">2. 공통팝업</a></li>
+		</ul>
+		<hr />
+		<ul>
+			<li><a href="###" target="_blank">레이아웃</a></li>
+			<li><a href="popup_type1ajsp" target="_blank">팝업 type1</a></li>
+			<li><a href="popup_type2.asp" target="_blank">팝업 type2</a></li>
+			<li><a href="bd_sample.asp" target="_blank">게시판 샘플</a></li>
+
+		</ul> -->
+		<hr />
+		<!-- <ul>
+			<li class="incompletion">작업중 incompletion</li>
+			<li class="coding_complete">코딩완료 coding_complete</li>
+			<li class="coding_modi">코딩수정완료 coding_modi</li>
+			<li class="no_cont">컨텐츠미수급 no_cont</li>
+			<li class="commu">협의중 commu</li>
+			<li class="sian">시안용 sian</li>
+		</ul> -->
+	</fieldset>
+
+	<h1>baby 모바일 페이지 (utf-8/html)</h1>
+	<div class="list_txt">
+		<strong> * 순수코딩페이지 확인 방법 * </strong><br />
+
+		해당 파일 URL에서 <strong class="incompletion">/html/</strong> 를 추가한다. <br />
+		예:
+		<p>
+			<strong>
+			<!-- 개발 화면 : /main.html  <br /> -->
+			코딩 화면 : /<span class="incompletion">html</span>/main.html <br />
+			</strong>
+
+		</p>
+	</div>
+	<div id="list">
+
+		<h2 id="s1">리스트</h2>
+		<table>
+			<col width="10%" span="3" /><col width="10%" /><col width="5%" /><col width="10%" /><col width="5%" />
+			<thead>
+				<tr class="title">
+					<th>1Depth</th>
+					<th>2Depth</th>
+					<th>3Depth</th>
+					<th>directory</th>
+					<th>파일명</th>
+					<th>유형</th>
+					<th>비고</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="deb2">임신 셀렉트 박스</td>
+					<td class="deb3"></td>
+					<td></td>
+					<td></td>
+					<td><a class="coding_complete" href="/application/html/htmldoc/index.html">index.html</a></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="deb2">공지/뉴스/이벤트</td>
+					<td class="deb3">탭메뉴</td>
+					<td></td>
+					<td></td>
+					<td><a class="coding_complete" href="/application/html/htmldoc/tab_notice.html">tab_notice.html</a></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="deb2">공지</td>
+					<td class="deb3">상세</td>
+					<td></td>
+					<td></td>
+					<td><a class="coding_complete" href="/application/html/htmldoc/notice_view.html">notice_view.html</a></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="deb2">서비스</td>
+					<td class="deb3">상세</td>
+					<td></td>
+					<td></td>
+					<td><a class="coding_complete" href="/application/html/htmldoc/service_view.html">service_view.html</a></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="deb2">서비스이용약관/개인정보취급방침 </td>
+					<td class="deb3">탭메뉴</td>
+					<td></td>
+					<td></td>
+					<td><a class="coding_complete" href="/application/html/htmldoc/agreement.html">agreement.html</a></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="deb2">도움말</td>
+					<td class="deb3"></td>
+					<td></td>
+					<td></td>
+					<td><a class="coding_complete" href="/application/html/htmldoc/help.html">help.html</a></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="deb2">스토리 커뮤니티</td>
+					<td class="deb3">탭메뉴</td>
+					<td></td>
+					<td></td>
+					<td><a class="coding_complete" href="/application/html/htmldoc/story_community.html">story_community.html</a></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="deb2">스토리 커뮤니티</td>
+					<td class="deb3">상세</td>
+					<td></td>
+					<td></td>
+					<td><a class="coding_complete" href="/application/html/htmldoc/story_community_view.html">story_community_view.html</a></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="deb2">스마트 체크 추가 페이지</td>
+					<td class="deb3"></td>
+					<td></td>
+					<td></td>
+					<td><a class="coding_complete" href="/application/html/htmldoc/smartChk.html">smartChk.html</a></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="deb2">마이페이지 메인 추가</td>
+					<td class="deb3"></td>
+					<td></td>
+					<td></td>
+					<td><a class="coding_complete" href="/application/html/htmldoc/mypage.html">mypage.html</a></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="deb2">마이페이지 view 추가</td>
+					<td class="deb3"></td>
+					<td></td>
+					<td></td>
+					<td><a class="coding_complete" href="/application/html/htmldoc/mypage_view.html">mypage_view.html</a></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<script type="text/javascript">initMoving(document.getElementById("info"), 50,10, 800);</script>
+</body>
+</html>

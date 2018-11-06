@@ -1,0 +1,271 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="style.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <title> admin </title>
+    <style>
+ 
+    </style>
+ 
+	<script>
+			$(document).ready(function() {	 
+ 
+				$(".mig_close_btn").click(function() {
+					$(".mig_open_btn").show(500);
+					$(".jb-sidebar-first-close").show(500);
+					$(".mig_close_btn").hide(500);
+					$(".jb-sidebar-first").hide(500);
+ 
+					$(".jb-sidebar").css( { "margin-left" : "-310px" } );
+					$(".jb-header").css( { "margin-left" : "30px" } );
+					$(".jb-content-in").css( { "margin-left" : "30px" } );
+
+					$(".jb-sidebar").hide(300);
+					$(".jb-header").hide(300);
+					$(".jb-content-in").hide(300);
+
+					$(".jb-sidebar").show(300);
+					$(".jb-header").show(300);
+					$(".jb-content-in").show(300);
+				});
+
+				$(".mig_open_btn").click(function() {
+					$(".jb-sidebar-first").show(500);
+					$(".mig_close_btn").show(500);
+					$(".mig_open_btn").hide(500);
+					$(".jb-sidebar-first-close").hide(500);
+					
+ 
+					$(".jb-sidebar").css( { "margin-left" : "0px" } );
+					$(".jb-header").css( { "margin-left" : "340px" } );
+					$(".jb-content-in").css( { "margin-left" : "340px" } ); 
+
+	
+					$(".jb-sidebar").hide(300);
+					$(".jb-header").hide(300);
+					$(".jb-content-in").hide(300);
+ 
+					$(".jb-sidebar").show(300);
+					$(".jb-header").show(300);
+					$(".jb-content-in").show(300);
+				});
+
+
+
+				$(".side_main_menu").click(function() {
+					$(".side_main_menu").hide();
+					$(".side_main_menu_view").hide();
+					$(".side_main_menu_sub_top").hide();
+					$(".side_main_menu_sub").hide();
+					$(".side_main_menu_sub_bottom").hide();
+					$(".side_main_menu_close").show();
+					$(".side_main_menu_close").css( { "width" : "82px" } ); 
+					$(".side_main_menu_close").css( { "background-image" : "url('image/menu_bg.jpg')" } ); 
+				});
+
+				$(".side_main_menu_close").click(function() {
+					$(".side_main_menu_close").hide();
+					$(".side_main_menu_sub_top").show();
+					$(".side_main_menu_sub").show();
+					$(".side_main_menu_sub_bottom").show();
+				
+					
+  					$(".side_main_menu").show();
+					$(".side_main_menu_view").show();
+					$(".side_main_menu_close").css( { "width" : "82px" } );
+					$(".side_main_menu_close").css( { "background-image" : "url('image/menu_bg_close.jpg')" } ); 
+				});
+
+			});
+	</script>
+
+  </head>
+
+
+  <body>
+      <div class="jb-main-header-container">
+			<form name="search_form" method="post" action="#">
+			 <a href="#"><img src="/etc/image/logo.jpg"/></a> 
+			 <input type="text" name="search" id="search" size="30" class="input textarea"/><input type="image" src="/etc/image/search.jpg"/>
+			 <span class="INTEGRATE"><img src="/etc/image/dot.png" width="5" align="center" /> INTEGRATE ID?</span>  <a href="#"><span class="notice"><img src="/etc/image/dot.png" width="5" align="center" /> 공지사항</span></a> <span class="login_name">통합관리자</span> 님 
+			 <a href="#"><span class="main_header"><img src="/etc/image/logout.jpg"/></span></a>
+			</form>
+	  </div>
+	 
+ 
+	<div class="jb-left-container-close">
+		<div class="jb-left-sidebar">
+			 
+		</div>
+    </div>
+ 
+    <div class="jb-header-container">
+		 <a href="#"><img src="/etc/image/menu01_off.jpg"/></a> 
+		 <a href="#"><img src="/etc/image/menu02_on.jpg"/></a> 
+		 <a href="#"><img src="/etc/image/menu03_off.jpg"/></a> 
+		 <a href="#"><img src="/etc/image/menu04_off.jpg"/></a> 
+		 <a href="#"><img src="/etc/image/menu05_off.jpg"/></a> 
+		 <a href="#"><img src="/etc/image/menu06_off.jpg"/></a>
+    </div>
+ 
+
+	  <div class="container">
+		<div class="jb-sidebar-first">
+			<div class="jb-sidebar">
+				 <div class="side_menu_com">
+					 <span>웰니스인텔리전스</span>
+				 </div>
+				 <hr class="hr1"></hr>
+				 <div class="side_menu_title1">
+					 <span class="side_menu_title1">통합</span>
+					 <span class="side_menu_title2">ADMIN</span>
+				 </div>
+				 <div class="side_main_g1">
+					<div class="side_main_menu"><a href="#">바우처</a></div>
+					<div class="side_main_menu_close"><a href="#">바우처</a></div>
+						<div class="side_main_menu_view">
+							<div class="side_main_menu_sub_top"><a href="#">상담신청</a></div> <hr class="hr2"></hr>
+							<div class="side_main_menu_sub"><a href="#">상담만완료</a></div> <hr class="hr2"></hr>
+							<div class="side_main_menu_sub"><a href="#">서비스예약</a></div> <hr class="hr2"></hr>
+							<div class="side_main_menu_sub"><a href="#">서비스중</a></div> <hr class="hr2"></hr>
+							<div class="side_main_menu_sub"><a href="#">서비스완료</a></div> <hr class="hr2"></hr> 
+							<div class="side_main_menu_sub"><a href="#">서비스중지</a></div> <hr class="hr2"></hr>
+							<div class="side_main_menu_sub"><a href="#">예약취소</a></div> <hr class="hr2"></hr> 
+							<div class="side_main_menu_sub_bottom"><a href="#">삭제</a></div>  
+						</div>
+				</div>
+				 <div class="side_main_g2">
+					<div class="side_main_menu2"><a href="#">일반</a></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="jb-sidebar-first-close">
+			<div class="jb-sidebar">
+				 <div class="side_menu_com">
+					
+				 </div>
+				 <hr class="hr1"></hr>
+				 <div class="side_menu_title1">
+					
+				 </div>
+				 <div class="side_main_g1">
+				
+				</div>
+				 <div class="side_main_g2">
+					
+				</div>
+			</div>
+		</div>
+
+			<div><span class="mig_close_btn"><img src="/etc/image/close_bt.jpg" /></span></div>
+			<div><span class="mig_open_btn"><img src="/etc/image/close_bt.jpg" /></span></div>
+					
+			<div class="jb-header">
+				<span class="jb_header_title">마더앤베이비 바우쳐 관리자</span>
+				<p><img src="/etc/image/call.png" /> <span class="header_span">문의</span> <span class="header_span1">&gt;</span> <span class="header_span2">바우처</span> <span class="header_span1">&gt;</span> <span class="header_span2">상담신청</span></p>
+			</div>
+
+			<div class="jb-content"> 
+				<div class="jb-content-in"> <hr></hr> 
+					<table border="0" cellpadding="0" cellspacing="0" class="deteil_tb" summary="회원정보 테이블 입니다.">
+						<tr>
+							<td rowspan="4" class="deteil_tb_title">기본정보</td>
+							<td class="deteil_tb_title_sub">성명</td>
+							<td class="deteil_tb_title_sub_cont">허서연</td>
+							<td class="deteil_tb_title_sub"> </td>
+							<td class="deteil_tb_title_sub_last"> </td>
+						</tr>
+						<tr>
+							<td class="deteil_tb_title_sub">생년월일</td>
+							<td colspan="3" class="deteil_tb_title_sub_last">1983년 1월 1일</td>
+						</tr>
+						<tr>
+							<td class="deteil_tb_title_sub">휴대폰</td>
+							<td class="deteil_tb_title_sub_cont">010-1111-2222</td>
+							<td class="deteil_tb_title_sub"> </td>
+							<td class="deteil_tb_title_sub_last"> </td>
+						</tr>
+						<tr>
+							<td class="deteil_tb_title_sub">주소</td>
+							<td colspan="3" class="deteil_tb_title_sub_last">경기도 성남시 분당구 미금로 216, 111동 1111호</td>
+						</tr>
+						<tr>
+							<td rowspan="3" class="deteil_tb_title"></td>
+							<td class="deteil_tb_title_sub">서비스</td>
+							<td class="deteil_tb_title_sub_cont">
+								<select name="service">
+									<option>선택</option>
+									<option value=""></option>
+									<option value=""></option>
+								</select>
+							</td>
+							<td class="deteil_tb_title_sub"> </td>
+							<td class="deteil_tb_title_sub_last"> </td>
+						</tr>
+						<tr>
+							<td class="deteil_tb_title_sub">이용형태</td>
+							<td class="deteil_tb_title_sub_cont">
+								<select name="service">
+									<option>선택</option>
+									<option value=""></option>
+									<option value=""></option>
+								</select>
+							</td>
+							<td class="deteil_tb_title_sub"> </td>
+							<td class="deteil_tb_title_sub_last"> </td>
+						</tr>
+						<tr>
+							<td class="deteil_tb_title_sub">선택한지점</td>
+							<td class="deteil_tb_title_sub_cont">
+								<select name="service">
+									<option>선택</option>
+									<option value=""></option>
+									<option value=""></option>
+								</select>
+							</td>
+							<td class="deteil_tb_title_sub"></td>
+							<td class="deteil_tb_title_sub_last"></td>
+						</tr>
+						<tr>
+							<td rowspan="3" class="deteil_tb_title"></td>
+							<td class="deteil_tb_title_sub">조리원이용</td>
+							<td class="deteil_tb_title_sub_cont">이용함</td>
+							<td class="deteil_tb_title_sub"> </td>
+							<td class="deteil_tb_title_sub_last"> </td>
+						</tr>
+		                <tr> 
+							<td class="deteil_tb_title_sub">특이사항</td> 
+							<td colspan="3" class="deteil_tb_title_sub_last">다둥이, 임신성당뇨, 부종, 고혈압</td> 
+						</tr>
+						<tr> 
+							<td class="deteil_tb_title_sub">가족사항</td> 
+							<td colspan="3" class="deteil_tb_title_sub_last">부모님, 남편, 큰아이2명이상, 기타가족</td> 
+						</tr>
+						<tr>
+							<td rowspan="3" class="deteil_tb_title"></td>
+							<td colspan="4" class="deteil_tb_title_last_last"></td>
+						</tr>
+		                <tr> 
+							<td colspan="5" class="deteil_tb_title_sub_last"></td> 
+						</tr>
+						<tr> 
+							<td colspan="5" class="deteil_tb_title_sub_last"></td> 
+						</tr> 
+					</table> 
+				</div> 
+			</div>
+
+		  <!--div class="jb-footer">
+
+		  </div-->
+	  </div>
+  </body>
+</html>

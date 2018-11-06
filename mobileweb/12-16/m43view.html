@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0 ,user-scalable=no , target-densitydpi=medium-dpi" />
+	<meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
+	<script type="text/javascript" src="common/js/jquery/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript" src="common/js/common.js"></script>
+    <script type="text/javascript" src="js/jquery.fixedMenu.js"></script>
+    <script type="text/javascript" src="js//jquery.toolbar.js"></script>
+	<link type="text/css" rel="stylesheet" href="css/sub.css">
+    <link type="text/css" rel="stylesheet" href="css/font.css">
+	<title>마더앤베이비</title>
+</head>
+
+        
+        
+        
+        
+<%
+	intIDX	= fncRequest("idx")
+	intNum	= fncRequest("num")
+	brd_id	= fncRequest("brd_id")
+	secFlg	= fncRequestForm("sec_flg")
+	
+'-----------------------------------------------------------------------------
+'	데이터 확인
+	brd_tbl = "dbo.MO_BRD_"& brd_id &" "
+'-----------------------------------------------------------------------------
+
+'-----------------------------------------------------------------------------
+'	게시판 생성여부 확인
+	strSql = "IF object_id(N'"& brd_tbl &"') IS NOT NULL SELECT 'Y' ELSE SELECT 'N' "
+	Set Rs = DBExec(strSql,"main")
+	If Not Rs.EOF Then 
+		If Rs(0) = "N" Then 
+			response.Write "<script type='text/javascript'>alert('존재하지 않는 게시판 입니다.');history.back(-1);</script>"
+			response.End 
+		End If 
+	End If 
+	Call DBClose(Rs)
+'-----------------------------------------------------------------------------
+
+'--------------------------------------------------------------------------
+'	공지사항 리스트 호출
+	If intIDX <> "" Then 
+		strSql = ""
+		strSql = strSql & "		SELECT "
+		strSql = strSql & "			BA_IDX "
+		If brd_id = "NOTICE" Then 
+		strSql = strSql & "			,BA_TYPE "
+		End If 
+		strSql = strSql & "			,BA_MEM_NM  "
+		strSql = strSql & "			,BA_TITLE   "
+		strSql = strSql & "			,BA_CONTENT   "
+		strSql = strSql & "			,BA_SEC_FLG "
+		strSql = strSql & "			,BA_REG_DT	"
+		strSql = strSql & "			,ROW_NUMBER( ) OVER (ORDER BY BA_SEQ DESC, BA_IDX DESC) ROWNUM "
+		strSql = strSql & "		FROM "& brd_tbl &" WITH(NOLOCK) "
+		strSql = strSql & "		WHERE BA_CNLKBN='N' AND BA_IDX='"& intIDX &"' "
+		Set Rs = DBExec(strSql,"main")
+		If Not Rs.EOF Then 
+			If brd_id = "NOTICE" Then 
+				ba_type		= Rs("BA_TYPE")
+			End If 
+			mem_nm		= Rs("BA_MEM_NM")
+			title		= Rs("BA_TITLE")
+			content		= Re_sqlFilter(Rs("BA_CONTENT"))
+			sec_flg		= Rs("BA_SEC_FLG")
+			reg_dt		= Left(Rs("BA_REG_DT"),10)
+		End If 
+		Call RSClose(Rs)
+	Else
+		response.Write "<script type='text/javascript'>history.back(-1);</script>"
+		response.End 
+	End If 
+'--------------------------------------------------------------------------
+
+'--------------------------------------------------------------------------
+'	비밀글 확인
+	If sec_flg <> "N" And sec_flg <> secFlg Then 
+		response.Write "<script type='text/javascript'>history.back(-1);</script>"
+		response.End 
+	End If 
+'--------------------------------------------------------------------------
+
+'--------------------------------------------------------------------------
+'	답변 확인
+	If intIDX <> "" Then 
+		strSql = ""
+		strSql = strSql & "		SELECT "
+		strSql = strSql & "			BA_TITLE   "
+		strSql = strSql & "			,BA_CONTENT   "
+		strSql = strSql & "		FROM "& brd_tbl &" WITH(NOLOCK) "
+		strSql = strSql & "		WHERE BA_CNLKBN='N' AND BA_DPH=2 AND BA_PIDX='"& intIDX &"' "
+		Set Rs = DBExec(strSql,"main")
+		If Not Rs.EOF Then 
+			re_title		= Rs("BA_TITLE")
+			re_content		= Re_sqlFilter(Rs("BA_CONTENT"))
+		End If 
+		Call RSClose(Rs)
+	End If 
+'--------------------------------------------------------------------------
+%>
+<body>
+	<div id="wrap">
+        <div id="msub_menu"> </div>    
+		<div id="mheader">
+        	<div id="mtop">
+				<ul>
+					<li id="mtop1" class="mmtop">
+                    	<div class="tooltip-container normal">
+		  					<div class="example">
+                                <div id="normal-button-bottom" class="settings-button"><img src="images/mtop_navi.jpg" alt=""/></div>
+                            </div>
+						   <div id="user-options" class="toolbar-icons" style="display:none; position:relative;  z-index: 10000000;">
+							<a><img src="images/mnavi.jpg" border="0" usemap="#mnav" width="360px" height="455px" /></a>
+                                <map name="mnav" id="mnav">
+                                <area shape="rect" coords="35,19,153,34" href="m11.html" target="_blank" />
+                                <area shape="rect" coords="35,38,149,55" href="m12.html" target="_blank" />
+                                <area shape="rect" coords="35,58,141,75" href="m13.html" target="_blank" />
+                                <area shape="rect" coords="35,78,151,95" href="m14.html" target="_blank" />
+                                <area shape="rect" coords="35,99,103,115" href="m15.html" target="_blank" />
+                                <area shape="rect" coords="35,118,103,135" href="m16.html" target="_blank" />
+                                <area shape="rect" coords="35,139,86,155" href="m17.html" target="_blank" />
+                                <area shape="rect" coords="35,160,86,176" href="m18.html" target="_blank" />  
+                                <area shape="rect" coords="35,199,127,215" href="m21.html" target="_blank" />
+                                <area shape="rect" coords="35,219,148,235" href="m22.html" target="_blank" />
+                                <area shape="rect" coords="35,239,136,254" href="m23.html" target="_blank" />
+                                <area shape="rect" coords="35,260,136,275" href="m24.html" target="_blank" />
+                                <area shape="rect" coords="35,280,136,295" href="m25.html" target="_blank" />
+                                <area shape="rect" coords="35,301,136,316" href="m26.html" target="_blank" />
+                                <area shape="rect" coords="219,17,323,34" href="m31.html" target="_blank" />
+                                <area shape="rect" coords="219,38,323,53" href="m32.html" target="_blank" />
+                                <area shape="rect" coords="219,59,324,74" href="m33.html" target="_blank" />
+                                <area shape="rect" coords="219,79,326,94" href="m34.html" target="_blank" />
+                                <area shape="rect" coords="219,99,295,114" href="m35.html" target="_blank" />
+                                <area shape="rect" coords="219,119,297,135" href="m36.html" target="_blank" />
+                                <area shape="rect" coords="218,199,296,215" href="m41.html" target="_blank" />
+                                <area shape="rect" coords="218,220,296,236" href="m42.html" target="_blank" />
+                                <area shape="rect" coords="219,240,297,256" href="m43.html" target="_blank" />
+                                <area shape="rect" coords="220,260,298,276" href="m44.html" target="_blank" />
+                                <area shape="rect" coords="220,280,298,296" href="m45.html" target="_blank" />
+                                <area shape="rect" coords="34,341,112,357" href="http://www.mothernbaby.co.kr/comp/comp_08.asp?mOne=5&mTwo=1" target="_blank" />
+                                <area shape="rect" coords="220,341,298,357" href="mlogin.html" target="_blank" />
+                                <area shape="rect" coords="220,361,298,377" href="mjoin.html" target="_blank" />
+                                <area shape="rect" coords="220,381,298,397" href="mmodify.html" target="_blank" />
+                                <area shape="rect" coords="220,400,298,416" href="mreser.html" target="_blank" />
+                                <area shape="rect" coords="220,421,314,438" href="mservice.html" target="_blank" />
+                                </map>
+				  </div>
+                	</li>
+               		<li id="mlogo" class="mmtop"><a href="index.html"><img src="images/frame.png" class="frame"  alt=""/>
+                		<img src="images/ani-bg.png" alt="" class="ani-bg"  alt=""/></a>
+                    </li>
+                	<li id="mtop3" class="mmtop"><a href="tel:025573579"><img src="images/mcall.jpg"   "opacity:1;filter:alpha(opacity=100)" onMouseOver="this.style.opacity=0.9;this.filters.alpha.opacity=90" onMouseOut="this.style.opacity=1;this.filters.alpha.opacity=100" cursor="pointer" alt="개인맞춤형서비스" /></a>
+                    </li>
+				</ul>
+            </div>
+		</div>
+        <!----------------------------------------- 메뉴바시작 ----------------------------------------->
+  		<div id="mnav" class="menu">
+        <ul>
+        	<li id="menu01" class="000">
+                 	<a href="#">커뮤니티<span class="arrow"></span></a>
+                <ul>
+                	<li><a href="m11.html">마더앤베이비</a></li>
+                    <li><a href="m21.html">산후케어서비스</a></li>
+                    <li><a href="m31.html">이용안내/예약</a></li>
+                    <li><a href="m41.html">커뮤니티</a></li>
+                </ul>
+            </li>
+            <li id="menu02" class="000">
+                <a href="#">1:1Q&A<span class="arrow"></span></a>
+                <ul>
+                	<li><a href="m41.html">공지&뉴스</a></li>
+                    <li><a href="m42.html">FAQ</a></li>
+                    <li><a href="m43.html">1:1Q&A</a></li>
+                    <li><a href="m44.html">칭찬하기</a></li>
+                    <li><a href="m45.html">이벤트</a></li>
+                </ul>
+            </li>
+        </ul>
+    	</div>
+        <!----------------------------------------- 본문 ----------------------------------------->
+        <div id="mcontainer">
+		<td width="360" valign="top">
+			<table width="360" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+				<td style="padding-top:40px;"><img src="images/sub04_subtitle0<%=mTwo%>.jpg" width="360" height="43" /></td>
+			</tr>
+			</table>
+			<table width="360" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+				<td style="padding-top:15px; padding-bottom:15px;"><div align="right"><a href="./board_0<%=mTwo%>.asp?<%=strParam%>"><img src="images/bt_0006.jpg" width="123" height="36" border="0" /></a></div></td>
+			</tr>
+			</table>
+			<table width="360" border="0" align="center" cellpadding="0" cellspacing="2">
+			<tr>
+				<td width="56" height="34" bgcolor="#979797" class="white_text"><div align="center">번호</div></td>
+				<% If brd_id = "NOTICE" Then %>
+				<td width="69" bgcolor="#979797" class="white_text"><div align="center">분류</div></td>
+				<% End If %>
+				<td width="442" bgcolor="#979797" class="white_text"><div align="center">제목</div></td>
+				<td width="103" bgcolor="#979797" class="white_text"><div align="center">작성자</div></td>
+				<td width="88" bgcolor="#979797" class="white_text"><div align="center">작성일</div></td>
+			</tr>
+			<tr>
+				<td height="34" bgcolor="#ebebeb"><div align="center"><%=intNum%></div></td>
+				<% If brd_id = "NOTICE" Then %>
+				<td bgcolor="#ebebeb"><div align="center"><%=ba_type%></div></td>
+				<% End If %>
+				<td bgcolor="#ebebeb" style="padding-left:10px;"><%=title%></td>
+				<td bgcolor="#ebebeb"><div align="center"><%=mem_nm%></div></td>
+				<td bgcolor="#ebebeb"><div align="center"><%=reg_dt%></div></td>
+			</tr>
+			</table>
+			<p style="margin-top:10px;">
+			<table width="360" border="0" align="center" cellpadding="0" cellspacing="0" class="bbs_view">
+			<tr>
+				<td valign="top"><%=content%></td>
+			</tr>
+			</table>
+			<% If re_content <> "" Then %>
+			<p style="margin-top:10px;">
+			<table width="360" border="0" align="center" cellpadding="0" cellspacing="0" class="bbs_view">
+			<tr>
+				<td valign="top"><%=re_content%></td>
+			</tr>
+			</table>
+			<% End If %>
+			<p style="margin-top:50px;">	  
+		</td>
+	</tr>
+	</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,399 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+
+<meta name="viewport" content="width=1190">
+<script type="text/javascript" src="/common/js/jquery/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="/common/js/common.js"></script>
+<link type="text/css" rel="stylesheet" href="/common/css/style.css">
+<link type="text/css" rel="stylesheet" href="/common/css/main_css.css">
+<title>마더앤베이비</title>
+
+  <style type="text/css">
+  <!--
+  body {
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+  }
+  #Layer1 {
+    position:absolute;
+    width:200px;
+    height:115px;
+    z-index:2;
+  }
+  #Layer2 {
+    position:absolute;
+    width:200px;
+    height:115px;
+    z-index:2;
+  }
+  -->
+  </style>
+
+</head>
+
+
+
+<body>
+<iframe id="ifrm" name="ifrm" width="0" height="0" style="display:none;"></iframe>
+  <div id="top">
+    <div id="gnb">
+    <div class="rel">
+      <ul class="fl pdt10 ">
+        <li><img src="/image/top_001.jpg" width="193" height="32" alt="개인맞춤형서비스" /></li>
+      </ul>
+    </div>
+    <div>
+      <ul class="relmenu pdt10 pdl20">
+        
+          <li class="k_menu"><a href="/member/login.asp?mOne=6&mTwo=1"><img src="/image/top_login.jpg" border="0" /></a></li>
+          <li class="h_menu"><img src="/image/top_002.jpg" width="30" height="32" /></li>
+          <li class="h_menu"><a href="/member/member.asp?mOne=6&mTwo=2"><img src="/image/top_join.jpg" border="0" /></a></li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="wrap">
+  <div id="header">
+            <div class="logo_sec">
+          <div class="logo">
+              <a href="/index.asp"><img src="/image/top_logo.jpg" width="196" height="83" border="0" /></a>
+            </div>
+            <div class="menu">
+              <img src="/image/top_navi.jpg" width="601" height="83" border="0" id="top_menu" style="cursor:pointer;"  onload="this.style.filter='alpha(opacity=60)'" onmouseover="this.style.filter='alpha(opacity=100)'" onmouseout="this.style.filter='alpha(opacity=60)'" usemap="#top_navi"/>            
+             </div>
+        </div>
+     </div>
+</div>
+
+<map name="top_navi" id="top_navi">
+  <area shape="rect" coords="8,19,129,66" href="/comp/comp_01.asp?mOne=1&amp;mTwo=1"/>
+  <area shape="rect" coords="170,16,284,67" href="/service/service_01.asp?mOne=2&amp;mTwo=1" />
+  <area shape="rect" coords="337,17,455,66" href="/info/info_01.asp?mOne=3&amp;mTwo=1" />
+  <area shape="rect" coords="499,16,584,65" href="/board/board_01.asp?mOne=4&amp;mTwo=1" />
+</map>
+
+<!-- 서브메뉴 시작 -->
+<div id="sub_menu" style="display:none; width:650px; height:324px; position:absolute; top:115px; left:50%; margin-left:-100px; z-index: 3;">
+  <table width="650" height="324" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td background="/image/navi_bg.jpg" style="padding-left:20px;">
+      <table width="570" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="155" height="38"><a href="/comp/comp_01.asp?mOne=1&mTwo=1"><img src="/image/navi_menu1-1.jpg" width="113" height="21" border="0"/></a></td>
+        <td width="168"><a href="/service/service_01.asp?mOne=2&amp;mTwo=1"><img src="/image/navi_menu2-1.jpg" border="0"/></a></td>
+        <td width="167"><a href="/info/info_01.asp?mOne=3&amp;mTwo=1"><img src="/image/navi_menu3-1.jpg" border="0" /></a></td>
+        <td width="80"><a href="/board/board_01.asp?mOne=4&amp;mTwo=1"><img src="/image/navi_menu4-1.jpg" border="0"/></a></td>
+      </tr>
+      <tr>
+        <td height="38"><a href="/comp/comp_02.asp?mOne=1&mTwo=2"><img src="/image/navi_menu1-2.jpg" width="113" height="21" border="0"/></a></td>
+        <td><a href="/service/service_03.asp?mOne=2&amp;mTwo=3"><img src="/image/navi_menu2-3.jpg" border="0"/></a></td>
+        <td><a href="/info/info_02.asp?mOne=3&amp;mTwo=2"><img src="/image/navi_menu3-2.jpg" border="0" /></a></td>
+        <td><a href="/board/board_02.asp?mOne=4&amp;mTwo=2"><img src="/image/navi_menu4-2.jpg" border="0"/></a></td>
+      </tr>
+      <tr>
+        <td height="38"><a href="/comp/comp_03.asp?mOne=1&amp;mTwo=3"><img src="/image/navi_menu1-3.jpg" width="113" height="21" border="0"/></a></td>
+        <td><a href="/service/service_04.asp?mOne=2&amp;mTwo=4"><img src="/image/navi_menu2-4.jpg" border="0"/></a></td>
+        <td><a href="/info/info_03.asp?mOne=3&amp;mTwo=3"><img src="/image/navi_menu3-3.jpg" border="0"/></a></td>
+        <td><a href="/board/board_03.asp?mOne=4&amp;mTwo=3"><img src="/image/navi_menu4-3.jpg" border="0"/></a></td>
+      </tr>
+      <tr>
+        <td height="38"><a href="/comp/comp_04.asp?mOne=1&amp;mTwo=4"><img src="/image/navi_menu1-4.jpg" width="113" height="21" border="0" /></a></td>
+        <td><a href="/service/service_05.asp?mOne=2&amp;mTwo=5"><img src="/image/navi_menu2-5.jpg" border="0"/></a></td>
+        <td><a href="/info/info_04.asp?mOne=3&amp;mTwo=4"><img src="/image/navi_menu3-4.jpg" border="0" /></a></td>
+        <td><a href="/board/board_04.asp?mOne=4&amp;mTwo=4"><img src="/image/navi_menu4-4.jpg" border="0" /></a></td>
+      </tr>
+      <tr>
+        <td height="38"><a href="/comp/comp_05.asp?mOne=1&amp;mTwo=5"><img src="/image/navi_menu1-5.jpg" width="113" height="21" border="0"/></a></td>
+        <td><a href="/service/service_06.asp?mOne=2&amp;mTwo=6"><img src="/image/navi_menu2-6.jpg" border="0"/></a></td>
+        <td><a href="/info/info_05.asp?mOne=3&amp;mTwo=5"><img src="/image/navi_menu3-5.jpg" border="0"/></a></td>
+        <td><a href="/board/board_05.asp?mOne=4&amp;mTwo=5"><img src="/image/navi_menu4-5.jpg" border="0"/></a></td>
+      </tr>
+      <tr>
+        <td height="38"><a href="/comp/comp_06.asp?mOne=1&amp;mTwo=6"><img src="/image/navi_menu1-6.jpg" width="113" height="21" border="0"/></a></td>
+        <td><a href="/service/service_07.asp?mOne=2&amp;mTwo=7"><img src="/image/navi_menu2-7.jpg" border="0"/></a></td>
+        <td><a href="/info/info_06.asp?mOne=3&amp;mTwo=6"><img src="/image/navi_menu3-6.jpg" border="0"/></a></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="38"><a href="/comp/comp_07.asp?mOne=1&amp;mTwo=7"><img src="/image/navi_menu1-7.jpg" border="0"/></a></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      </table>
+    </td>
+  </tr>
+  </table>
+</div>
+<!-- 서브메뉴 끝 -->
+
+<script type="text/javascript">
+  var top_menu = jQuery("#top_menu");
+  var sub_menu = jQuery("#sub_menu");
+  var sub_img  = jQuery("#sub_menu img");
+  
+  sub_img.mouseover(function(){
+    num = sub_img.index(this);
+    sub_img.each(function(i){
+      if (i == num){
+        sub_img.eq(i).attr({"src": sub_img.eq(i).attr("src").replace("_on.jpg",".jpg").replace(".jpg","_on.jpg")});
+      }else{
+        sub_img.eq(i).attr({"src": sub_img.eq(i).attr("src").replace("_on.jpg",".jpg")});
+      }
+    });
+  });
+
+  top_menu.hover(function(){
+    sub_menu.show();
+    top_menu.attr({"src": top_menu.attr("src").replace("_on.jpg",".jpg").replace(".jpg","_on.jpg")});
+  },function(){
+    sub_menu.hide();
+    top_menu.attr({"src": top_menu.attr("src").replace("_on.jpg",".jpg")});
+  });
+
+  sub_menu.hover(function(){
+    sub_menu.show();
+  },function(){
+    sub_menu.hide();
+  });
+</script>
+
+  <div id="wrap2">
+    <div id="header">
+      <div id="showcase">
+		  <a href="http://mothernbaby.co.kr/service/service_01.asp?mOne=2&mTwo=1" class="mainList" ><img src="/upload_file/main/20140714/20140714190407.jpg" width="1300" height="529" border="0"/></a>
+		  <a href="http://mothernbaby.co.kr/comp/comp_07.asp?mOne=1&mTwo=7" class="mainList" style="display:none;"><img src="/upload_file/main/20140714/20140714190334.jpg" width="1300" height="529" border="0"/></a>
+		  <a href="http://mothernbaby.co.kr/service/service_01.asp?mOne=2&mTwo=1" class="mainList" style="display:none;"><img src="/upload_file/main/20140527/20140527155205.jpg" width="1300" height="529" border="0"/></a>
+		  <a href="http://mothernbaby.co.kr/service/service_03.asp?mOne=2&mTwo=3" class="mainList" style="display:none;"><img src="/upload_file/main/20140706/20140706110126.jpg" width="1300" height="529" border="0"/></a>		  
+      </div>
+      <div id="Layer2" style="width:52px; height:53px; position:absolute; top:200px; left:50%; margin-left:-525px;"><img src="http://mothernbaby.co.kr/image/img_0009.png" width="52" height="53" border="0" onClick="fncMainPre();"  style="cursor:pointer;"/></div>
+      <div id="Layer2" style="width:52px; height:53px; position:absolute; top:200px; left:50%; margin-left:473px;"><img src="http://mothernbaby.co.kr/image/img_0010.png" width="52" height="53" border="0" onClick="fncMainNext();" style="cursor:pointer;"/></div>
+		<div id="Layer1" style="top:525px; position:absolute; left:50%; margin-left:-525px; "></div>
+	</div> <!-- /#header -->
+	<!-- #header 닫는 div 태그가 빠져있어서 추가합니다. -->
+	
+
+    <div id="cont">
+      <div class="pdl125">
+		
+		<!-- table > div -->
+		<div class="cont-row">
+			<div class="span">
+				<a href="http://mothernbaby.co.kr/service/service_03.asp?mOne=2&mTwo=3"><img src="/upload_file/main/20140519/20140519154422.jpg" width="528" height="238" border="0" onload="this.style.filter='alpha(opacity=100)'" onMouseOver="this.style.filter='alpha(opacity=90)'" onMouseOut="this.style.filter='alpha(opacity=100)'" /></a>
+			</div>
+			<div class="span">
+				<a href="http://mothernbaby.co.kr/service/service_01.asp?mOne=2&mTwo=1"><img src="/upload_file/main/20140519/20140519140418.jpg" width="261" height="238" border="0" onload="this.style.filter='alpha(opacity=100)'" onMouseOver="this.style.filter='alpha(opacity=90)'" onMouseOut="this.style.filter='alpha(opacity=100)'"  /></a>
+			</div>
+			<div class="span">
+				<div class="notice-list">
+					<h3>
+						<img src="http://mothernbaby.co.kr/image/main_notice.jpg" width="261" height="31" border="0" usemap="#Map" />
+						<map name="Map" id="Map"><area shape="rect" coords="234,2,260,27" href="/board/board_01.asp?mOne=4&mTwo=1" /></map>
+					</h3>
+					<div class="cont-list ">
+						<a href="/board/board_01_view.asp?idx=19&brd_id=NOTICE&mOne=4&mTwo=1" class="notice_text">- [전자신문/머니위크]‘마더앤베이비’ ...</a><br />
+						<a href="/board/board_01_view.asp?idx=18&brd_id=NOTICE&mOne=4&mTwo=1" class="notice_text">- 마더앤베이비와 함께하는 우아성한의원 ...</a><br />
+						<a href="/board/board_01_view.asp?idx=17&brd_id=NOTICE&mOne=4&mTwo=1" class="notice_text">- [공지] 마더앤베이비, 여성가족부.고...</a><br />
+					</div>
+				</div>
+				<div class="faq-list">
+					<h3>
+						<img src="http://mothernbaby.co.kr/image/main_faq.jpg" width="261" height="31" border="0" usemap="#Map2" /></td>
+						<map name="Map2" id="Map2"><area shape="rect" coords="235,2,259,26" href="/board/board_02.asp?mOne=4&mTwo=2" /></map>
+					</h3>
+					<div class="cont-list ">
+						<a href="/board/board_02.asp?idx=28&type=기타&mOne=4&mTwo=2" class="notice_text">- 임대용품은 언제 도착하나요?</a><br />
+						<a href="/board/board_02.asp?idx=27&type=기타&mOne=4&mTwo=2" class="notice_text">- 마사지는 어느 부위로 진행되나요?</a><br />
+						<a href="/board/board_02.asp?idx=26&type=기타&mOne=4&mTwo=2" class="notice_text">- 마사지는 관리사가 해주는 건가요?</a><br />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cont-row">
+			<div class="span">
+				<a href="http://mothernbaby.co.kr/board/board_05.asp?mOne=4&mTwo=5" class="eventList" ><img src="/upload_file/main/20140526/20140526165209.jpg" width="265" height="241" border="0" onload="this.style.filter='alpha(opacity=100)'" onMouseOver="this.style.filter='alpha(opacity=90)'" onMouseOut="this.style.filter='alpha(opacity=100)'"  /></a>
+			</div>
+			<div class="span">
+				<a href="http://mothernbaby.co.kr/comp/comp_07.asp?mOne=1&mTwo=7"><img src="/upload_file/main/20140526/20140526165326.jpg" width="263" height="241" border="0" onload="this.style.filter='alpha(opacity=100)'" onMouseOver="this.style.filter='alpha(opacity=90)'" onMouseOut="this.style.filter='alpha(opacity=100)'"  /></a>
+			</div>
+			<div class="span">
+				<a href="http://mothernbaby.co.kr/info/info_02.asp?mOne=3&mTwo=2"><img src="/upload_file/main/20140526/20140526165433.jpg" width="261" height="241" border="0" onload="this.style.filter='alpha(opacity=100)'" onMouseOver="this.style.filter='alpha(opacity=90)'" onMouseOut="this.style.filter='alpha(opacity=100)'"  /></a>
+			</div>
+			<div class="span">
+				<div class="call">
+					<a href="tel:02-557-3579"><img src="/upload_file/main/20140519/20140519140546.jpg" width="261" height="125" border="0" /></a>
+				</div>
+				<div class="qna">
+					<a href="http://mothernbaby.co.kr/board/board_03.asp?mOne=4&mTwo=3"><img src="/upload_file/main/20140526/20140526165539.jpg" width="261" height="116" border="0" onload="this.style.filter='alpha(opacity=100)'" onMouseOver="this.style.filter='alpha(opacity=90)'" onMouseOut="this.style.filter='alpha(opacity=100)'"  /></a>
+				</div>
+			</div>
+		</div>
+
+        
+        <!-- 풋터 시작 -->
+		<div id="footer">
+			<img src="http://mothernbaby.co.kr/image/footer.jpg" border="0" usemap="#footer" width="1050" height="228" />
+		</div>
+		<!-- 풋터 끝 -->
+
+<form id="ofrm" name="ofrm" method="post" action="board_01_view.asp">
+  <input type="hidden" name="mOne" value="1">
+  <input type="hidden" name="mTwo" value="1">
+  <input type="hidden" id="idx" name="idx" value="">
+  <input type="hidden" id="num" name="num" value="">
+  <input type="hidden" name="brd_id" value="">
+  <input type="hidden" name="sec_flg" value="Y">
+</form>
+
+<map name="footer" id="footer">
+  <area shape="rect" coords="663,25,715,50" href="/comp/comp_08.asp?mOne=5&mTwo=1" />
+  <area shape="rect" coords="733,25,817,50" href="/member/member_01.asp?mOne=6&mTwo=3" />
+  <area shape="rect" coords="832,24,930,51" href="/member/member_02.asp?mOne=6&mTwo=4" />
+  <area shape="rect" coords="946,23,1045,51" href="/member/member_03.asp?mOne=6&mTwo=5" />
+  <area shape="rect" coords="717,86,771,146" href="http://www.mw.go.kr" target="_blank" />
+<area shape="rect" coords="912,84,975,145" href="http://www.ftc.go.kr" target="_blank" />
+<area shape="rect" coords="990,86,1049,144" href="http://www.lig.co.kr" target="_blank" />
+<area shape="rect" coords="849,86,902,144" href="http://www.kipo.go.kr" target="_blank" />
+<area shape="rect" coords="783,86,835,144" href="http://www.smba.go.kr" target="_blank" />
+<area shape="rect" coords="620,166,749,200" href="http://cafe.naver.com/mymotherskitchen" target="_blank" />
+<area shape="rect" coords="759,165,898,201" href="http://blog.naver.com/momsrecipe" target="_blank" /><area shape="rect" coords="905,165,1050,201" href="https://www.facebook.com/pages/%EB%A7%88%EB%8D%94%EC%95%A4%EB%B2%A0%EC%9D%B4%EB%B9%84/1443130975944590?fref=ts" target="_blank" />
+</map>
+
+<script type="text/javascript">
+  function fncView(flg,idx,num){
+    if (flg == "N"){
+      fncFormSubmit(idx,num);
+    }else{
+      window.open("./board_pop.asp?idx="+ idx +"&num="+ num +"&brd_id=&mOne=1&mTwo=1","board_view","width=500px, height=200px");
+    }
+  }
+
+  function fncFormSubmit(idx,num){
+    jQuery("#ofrm").children("input").eq(2).val(idx);
+    jQuery("#ofrm").children("input").eq(3).val(num);
+    jQuery("#ofrm").submit();
+  }
+</script>
+      </div>
+    </div>
+  </div>
+  <div id="imgPop_1" style="z-index:100; display:none;position:absolute; z-index:1000; top:130px; width:410px; background-color:#d6d6d6; layer-background-color:#CCCCCC;">
+  <div align="center" style="padding-top:5px;">
+    <img src="/image/banner01.jpg" style="cursor:pointer;" border="0" />
+    <input type="checkbox" name="check" value="Y" onclick="fncSetCookie('imgPop_1',1);"/><span style="font-size:12px;">오늘하루 열지 않기</span>
+    <span style="font-size:12px; padding-left:240px;"><a href="javascript:fncClosePop('imgPop_1');" style="text-decoration:none; color:black">닫기</a></span>
+  </div>
+  <p style="margin-top:10px;">
+</div>
+
+<div id="imgPop_2" style="z-index:100; display:none;position:absolute; width:130px; z-index:1000; top:410px; left:545px; background-color:#d6d6d6; layer-background-color:#CCCCCC;">
+  <div align="center" style="padding-top:5px;">
+    <img src="/image/banner01.jpg" style="cursor:pointer;" border="0" />
+    <input type="checkbox" name="check" value="Y" onclick="fncSetCookie('imgPop_2',2);"/><span style="font-size:12px;">오늘하루 열지 않기</span>
+    <span style="font-size:12px; padding-left:240px;"><a href="javascript:fncClosePop('imgPop_2');" style="text-decoration:none; color:black">닫기</a></span>
+  </div>
+  <p style="margin-top:10px;">
+</div>
+
+
+
+<script type="text/javascript">
+    if (fnc_getCookie("main_pop", 0) != "yes") {
+    fncOpenPop('imgPop_1');
+    }
+
+    if (fnc_getCookie("main_pop", 1) != "yes") {
+//    fncOpenPop('imgPop_2');
+    }
+
+  function fncOpenPop(tar){
+    jQuery("#" + tar).show();
+  }
+
+  function fncClosePop(tar){
+    jQuery("#" + tar).hide();
+  }
+
+  function fncSetCookie(tar,num){
+    setCookie("main_pop", "yes", "1", num);
+    fncClosePop(tar)
+  }
+</script>
+
+</body>
+
+
+<script type="text/javascript">
+/*
+    if (fnc_getCookie("main_pop", 2) != "yes") {
+        window.open('/common/inc/popup_02.asp', 'popup_02', 'width=400,height=360,scrollbars=no,top=0,left=0');
+    }
+*/
+</script>
+
+
+
+<script type="text/javascript">
+  var MainList = jQuery(".mainList");
+  var EventList = jQuery(".eventList");
+  var intMainCnt = 0;
+  var intMainNow = 0;
+  var intEventCnt = 0;
+  var intEventNow = 0;
+
+  function fncSetMainTimer() {
+    intMainCnt = MainList.length;
+    if (intMainCnt > 1){ Main = setInterval("fncMainNext()", 5000); }
+  }
+
+  function fncMainPre() {
+    intMainNow -= 1;
+    if (intMainNow < 0) { intMainNow = intMainCnt-1; }
+    fncMainShow(intMainNow);
+  }
+
+  function fncMainNext() {
+    intMainNow += 1;
+    if (intMainNow >= intMainCnt) { intMainNow = 0; }
+    fncMainShow(intMainNow);
+  }
+
+  function fncMainShow(num) {
+    intMainNow = num;
+    MainList.each(function (i) {
+      if (i == num) { MainList.eq(i).fadeIn(); }
+      else { MainList.eq(i).fadeOut(); }
+    });
+  }
+
+  function fncSetEventTimer() {
+    intEventCnt = EventList.length;
+    if (intEventCnt > 1){ Event = setInterval("fncEventNext()", 3000); }
+  }
+
+  function fncEventNext() {
+    intEventNow += 1;
+    if (intEventNow >= intEventCnt) { intEventNow = 0; }
+    fncEventShow(intEventNow);
+  }
+
+  function fncEventShow(num) {
+    intEventNow = num;
+    EventList.each(function (i) {
+      if (i == num) { EventList.eq(i).show(); }
+      else { EventList.eq(i).hide(); }
+    });
+  }
+
+  jQuery(document).ready(function(){
+    fncSetMainTimer();
+    fncSetEventTimer();
+  });
+</script>
+</html>

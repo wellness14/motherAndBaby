@@ -1,0 +1,87 @@
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+
+body {margin:0px; font-family:'Nanum Gothic', serif; font-size:15px;}
+
+.content {
+  padding-top:55px;
+  text-align:center;
+  width:100%;
+}
+
+.mt_5 {margin-top:5px;}
+.mt_10 {margin-top:10px;}
+.pd_5 {padding:5px;}
+
+.req {color:#F69985;}
+.fb {font-weight:bold;}
+
+.align_left {text-align:left;}
+
+.header {width:100%; height:50px; line-height:50px; text-align:center; background-color:#00AAA7; color:#FFFFFF; font-weight:bold; font-size:20px;}
+.close {float:right; font-size:25px; padding-right:10px; line-height:50px; text-align:center; display:inline-block;}
+
+.title {font-weight:bold; font-size:20px; margin-top:15px;}
+
+.input {margin-top:10px; max-width:400px;}
+.input_txt {font-weight:bold; font-size:15px; color:#F69985; margin-top:5px;}
+.input_01 {width:250px; height:30px; border:1px solid #C8C8C8; padding-left:15px; color:#C8C8C8;}
+.input_02 {width:250px; height:30px; border:1px solid #C8C8C8; padding-left:15px; color:#C8C8C8;}
+.input_03 {width:70px; height:30px; border:1px solid #C8C8C8; padding-left:15px; color:#C8C8C8;}
+.input_04 {width:100%; height:30px; border:1px solid #C8C8C8; padding-left:15px; color:#C8C8C8;}
+
+.textarea_01 {width:100%; height:100px; border:1px solid #C8C8C8; padding-left:15px; color:#C8C8C8;}
+
+.chk_txt {font-weight:bold; font-size:15px; color:#888888; margin-top:5px; max-width:400px;}
+.co_vw {float:right; color:#C8C8C8; text-decoration:underline; color:#888888;}
+
+.input2 {margin-top:10px; padding-top:10px; border-top:1px solid #C8C8C8; color:#888888; max-width:1170px;}
+.input2_title {display:inline-block; width:80px; font-weight:bold; color:#888888;}
+.input2_title2 {display:inline-block; width:200px; color:#888888; font-weight:bold;}
+
+.select1 {background-color:#FFFFFF; width:80px; height:30px; color:#C8C8C8;}
+.select2 {background-color:#FFFFFF; width:70px; height:30px; color:#C8C8C8;}
+.select3 {background-color:#FFFFFF; width:100%; height:30px; color:#C8C8C8;}
+
+.over_chk_btn {border:1px solid #F69985; background-color:#FFFFFF; color:#F69985; height:30px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius:5px;}
+.over_chk_btn1 {border:1px solid #F69985; background-color:#FFFFFF; color:#F69985; height:30px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius:5px;}
+
+.btn {text-align:center;}
+.btn_on {text-align:center;}
+.join_btn {font-weight:bold; border:1px solid #FF0033; background-color:#FF0033; color:#FFFFFF; font-size:20px; margin-bottom:10px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius:5px;}
+
+
+.modal_btn1 {font-weight:bold; border:1px solid #F16649; background-color:#F16649; color:#FFFFFF; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius:5px;}
+
+.tb {margin-top:10px; color:#888888; max-width:1170px;}
+.tb .td1 {background-color: #EEEEEE; color:#888888; padding-left:10px; font-weight:bold;}
+.tb .td2 {background-color: #FFFFFF; color:#888888; padding-left:10px;}
+
+.login_logo {width:100%; margin-top:70px; margin-bottom:20px; text-align:center;}
+.login_input {width:100%; margin-top:10px; text-align:center; color:#888888;}
+.login_input_01 {width:305px; height:30px; border:1px solid #C8C8C8; padding-left:15px;}
+.login_btn {width:100%; margin-top:20px; text-align:center; color:#C8C8C8; font-size:13px;}
+.member_join {width:100%; margin-top:20px; text-align:center;}
+.id_pwd_find {width:100%; margin-top:10px; text-align:center;}
+
+.campaign-list .campaign-item {max-width:1170px; margin-top:15px;}
+.campaign-list .campaign-item .campaign-item-img img {width:100%; max-height:400px;}
+.campaign-list .campaign-item .campaign-item-line {width:100%; border-top:2px solid #F47852;}
+.campaign-list .campaign-item .campaign-item-content {width:100%; height:50px; text-align:center; padding-top:10px; font-weight:bold; color:#F49683;}
+.campaign-list .campaign-item .campaign-item-content .campaign-item-content-bar {height:50px; border-left:2px solid #F47852;}
+.campaign-list .campaign-item .campaign-item-content .campaign-item-content1 {float:left; width:40%;}
+.campaign-list .campaign-item .campaign-item-content .campaign-item-content2 {float:right; width:55%; cursor:pointer;}
+
+.campaign-list .campaign-item .campaign-item-title {color:#888888; text-align:left; margin-bottom:5px; font-size:20px;}
+.campaign-list .campaign-item .campaign-item-view {margin-top:10px; color:#888888; text-align:left;}
+.campaign-list .campaign-item .campaign-item-share {margin-top:10px; margin-bottom:10px; text-align:left;}
+.campaign-list .campaign-item .campaign-item-reply-insert {margin-top:10px; margin-bottom:10px; text-align:left;}
+.campaign-list .campaign-item .campaign-item-reply-list {margin-top:10px; margin-bottom:10px; text-align:left;}
+.campaign-list .campaign-item .campaign-item-reply {margin-top:10px; text-align:left;}
+.campaign-list .campaign-item .campaign-item-reply-content {margin-top:10px; margin-bottom:10px;height:15px;}
+.campaign-list .campaign-item .campaign-item-reply-content1 {float:left; padding-left:10px; color:#F4836B; cursor:pointer;}
+.campaign-list .campaign-item .campaign-item-reply-content2 {float:right; padding-right:10px; color:#F4836B;}
+
+.round-box {-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius:5px; border:1px solid #000000; margin-top:10px; margin-bottom:10px; color:#888888;}
+.black-line {width:100%; border-top:1px solid #000000;}
+
+.mypage-title1 {width:200px; display:inline-block;}

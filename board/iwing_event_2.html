@@ -1,0 +1,478 @@
+﻿<!DOCTYPE html>
+<html>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=1190">
+
+	<script type="text/javascript" src="/common/js/jquery/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript" src="/common/js/common.js"></script>
+	<link type="text/css" rel="stylesheet" href="/common/css/style.css">
+	<title>마더앤베이비 & 아이윙</title>
+	<style type="text/css">
+	<!--
+		body {
+			margin-left: 0px;
+			margin-top: 0px;
+			margin-right: 0px;
+			margin-bottom: 0px;
+		}
+		#Layer1 {
+			position:absolute;
+			width:200px;
+			height:115px;
+			z-index:2;
+		}
+		#Layer2 {
+			position:absolute;
+			width:200px;
+			height:115px;
+			z-index:2;
+		}
+			/*.img2 {width:740px; height:233px; background-image:url(/image/iwing_02.jpg); background-repeat:no-repeat;}
+			.input_01 {width:225px; height:38px; padding-left:5px}
+			.pl_50 {padding-left:140px;}
+			.pl_24 {padding-left:36px;}
+			.pt_50 {padding-top:50px;padding-left:40px;}
+			.pt_15 {padding-top:15px;padding-left:40px;}*/
+
+			.iwing_02 {width:740px; height:233px; background-image:url("/image/iwing_02.jpg"); background-repeat:no-repeat; padding-left:140px;}
+			.input_01 {width:225px; height:38px; padding-left:5px}
+			.pl_50 {padding-left:50px;}
+			.pl_35 {padding-left:35px;}
+			.pl_35_2 {padding-left:35px;}
+			.pt_50 {padding-top:50px;}
+			.pt_15 {padding-top:15px;}
+	-->
+	</style>
+</head>
+
+<body>
+
+<table width="1050" border="0" align="center" cellpadding="0" cellspacing="0">
+	<tr>
+		<td>
+			<form id="oFrm" name="oFrm" method="post">
+			<input type="hidden" name="mode" value="ins">
+			<input type="hidden" id="idCheck" name="idCheck" value="N">
+			<input type="hidden" name="mOne" value="<%=mOne%>">
+			<input type="hidden" name="mTwo" value="<%=mTwo%>">
+			<input type="hidden" id="login" name="login" value="<%=uId%>">
+			 
+			 
+		<div class="iwing_01" style="width:740px; height:964px;">
+			<img src="/image/iwing_01.jpg">
+		</div>
+
+		<div class="iwing_02">
+			<div class="pt_50">
+				<input type="text" class="input_01" id="cert_mnb_id" name="cert_mnb_id"   placeholder="아이디" tabindex="1" /><!--마더앤 베이비 -->
+				<span class="pl_50">
+					<input type="text" class="input_01" id="cert_id" name="cert_id"  placeholder="아이디" tabindex="3" /><!--아이윙 아이디 -->
+				</span>
+			</div>
+
+			<div class="pt_15">
+				<input type="password" class="input_01" id="mnb_pwd2" name="mnb_pwd2" placeholder="비밀번호" tabindex="2" />
+				<span class="pl_50">
+					<input type="password" class="input_01" id="pwd2" name="pwd2" placeholder="비밀번호" tabindex="4" />
+				</span>
+			</div>
+
+			<div class="pt_15">
+				<span class="btn1_1">
+					<img src="/image/iwing_btn_01.png" id="btnMnBCert" style="cursor:pointer;" />
+					<span class="pl_35">
+						<img src="/image/iwing_btn_02.png" onclick="join();"style="cursor:pointer;" />
+					</span>
+				</span>
+				
+				<!-- 마더앤베이비 인증 완료시 교체 -->
+				<span class="btn1_2" style="display:none; margin-right:10px;">
+					<img src="/image/iwing_btn_s_01.png" />
+				</span>
+
+				<span class="btn2_1 pl_50">
+					<img src="/image/iwing_btn_01.png" id="btnIdCert" style="cursor:pointer;" />
+					<span class="pl_35_2">
+						<img src="/image/iwing_btn_02.png" onclick="fncOpenZip();" style="cursor:pointer;" />
+					</span>
+				</span>
+				
+				<!--아이윙 인증 완료시 교체-->
+				<span class="btn2_2 pl_50" style="display:none;">
+					<img src="/image/iwing_btn_s_02.png" />
+				</span>
+
+				<!--<span class="btn1_1">
+					<img src="/image/iwing_btn_01.png"  id="btnMnBCert" style="cursor:pointer;"/>
+					<span class="pl_24">
+						<img src="/image/iwing_btn_02.png" onclick="join();"style="cursor:pointer;"/>
+					</span>
+				</span>
+				
+				<!--마더앤베이비 인증 완료시 교체--
+				 <span class="btn1_2" style="padding-left:5px;display:none">
+					<img src="/image/iwing_btn_s_01.png" />
+				</span> 
+
+				<span class="btn2_1 pl_50">
+					<img src="/image/iwing_btn_01.png" id="btnIdCert" style="cursor:pointer;"/> <!-- 아이윙 아디이--
+					<span class="pl_24">
+						<img src="/image/iwing_btn_02.png" onclick="fncOpenZip();" style="cursor:pointer;" />
+					</span>
+				</span>
+				
+				<!--아이윙 인증 완료시 교체--
+				<span class="btn2_2" style="padding-left:385px;margin-bottom:20px;display:none;">
+					<img src="/image/iwing_btn_s_02.png" />
+				</span>-->
+			</div>
+		</div>
+
+		<div class="iwing_03">
+			<img src="/image/iwing_03.jpg" usemap="#img3_map">
+
+			<map name="img3_map">
+				<area shape="rect" coords="264,170,376,206" href="https://itunes.apple.com/kr/app/aiwing-choegoui-donghwachaeg/id923670648?mt=8" target="_blank">
+				<area shape="rect" coords="401,170,514,206" href="https://play.google.com/store/apps/details?id=kr.co.mflare.google.iwing" target="_blank">
+			</map>
+		</div>
+			 
+			</form>   
+		</td>
+	</tr>
+	</table>
+</body>
+<script type="text/javascript" src="/common/js/frm_common.js"></script>
+<script type="text/javascript">
+	var hp = "";
+	var frm = jQuery("#oFrm");
+	var tar	= jQuery("*[valid]");
+	var btnSms = jQuery("#btnSms");
+	var btnSmsCheck = jQuery("#btnSmsCheck");
+	var btnSubmit = jQuery("#btnSubmit");
+	var btnIdCheck = jQuery("#btnIdCheck");
+	var btnIdCert = jQuery("#btnIdCert");
+	var btnMnBCert = jQuery("#btnMnBCert");
+
+	 
+
+		if (jQuery("#login").val() != ""){
+				$(".btn1_1").hide();
+				$(".pl_35").hide();
+				$(".btn1_2").show();
+		}
+
+
+		btnIdCheck.click(function(){
+		var id = jQuery("#mem_id").val();
+		
+		if (id == ""){
+			alert("ID를 입력해주세요.");
+			return false;
+		}else{
+			jQuery.post("/common/inc/iwing_check.asp",{"proc_type":'checkUserId',"user_id":id},function(data,testStatus){
+			 
+				switch(data) {
+					case("0000") :
+						alert('등록가능합니다.');
+					break;
+					case("1000") :
+						alert('중복된 아이디 입니다.');
+						return false;
+					break;
+					case("1001") :
+						alert('데이터를 정확히 입력해주세요.');
+						return false;
+					break;
+					case("9999") :
+						alert('처리중 오류가 발생하였습니다. 관리자에게 문의하세요');
+						return false;
+					break;
+				}
+			});
+		}
+	});
+
+		btnMnBCert.click(function(){
+		var id = jQuery("#cert_mnb_id").val();
+		var mnb_pw = jQuery("#mnb_pwd2").val();
+		 
+		 	if (id == ""){
+			alert("ID를 입력해주세요.");
+			return false;
+			}if(mnb_pw == ""){
+			alert("비밀번호를 입력해주세요.");
+			return false;
+		}else{
+
+		jQuery.post("/common/inc/check_id_pw_ax.asp",{"cert_mnb_id":id,"mnb_pwd2":mnb_pw},function(data,testStatus){
+			switch(data) {
+				case("1") :
+					alert('인증하실 아이디를 입력해 주세요.');
+				break;
+				case("2") :
+				//	alert('인증이완료되었습니다.');
+						/*$(function() {
+						  $(".btn1_2").css('display','block');
+						  $(".btn1_1").css('display','none');
+						//  $(".btn2_2").css({ 'padding-left':'140px'});
+						//   $(".btn2_1").css({ 'color':'yellow','font-weight':'bolder'});
+						});*/
+
+						$(".btn1_1").hide();
+						$(".btn1_2").show();
+
+
+						jQuery("#idCheck").val("Y");
+
+						//alert(jQuery("#idCheck").val());
+				break;
+				case("3") :
+					alert('아이디 비밀번호가 틀렸거나 등록되지 않은 아이디입니다.');
+				break;
+				case("22") :
+					alert('이미 이벤트에 참여하셨습니다. 이벤트는 한번만 참여하실 수 있습니다.');
+					return false;
+				case("34") :
+					alert('처리중 오류가 발생하였습니다. 관리자에게 문의하세요');
+					return false;
+			}
+		});
+		}
+	});
+
+
+	btnIdCert.click(function(){
+		var cert_id = jQuery("#cert_id").val();
+		var pwd2 = jQuery("#pwd2").val();
+ 
+/*
+		proc_type	confirmUser	수행명(고정값)
+		user_id	입력값	아이디(이메일주소)
+		pwd	입력값	비밀번호
+		pn_mem_id	mBaby	파트너 아이디(고정값)
+
+		0000	인증완료(캐시지급)
+		1001	필수 파라미터 값이 없을경우
+		1002	아이디 혹은 비밀번호 오류
+		1003	이미 인증을 받아 캐시를 지급받은 경우
+		9999	처리중 오류발생
+*/
+		if (jQuery("#login").val() == ""){
+			//로그인 안했을시
+
+		if (jQuery("#idCheck").val() == "N" ) {
+			alert("마더앤베이비 회원인증을 먼저 해주세요.");
+			return false;
+		}
+		else {
+			if (cert_id == ""){
+				alert("ID를 입력해주세요.");
+				return false;
+			}
+			
+	  
+			if(pwd2 == ""){
+				alert("비밀번호를 입력해주세요.");
+				return false;
+			}else{
+				jQuery.post("/common/inc/iwing_cert_check.asp",{"proc_type":'confirmUser',"user_id":cert_id,"pwd":pwd2,"pn_mem_id":"mBaby"},function(data,testStatus){
+				 
+					switch(data) {
+						case("0000") :
+							//alert('인증이 완료되었습니다.');
+							$(".btn2_1").hide();
+							$(".btn2_2").show();
+ 
+
+						break;
+						case("1001") :
+							alert('데이터를 정확히 입력해주세요.');
+							return false;
+						break;
+						case("1002") :
+							alert('아이디 혹은 비밀번호를 제대로 입력해주세요');
+							return false;
+						break;
+						case("1003") :
+							alert('이미 인증을 받은 아이디입니다.');
+							//window.location.href = "http://mothernbaby.co.kr/member/member_iwing.asp?mOne=6&mTwo=2";
+							return false;
+						break;
+						case("9999") :
+							alert('처리중 오류가 발생하였습니다. 관리자에게 문의하세요');
+							return false;
+						break;
+					}
+				});
+			}
+		}
+		}else{
+					//로그인 했을시
+				if (cert_id == ""){
+					alert("ID를 입력해주세요.");
+					return false;
+				}
+		  
+				if(pwd2 == ""){
+					alert("비밀번호를 입력해주세요.");
+					return false;
+				}else{
+					jQuery.post("/common/inc/iwing_cert_check.asp",{"proc_type":'confirmUser',"user_id":cert_id,"pwd":pwd2,"pn_mem_id":"mBaby"},function(data,testStatus){
+					 
+						switch(data) {
+							case("0000") :
+								//alert('인증이 완료되었습니다.');
+								$(".btn2_1").hide();
+								$(".btn2_2").show();
+							break;
+							case("1001") :
+								alert('데이터를 정확히 입력해주세요.');
+								return false;
+							break;
+							case("1002") :
+								alert('아이디 혹은 비밀번호를 제대로 입력해주세요');
+								return false;
+							break;
+							case("1003") :
+								alert('이미 인증을 받은 아이디입니다.');
+								//window.location.href = "http://mothernbaby.co.kr/member/member_iwing.asp?mOne=6&mTwo=2";
+								return false;
+							break;
+							case("9999") :
+								alert('처리중 오류가 발생하였습니다. 관리자에게 문의하세요');
+								return false;
+							break;
+						}
+					});
+				}
+		}
+	});
+
+
+
+
+
+		btnSubmit.click(function(){
+			var id1 = jQuery("#mem_id").val();
+			var pwd = jQuery("#pwd").val();
+			var nickname = jQuery("#nickname").val();
+			var hp_1 = jQuery("#hp_1").val();
+			var hp_2 = jQuery("#hp_2").val();
+			var hp_3 = jQuery("#hp_3").val();
+
+			var hp_num = hp_1 + hp_2 + hp_3;
+ 
+			var cert_id = jQuery("#cert_id").val();
+			var pwd2 = jQuery("#pwd2").val();
+
+
+			var Ybirth = jQuery("#Ybirth").val();
+			var Mbirth = jQuery("#Mbirth").val();
+			var Dbirth = jQuery("#Dbirth").val();
+ 
+/*
+
+		proc_type	insertUser	수행명(고정값)
+		user_id	입력값	아이디(이메일주소)
+		pwd	입력값	비밀번호(6~15자리 영문및숫자구성)
+		nickname	입력값	닉네임(10자리)
+		birthday	입력값	생년월일(숫자 8자리)
+		phone	입력값	전화번호(숫자만입력)
+		pn_mem_id	mBaby	파트너 아이디(고정값)
+
+		회원가입완료
+		중복된 아이디일 경우
+		필수 파라미터 값이 없을경우
+		처리중 오류발생
+
+
+*/
+  
+		if (id1 == ""){
+			alert("ID를 입력해주세요.");
+			return false;
+		}else{
+			jQuery.post("/common/inc/iwing_join_check.asp",{"proc_type":'insertUser',"user_id":id1,"pwd":pwd,"nickname":nickname,"Ybirth":Ybirth,"Mbirth":Mbirth,"Dbirth":Dbirth,"phone":hp_num,"pn_mem_id":"mBaby"},function(data,testStatus){
+			 
+				switch(data) {
+					case("0000") :
+						alert('회원가입이 완료되었습니다.');
+					break;
+					case("1000") :
+						alert('중복된 아이디 입니다.');
+						return false;
+					break;
+					case("1001") :
+						alert('데이터를 정확히 입력해주세요.');
+						return false;
+					break;
+					case("9999") :
+						alert('처리중 오류가 발생하였습니다. 관리자에게 문의하세요');
+						return false;
+					break;
+				}
+			});
+		}
+	});
+
+  
+
+	btnSubmit.click(function(){
+
+		var id1 = jQuery("#mem_id").val();
+		var pwd = jQuery("#pwd").val();
+		var nickname = jQuery("#nickname").val();
+		var hp_1 = jQuery("#hp_1").val();
+		var hp_2 = jQuery("#hp_2").val();
+		var hp_3 = jQuery("#hp_3").val();
+
+		var hp_num = hp_1 + hp_2 + hp_3;
+	//	var birth  = ;
+
+ 
+ 
+ 
+
+		var pw = jQuery("#pwd").val();
+		if (!check_info(pw,"패스워드")){ return false }
+
+		mem_pw = jQuery("#pwd").val();
+		mem_pw_check = jQuery("#pwd_check").val();
+		if (mem_pw != mem_pw_check){
+			alert('비밀번호를 다시 확인해 주세요');
+			return false;
+		}
+
+ 
+
+		if  (!checkForm(frm,tar)){ return false }
+		frm.submit();
+	});
+
+
+	frm.submit(function(){
+	}).attr({
+		"target" : "ifrm",
+		"action" : ""
+	});
+
+ 
+	function fncOpenZip(){
+		window.open("/member/iwing.asp","pop_zipcode","width=500px, height=460px");
+	}
+
+	function join(){
+		window.open('http://mothernbaby.co.kr/member/member_join.asp?mOne=6&mTwo=2', '_blank'); 
+	}
+</script>
+
+<script type="text/javascript" src="/common/js/ajax_common.js"></script>
+<script type="text/javascript">
+	function fncSetPart(val){
+		fncAxListHtml("/common/inc/local_ax.asp?local="+val,"#part");
+	}
+</script>
+
+ 
+</html>

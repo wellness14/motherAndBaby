@@ -1,0 +1,90 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* Reset */
+::selection{color:#fff; background:#000000;}
+html,body{width:100%;height:100%}
+html{overflow-y:scroll}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,form,fieldset,p,button{margin:0;padding:0; color:#000000}
+body,h1,h2,h3,h4,input,button{font-family: "Nanum Gothic", sans-serif;font-size:12px;color:#000000}
+body{background-color:#fff;text-align:center;*word-break:break-all;-ms-word-break:break-all}
+img,fieldset,iframe{border:0 none}
+li{list-style:none}
+input,select,button{vertical-align:middle}
+img{vertical-align:top}
+i,em,address{font-style:normal}
+em{color:#898989; display:block;}
+label,button{cursor:pointer}
+button{margin:0;padding:0}
+a{color:#000;text-decoration:none}
+a:hover{ color:#2268bf; text-decoration:none;}
+button *{position:relative}
+button img{left:-3px;*left:auto}
+html:first-child select{height:20px;padding-right:6px}
+option{padding-right:6px}
+hr{display:none}
+legend{*width:0}
+table{border-collapse:collapse;border-spacing:0}
+strong{ font-weight:bold; color:#e44315}
+/* layout */
+
+
+#wrap{ width:1050px; margin:0 auto;}
+#wrap2{ width:1300px; margin:0 auto;}
+#header{position:relative;}
+#container{position:relative; overflow:hidden;}
+#footer{ width:950px; height:447px;position:relative;}
+
+/* top */
+#top{ width:100%; background:#f1f1f1;}
+#cont{position:absolute;top:410px; z-index:999}
+
+/* header */
+#gnb{height:39px; overflow:hidden; width:1050px; margin:0 auto; }
+.rel{ float:left;width:193px;}
+.rel ul {overflow:hidden;}
+.rel ul li{float:left;}
+.relmenu{ overflow:hidden; width:122px; float:left;}
+.k_menu{float:left; height:32px;}
+.h_menu{float:left; height:32px;}
+.logo{ width:196px; height:83px;}
+.logo a{display:inline-block; width:176px; height:75px;}
+.logo_sec{position:relative; }
+.menu{position:absolute; right:0px; top:0px;}
+.lnb{ width:950px; background:#363836; height:41px;}
+.lnb ul li{float:left;}
+.lnb ul li a span{text-indent:-9999px;}
+.lnb ul li a{display:inline-block; height:41px;}
+.lnb ul{overflow:hidden;}
+.re_s{ width:88px; background:url(../img/spr.png) 0px 0px;}
+.re_hotel{ width:58px; background:url(../img/spr.png) -88px 0px;}
+.re_leso{ width:108px; background:url(../img/spr.png) -146px 0px;}
+.re_resi{ width:86px; background:url(../img/spr.png) -254px 0px;}
+.re_re{ width:86px; background:url(../img/spr.png) -340px 0px;}
+.re_local{ width:110px; background:url(../img/spr.png) -425px 0px;}
+.re_nh{ width:91px; background:url(../img/spr.png) -535px 0px;}
+.re_hg{ width:162px; background:url(../img/spr.png) -789px 0px;}
+/* color */
+.red{color:#bd1313;}
+/* etc */
+.fr{float:right !important;}
+.fl{float:left !important;}
+.cl{clear:both;}
+.pdl1{padding-left:1px;}
+.pdl10{padding-left:10px;}
+.pdl125{padding-left:125px;}
+.pdl20{padding-left:710px;}
+.pdr10{padding-right:10px;}
+.pdr20{padding-right:20px;}
+.pdt1{padding-top:1px;}
+.pdt10{padding-top:4px;}
+.pdt15{padding-top:15px;}
+.pdt20{padding-top:20px;}
+.bb0{border-bottom:0px !important;}
+.bb1{border-bottom:1px solid #ccc;}
+.br0{border-right:0px !important;}
+.bl0{border-left:0px !important;}
+.bt0{border-top:0px !important;}
+.on{border-bottom:0px !important; background:#fff !important;}
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);

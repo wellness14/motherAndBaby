@@ -1,0 +1,221 @@
+<%
+'======================================================================
+'업 무 명 : 마더앤베이 - 관리자
+'모듈기능 : 전화상담 내역 보기
+'파 일 명 : service_call_view.asp
+'작성일자 : 2015/06/22
+'작 성 자 : 홍성주
+'-----------------------------------------------------------------------
+'변경일자   변경자  변동내역
+'=======================================================================
+'
+'======================================================================= 
+%>
+<!-- #include virtual = "/common/asp/RSexec.asp" -->
+<!-- #include virtual = "/common/asp/VarDef.asp"-->
+<!-- #include virtual = "/common/asp/FunDef.asp"-->
+<!-- #include virtual="/admin/common/asp/mobile_checkUser.asp"-->
+<%	
+	intIDX = fncRequest("idx")   
+    If intIDX <> "" Then
+		strTable = " FROM MO_BRD_SERVICE WITH(NOLOCK) "
+
+		strWhere = " WHERE MS_CNLKBN='N' AND MS_IDX = '"& intIDX &"' "
+
+		strSql = ""
+		strSql = strSql & "	SELECT * "
+		strSql = strSql & strTable
+		strSql = strSql & strWhere
+		Set Rs = DBExec(strSql,"main")	
+		If Not Rs.EOF Then 
+			arrList = Rs.getRows()
+		End If 
+		Call RSClose(Rs)
+	Else 
+		response.Write "<script type='text/javascript'>history.back(-1);</script>"
+		response.End 
+	End If 	  
+%>
+<script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=32c5af9c21c6232852df18057f9425e7&libraries=services"></script>
+<HTML>
+<HEAD>
+	<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<link rel="stylesheet" type="text/css" href="/admin/common/css/style.css">
+	<link type="text/css" rel="stylesheet" href="/admin/common/css/mega_admin2.css" />
+	<style type="text/css">
+		body{margin:0;padding:0;font:12px/1.3 Dotum;color:#ccc;}
+		div,select, span, table,button,form{margin:0;padding:0;}
+		#container{width:100%;}
+		#container .linmap{}
+		#container .linemap a{font:12px/1.3 Dotum;color:#ccc;text-decoration:none;}
+		#container select{font:12px/1.3 Dotum;}
+		#container .selection{padding:11px 15px 11px 15px;border:2px solid #AABAE0;margin-top:20px;margin-bottom:20px;}
+		#container .selection *{vertical-align:middle;}
+		.footerBtns{position:relative;width:100%;text-align:center;margin-top:20px;}
+		.footerBtns .btns{}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div class="linemap">마더앤베이비 > 회원관리 > <strong>전화상담관리</strong></div>
+		<div class="write">
+			
+			<br />
+			<h1>전화 상담 내역</h1>
+			<table class="tb_style02">
+			<colgroup>
+				<col width="5%" /><col />
+			</colgroup>
+			<thead>
+			<tr>
+				<th>성명</th>
+				<td><%=arrList(2,0)%></td>
+			</tr>
+			<tr>
+				<th>생년월일</th>
+				<td><%=Left(arrList(3,0),4)%>-<%=Mid(arrList(3,0),5,2)%>-<%=Right(arrList(3,0),2)%></td>
+			</tr>
+			<tr>
+				<th>전화번호</th>
+				<td><%=arrList(4,0)%></td>
+			</tr>
+			<tr>
+				<th>핸드폰번호</th>
+				<td><%=arrList(5,0)%></td>
+			</tr>
+			<tr>
+				<th>주소</th>
+				<td>
+				<script>
+						var geocoder = new daum.maps.services.Geocoder();
+						// 주소로 좌표를 검색합니다
+						var tmp_address = '<%=arrList(7,0)%>' + ' ' + '<%=arrList(8,0)%>';
+						geocoder.addr2coord(tmp_address, function(status, result) {
+							// 정상적으로 검색이 완료됐으면 
+							 if (status == daum.maps.services.Status.OK) {
+								var coords = new daum.maps.LatLng(result.addr[0].lat, result.addr[0].lng);
+							} 
+						});   
+				</script>
+					(<%=arrList(6,0)%>)&nbsp;<a href="#" onClick="window.open('http://map.daum.net/link/to/<%=arrList(7,0)%> <%=arrList(8,0)%>,<%=coords%>','길찾기', width= 700, height=500);return false"><%=arrList(7,0)%>&nbsp;<%=arrList(8,0)%></a>
+				</td>
+			</tr>	
+			<tr>
+				<th>지도보기</th>
+				<td>
+						<div id="map" style="width:100%;height:500px;"></div>
+						<script>
+						var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+							mapOption = {
+								center: new daum.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+								level: 4 // 지도의 확대 레벨
+							};  
+
+						// 지도를 생성합니다    
+						var map = new daum.maps.Map(mapContainer, mapOption); 
+						// 주소-좌표 변환 객체를 생성합니다
+						var geocoder = new daum.maps.services.Geocoder();
+						// 주소로 좌표를 검색합니다
+						var tmp_address = '<%=arrList(7,0)%>' + ' ' + '<%=arrList(8,0)%>';
+						geocoder.addr2coord(tmp_address, function(status, result) {
+							// 정상적으로 검색이 완료됐으면 
+							 if (status == daum.maps.services.Status.OK) {
+								var coords = new daum.maps.LatLng(result.addr[0].lat, result.addr[0].lng);
+								
+								// 결과값으로 받은 위치를 마커로 표시합니다
+								var marker = new daum.maps.Marker({
+									map: map,
+									position: coords
+								});
+
+								// 인포윈도우로 장소에 대한 설명을 표시합니다
+								var infowindow = new daum.maps.InfoWindow({
+									content: '<div style="padding:5px;"><%=arrList(7,0)%>&nbsp<%=arrList(8,0)%></div>'
+								});
+								infowindow.open(map, marker);
+							} 
+						});    
+						</script>			
+				</td>
+			</tr>	
+			<tr>
+				<th>신청서비스</th>
+				<td><%=Replace(arrList(9,0),"||", ", ")%></td>
+			</tr>
+			<tr>
+				<th>이용기간</th>	
+				<td><%=arrList(10,0)%></td>
+			</tr>
+			<tr>
+				<th>이용형태</th>	
+				<td><%=arrList(11,0)%></td>
+			</tr>
+			<tr>
+				<th>출산예정일</th>	
+				<td><%=Left(arrList(12,0),4)%>-<%=Mid(arrList(12,0),5,2)%>-<%=Right(arrList(12,0),2)%></td>
+			</tr>
+			<tr>
+				<th>서비스시작 예정일</th>	
+				<td><%=Left(arrList(13,0),4)%>-<%=Mid(arrList(13,0),5,2)%>-<%=Right(arrList(13,0),2)%></td>
+			</tr>
+			<tr>
+				<th>조리원 이용</th>	
+				<td><%=arrList(14,0)%></td>
+			</tr>
+			<tr>
+				<th>출산경험</th>	
+				<td><%=arrList(15,0)%></td>
+			</tr>
+			<tr>
+				<th>특이사항</th>	
+				<td><%=Replace(arrList(16,0),"||", ", ")%></td>
+			</tr>
+			<tr>
+				<th>가족사항</th>	
+				<td><%=Replace(arrList(17,0),"||", ", ")%></td>
+			</tr>
+			<tr>
+				<th>상담완료여부</th>	
+				<td><%=arrList(24,0)%></td>
+			</tr>
+			<tr>
+				<th>상담내용</th>	
+				<td><%=arrList(18,0)%></td>
+			</tr>
+			</thead>
+			</table>
+			<p>&nbsp;</p>
+
+			<table border="0" cellpadding="0" cellspacing="0" bgcolor="white" style="width:100%; height:100px;">
+				<tr>
+					<td align="center">
+						<input type="button" value="수 정" id="btnSubmit" class="button">&nbsp;&nbsp;&nbsp;
+						<input type="button" value="삭 제" id="btnDelte" class="button">&nbsp;&nbsp;&nbsp;
+						<input type="button" value="목 록" class="button" onClick="location.href='./service_list.asp?<%=strLnkUrl%>';">
+					</td>
+				</tr>  
+			</table>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="/common/js/jquery/jquery-latest.js" /></script>
+<iframe id="ifrm" name="ifrm" width="0" height="0"></iframe>
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+		var btn = jQuery('#btnSubmit');
+		var del	= jQuery('#btnDelte');
+
+		btn.click(function(){
+			location.href="./service_ins.asp?idx=<%=intIDX%>&<%=strLnkUrl%>";
+		});
+
+		del.click(function(){
+			if (confirm("삭제 하시겠습니까?")) {
+				jQuery('#ifrm').attr({'src':'/info/info_01_sql.asp?mode=del&idx=<%=intIDX%>&<%=strLnkUrl%>'});
+			}
+		});
+	});
+</script>
+
+</html>

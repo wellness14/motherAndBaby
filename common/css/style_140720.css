@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+
+html,body {position:relative;width:100%; min-height:100%; margin:0; padding:0;}
+body {font:12px/1.4 Dotum,'돋움'; line-height:1.5; color:#666; line-height:1.5; -webkit-text-size-adjust:none; min-height:400px; overflow-y:scroll; overflow-x:hidden;}
+img {max-width:100%}
+ul {list-style:none; margin:0;padding:0}
+
+
+.notice_text{
+ line-height:20px; 
+}
+.notice_text:link, .notice_text:visited{
+ color:#FFFFFF; text-decoration:none;
+}
+
+.notice_text:hover{
+ color:#000000; text-decoration:none;
+}
+
+
+.white_text{
+ color:#FFFFFF; 
+}
+
+
+.post_text{
+ line-height:22px; 
+}
+.post_text:link, .post_text:visited{
+ color:#666; text-decoration:none;
+}
+.post_text:hover{
+ color:#000000; text-decoration:none;
+}
+
+
+.bbs_list{
+ line-height:22px;
+ color:#4c4c4c;
+}
+.bbs_list:link, .bbs_list:visited{
+ color:#4c4c4c; text-decoration:none;
+}
+.bbs_list:hover{
+ color:#000000; text-decoration:none;
+}
+
+
+.page_text{
+ color:#666; 
+ font-size:14px;
+ letter-spacing:12px;
+}
+.page_text:link, .page_text:visited{
+ color:#666; text-decoration:none;
+}
+.page_text:hover{
+ color:#000000; text-decoration:none;
+}
+
+.page_text_on{
+ color:#000000; 
+ font-size:14px;
+ letter-spacing:12px;
+ font-weight:bold;
+}
+
+.event_text{
+ color:#666; 
+ font-size:11px;
+ line-height:20px;
+}
+
+.event_text_1{
+ color:#000000; 
+ font-size:11px;
+ font-weight:bold;
+}
+
+
+
+.textarea {
+    border: 1px solid #cacaca; 
+	font-size: 16px;
+	height:30px;
+    vertical-align: middle;
+	padding-left: 8px;
+	padding-top: 4px;	
+}
+
+.textarea2 {
+    border: 1px solid #cacaca; 
+	font-size: 16px;
+	height:200px;
+	width:500px;
+	vertical-align: middle;
+	padding-left: 8px;		
+	padding-top: 8px;			
+}
+
+.textarea3 {
+    border: 1px solid #cacaca; 
+	font-size: 12px;
+	height:200px;
+	width:350px;
+	vertical-align: middle;
+	padding-left: 8px;		
+	padding-top: 8px;			
+}
+
+.textarea4 {
+    border: 1px solid #cacaca; 
+	font-size: 12px;
+	height:800px;
+	width:760px;
+	vertical-align: middle;
+	padding-left: 8px;		
+	padding-top: 8px;			
+}
+
+.textarea5 {
+    border: 1px solid #cacaca; 
+	font-size: 12px;
+	height:400px;
+	width:760px;
+	vertical-align: middle;
+	padding-left: 8px;		
+	padding-top: 8px;			
+}
+
+.textarea6 {
+    border: 1px solid #cacaca; 
+	font-size: 12px;
+	height:250px;
+	width:760px;
+	vertical-align: middle;
+	padding-left: 8px;		
+	padding-top: 8px;			
+}
+
+.bbs_view {
+    border: 1px solid #e1e1e1;
+	padding-left:30px;
+	padding-top:30px;
+	padding-right:30px;
+	padding-bottom:30px;
+	line-height:20px;
+}
+

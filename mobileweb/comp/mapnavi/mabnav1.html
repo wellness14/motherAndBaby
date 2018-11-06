@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>daum map</title>
+<style type="text/css">
+	.exmap{
+		width:355px;
+		height:419px;
+		background:url(img/bg_map00.jpg) no-repeat;
+	}
+	
+	#con4{margin-left:10px;} 
+	
+	/*.submap{
+		width:730px;
+		height:593px;
+		background:url(img/shseoul.jpg) no-repeat;
+	}*/
+</style>
+</head>
+
+<body>
+
+<div><img src='img/servicemap.jpg' border="0" width="360"px;/></div>
+<div id="ppp">
+	<div class="exmap">
+    	<img src="img/blank.png" border="0" alt="blank" width="330" height="390" usemap="#map" class="blank_nav"/>
+        
+        <map name="map" id="map">
+        	<area shape="poly" data-title="-398px 0" coords="116,103,111,106,108,113,112,118,116,120,118,118,124,121,127,118,130,114,130,109,126,106,126,101,122,99,120,98" href="mabnav1.html" alt="서울">
+        	<area shape="poly" data-title="-782px 0" coords="75,107,89,123,95,118,103,127,108,125,109,109,97,110,93,104,93,92,84,88,74,101" href="mabnav3.html" alt="인천">
+        	<area shape="poly" data-title="0 -456px" coords="142,207,137,206,134,203,133,195,142,187,151,192,151,204" href="mabnav4.html" alt="대전">
+          <area shape="poly" data-title="-398px -456px" coords="9,17,19,16,26,18,34,22,45,21,53,20,60,19,55,13,69,19,79,4,79,22,88,29,73,27,63,33,85,48,80,49,71,47,63,44,60,45,55,48,51,44,53,40,48,39,44,39,40,42,40,43,41,41,40,41,40,42,40,44,40,41,40,42,38,42,34,44,27,45,21,45,15,41,18,33,22,25,16,22" href="mabnav0.html" alt="해외파견">
+          <area shape="poly" data-title="-1166px 0" coords="94,104,94,94,102,93,105,87,103,83,108,83,114,76,111,73,117,66,127,65,132,69,141,70,154,80,152,102,160,107,166,113,163,119,163,125,164,129,164,130,164,133,164,140,152,146,139,159,120,157,109,156,104,149,96,139,102,137,102,131,108,127,110,116,116,120,120,117,125,121,130,115,130,110,127,107,127,102,121,96,114,105,108,109,98,109" href="mabnav2.html" alt="경기도">
+                    
+        </map>        
+  </div>
+</div>
+
+<div id="con4" class="mama4">
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="1" id="ppp3">
+	<div class="submap">
+    	<img src="img/maplist1.jpg" border="0" alt="blank" width="340" height="301" usemap="#detail_Map" class="blank_nav"/>
+        
+        <map name="detail_Map" id="2">
+        <area shape="rect" data-title="-1458px 0" coords="18,84,72,138" href="http://mothernbaby.co.kr/comp/mapnavi/seoulkangseo.html">
+        <area shape="rect" data-title="-1463px -583px" coords="280,211,345,278" href="http://mothernbaby.co.kr/comp/mapnavi/seoulnambu.html">
+        <area shape="rect" data-title="-734px -583px" coords="273,79,340,149" href="http://mothernbaby.co.kr/comp/mapnavi/seouljungbu.html">
+        <area shape="rect" data-title="-5px -583px" coords="263,8,329,76" href="http://mothernbaby.co.kr/comp/mapnavi/seoulbukbu.html">
+        <area shape="rect" data-title="-2192px -583px" coords="65,222,118,276" href="http://mothernbaby.co.kr/comp/mapnavi/seoulseobu.html">
+        <area shape="rect" data-title="-2187px 0" coords="24,159,77,213" href="http://mothernbaby.co.kr/comp/mapnavi/seoulyangcheon.html">
+        <area shape="rect" data-title="-729px 0" coords="82,33,143,95" href="http://mothernbaby.co.kr/comp/mapnavi/seoulseobukbu.html">
+</map>     
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<script src="navicommon/jss/jquery-1.11.0.min.js"></script>
+
+<script>
+	$("#ppp").prepend("<img class='info' src='img/map_layer_select.png' alt='지역을 선택하세요'>")
+	.children("img").css({
+		"position":"absolute",
+		"left":90,
+		"top":150
+	})
+	//마우스가 지도 위로 올라가면 설명 사라지도록
+	$(".exmap").mouseenter(function(){
+		$(".info").fadeOut(500);
+	})
+	//마우스가 지도에서 떠나면 설명이 사라지도록
+	$(".exmap").mouseleave(function(){
+		$(".info").fadeIn(500);
+		$(".exmap").css("background-position","0 0")
+	})
+	//지역에 마우스가 들어가면 해당 지역이 보이도록
+	$(".exmap map area").mouseenter(function(){
+		$(".exmap").css("background-position",$(this).data("title"))
+	})
+	$(".submap map area").mouseenter(function(){
+		$(".submap").css("background-position",$(this).data("title"))
+	})
+</script>
+</body>
+
+</html>
+
+

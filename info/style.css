@@ -1,0 +1,277 @@
+@charset "utf-8";
+
+
+html,body {position:relative;width:100%; min-height:100%; margin:0; padding:0;}
+body {font:12px/1.4 "RixGoM",Dotum,"돋움"; line-height:1.5; color:#666; line-height:1.5; -webkit-text-size-adjust:none; min-height:400px; overflow-y:auto; overflow-x:hidden;}
+/*body {font:12px/1.4 Dotum,'돋움'; line-height:1.5; color:#666; line-height:1.5; -webkit-text-size-adjust:none; min-height:400px; overflow-y:auto; overflow-x:hidden;}*/
+img {max-width:100%}
+
+/* 2016.10.05 - 구충모 
+   기존 컨텐츠이미지 -> 코딩으로 변경하여 글꼴 스타일 추가함. 	
+*/
+@font-face { 
+	font-family: 'RixGoM'; 
+	src: url('../font/RixGoM.eot') format('embedded-opentype'),
+			url('../font/RixGoM.woff') format('woff'), 
+			url('../font/RixGoM.ttf') format('truetype'), 
+			url('../font/RixGoM.svg#RixGoM') format('svg'); 		
+	font-weight: normal; 
+	font-style: normal; 
+} 
+
+
+
+
+
+
+
+
+ul {list-style:none; margin:0;padding:0}
+
+
+.notice_text{
+ line-height:20px; 
+}
+.notice_text:link, .notice_text:visited{
+ color:#FFFFFF; text-decoration:none;
+}
+
+.notice_text:hover{
+ color:#000000; text-decoration:none;
+}
+
+
+.white_text{
+ color:#FFFFFF; 
+}
+
+
+.post_text{
+ line-height:22px; 
+}
+.post_text:link, .post_text:visited{
+ color:#666; text-decoration:none;
+}
+.post_text:hover{
+ color:#000000; text-decoration:none;
+}
+
+
+.bbs_list{
+ line-height:22px;
+ color:#4c4c4c;
+}
+.bbs_list:link, .bbs_list:visited{
+ color:#4c4c4c; text-decoration:none;
+}
+.bbs_list:hover{
+ color:#000000; text-decoration:none;
+}
+
+
+.page_text{
+ color:#666; 
+ font-size:14px;
+ letter-spacing:12px;
+}
+.page_text:link, .page_text:visited{
+ color:#666; text-decoration:none;
+}
+.page_text:hover{
+ color:#000000; text-decoration:none;
+}
+
+.page_text_on{
+ color:#000000; 
+ font-size:14px;
+ letter-spacing:12px;
+ font-weight:bold;
+}
+
+.event_text{
+ color:#666; 
+ font-size:11px;
+ line-height:20px;
+}
+
+.event_text_1{
+ color:#000000; 
+ font-size:11px;
+ font-weight:bold;
+}
+
+
+
+.textarea {
+    border: 1px solid #cacaca; 
+  font-size: 16px;
+  height:30px;
+    vertical-align: middle;
+  padding-left: 8px;
+  padding-top: 4px; 
+}
+
+.textarea2 {
+    border: 1px solid #cacaca; 
+  font-size: 16px;
+  height:200px;
+  width:500px;
+  vertical-align: middle;
+  padding-left: 8px;    
+  padding-top: 8px;     
+}
+
+.textarea3 {
+    border: 1px solid #cacaca; 
+  font-size: 12px;
+  height:200px;
+  width:350px;
+  vertical-align: middle;
+  padding-left: 8px;    
+  padding-top: 8px;     
+}
+
+.textarea4 {
+    border: 1px solid #cacaca; 
+  font-size: 12px;
+  height:800px;
+  width:760px;
+  vertical-align: middle;
+  padding-left: 8px;    
+  padding-top: 8px;     
+}
+
+.textarea5 {
+    border: 1px solid #cacaca; 
+  font-size: 12px;
+  height:400px;
+  width:760px;
+  vertical-align: middle;
+  padding-left: 8px;    
+  padding-top: 8px;     
+}
+
+.textarea6 {
+    border: 1px solid #cacaca; 
+  font-size: 12px;
+  height:250px;
+  width:760px;
+  vertical-align: middle;
+  padding-left: 8px;    
+  padding-top: 8px;     
+}
+
+.textarea7 {
+    border: 1px solid #cacaca; 
+  font-size: 12px;
+  height:70px;
+  width:500px;
+  vertical-align: middle;
+  padding-left: 8px;    
+  padding-top: 8px;     
+}
+
+.bbs_view {
+    border: 1px solid #e1e1e1;
+  padding-left:30px;
+  padding-top:30px;
+  padding-right:30px;
+  padding-bottom:30px;
+  line-height:20px;
+}
+
+
+
+/* 2014.07.18 메인 수정 */
+#showcase {width:100%; height:529px; position:absolute; text-align:center; }
+#showcase a {position:absolute; display:block; width:100%; height:529px;}
+
+/* 2014.07.28 이벤트 수정 */
+#eventArea {margin:0 0 60px 40px; border-collapse:collapse}
+#eventArea td {vertical-align:top; padding:0; width:255px; border:1px solid #e0e0e0; background:#f4f4f4;}
+#eventArea td img {width:255px; height:178px; border-bottom:1px solid #e0e0e0;}
+#eventArea td .event_text {margin:12px 26px;}
+#eventArea td .event_text .event_text_1 {color:#3b3b3b}
+
+/* 2016.10.15 자문단 소개 - spacemonkey */
+.expert_group{font-family:"RixGoM";}
+.expert_group h3{font-size: 2rem;color:#B2E5ED;letter-spacing: -1px;line-height: 1;}
+.expert_group h3 span{font-weight: bold;font-size: 2.8rem;color:#52BFCC;display: block;}
+.expert_group dt{}
+.expert_group dt .title{color:#000;font-size: 2rem;font-weight: bold;letter-spacing: -1px;}
+.expert_group dt span:last-child{color:#FDAE37;margin-left: 20px;}
+.expert_group dt span:last-child i{margin-right: 20px;}
+.expert_group dd{color:#A8A8A8;margin:0 0 10px 0;border-bottom:1px dotted #a8a8a8;padding-bottom:20px;}
+.expert_group a{text-decoration: none;}
+.expert_group a:link{color:#A8A8A8;}
+.expert_group a:visited{color:#A8A8A8;}
+.expert_group a:hover{color:#A8A8A8;}
+.expert_group a:active{color:#A8A8A8;}
+
+/* 2017.05.31 협력사 소개 - spacemonkey */
+.subtit h3{color:#B2E5ED;font-weight: bold;margin-bottom: 0;font-size: 18px;}
+.subtit ul{clear: both;}
+.subtit li{width:192.4px;height:192.4px;float:left;box-sizing:border-box;}
+.subtit li a{display: block;width:100%;height:192.4px;}
+.hospital li:nth-child(1) a{background: url("/image/Translator_24.png")no-repeat center center;background-size: 90%;}
+.hospital li:nth-child(2) a{background: url("/image/Translator_25.png")no-repeat center center;background-size: 90%;}
+.hospital li:nth-child(3) a{background: url("/image/hospital (1).jpg")no-repeat center center;background-size: 90%;}
+.hospital li:nth-child(4) a{background: url("/image/hospital (2).jpg")no-repeat center center;background-size: 90%;}
+.hospital li:nth-child(5) a{background: url("/image/hospital (3).jpg")no-repeat center center;background-size: 90%;}
+.hospital li:nth-child(6) a{background: url("/image/hospital (4).jpg")no-repeat center center;background-size: 90%;}
+.hospital li:nth-child(7) a{background: url("/image/hospital (5).jpg")no-repeat center center;background-size: 90%;}
+.hospital li:nth-child(8) a{background: url("/image/hospital (6).jpg")no-repeat center center;background-size: 90%;}
+.hospital li:nth-child(9) a{background: url("/image/hospital (7).jpg")no-repeat center center;background-size: 90%;}
+
+.company li:nth-child(1) a{background: url("/image/Translator_32.png")no-repeat center center;background-size: 90%;}
+.company li:nth-child(2) a{background: url("/image/Translator_37.jpg")no-repeat center center;background-size: 90%;}
+.company li:nth-child(3) a{background: url("/image/Translator_38.png")no-repeat center center;background-size: 90%;}
+.company li:nth-child(4) a{background: url("/image/ergobaby.jpg")no-repeat center center;background-size: 90%;}
+.company li:nth-child(5) a{background: url("/image/Translator_40.png")no-repeat center center;background-size: 90%;}
+.company li:nth-child(6) a{background: url("/image/Translator_45.png")no-repeat center center;background-size: 90%;}
+.company li:nth-child(7) a{background: url("/image/Translator_46.png")no-repeat center center;background-size: 90%;}
+.company li:nth-child(8) a{background: url("/image/Translator_47.png")no-repeat center center;background-size: 90%;}
+.company li:nth-child(9) a{background: url("/image/Translator_48.png")no-repeat center center;background-size: 90%;}
+.company li:nth-child(10) a{background: url("/image/Translator_56.png")no-repeat center center;background-size: 90%;}
+.company li:nth-child(11) a{background: url("/image/Translator_61.png")no-repeat center center;background-size: 90%;}
+.company li:nth-child(12) a{background: url("/image/Translator_62.png")no-repeat center center;background-size: 90%;}
+.company li:nth-child(13) a{background: url("/image/Translator_64.png")no-repeat center center;background-size: 90%;}
+.company li:nth-child(14) a{background: url("/image/Translator_69.png")no-repeat center center;background-size: 90%;}
+.company li:nth-child(15) a{background: url("/image/Translator_71.png")no-repeat center center;background-size: 90%;}
+.company li:nth-child(16) a{background: url("/image/Translator_72.jpg")no-repeat center center;background-size: 90%;}
+.company li:nth-child(17) a{background: url("/image/Translator_78.png")no-repeat center center;background-size: 90%;}
+.company li:nth-child(18) a{background: url("/image/Translator_79.png")no-repeat center center;background-size: 90%;}
+.company li:nth-child(19) a{background: url("/image/Translator_80.png")no-repeat center center;background-size: 90%;}
+.company li:nth-child(20) a{background: url("/image/Translator_85.png")no-repeat center center;background-size: 90%;}
+.company li:nth-child(21) a{background: url("/image/Translator_86.png")no-repeat center center;background-size: 90%;}
+.company li:nth-child(22) a{background: url("/image/greenmedical.jpg")no-repeat center center;background-size: 90%;}
+.company li:nth-child(23) a{background: url("/image/rowell.jpg")no-repeat center center;background-size: 90%;}
+.company li:nth-child(24) a{background: url("/image/libero.jpg")no-repeat center center;background-size: 90%;}
+.company li:nth-child(25) a{background: url("/image/motherk.jpg")no-repeat center center;background-size: 90%;}
+.company li:nth-child(26) a{background: url("/image/mustela.jpg")no-repeat center center;background-size: 90%;}
+.company li:nth-child(27) a{background: url("/image/educhallenge.jpg")no-repeat center center;background-size: 90%;}
+.company li:nth-child(28) a{background: url("/image/mobiledoctor.jpg")no-repeat center center;background-size: 90%;}
+
+.org li:nth-child(1) a{background: url("/image/Translator1.png")no-repeat center center;background-size: 90%;}
+.org li:nth-child(2) a{background: url("/image/Translator2.png")no-repeat center center;background-size: 90%;}
+.org li:nth-child(3) a{background: url("/image/Translator3.png")no-repeat center center;background-size: 90%;}
+.org li:nth-child(4) a{background: url("/image/Translator4.png")no-repeat center center;background-size: 90%;}
+.org li:nth-child(5) a{background: url("/image/Translator5.png")no-repeat center center;background-size: 90%;}
+.org li:nth-child(6) a{background: url("/image/Translator6.png")no-repeat center center;background-size: 90%;}
+.org li:nth-child(7) a{background: url("/image/Translator7.png")no-repeat center center;background-size: 90%;}
+.org li:nth-child(8) a{background: url("/image/Translator8.png")no-repeat center center;background-size: 90%;}
+.org li:nth-child(9) a{background: url("/image/Translator9.png")no-repeat center center;background-size: 90%;}
+.org li:nth-child(10) a{background: url("/image/Translator10.png")no-repeat center center;background-size: 90%;}
+.org li:nth-child(11) a{background: url("/image/Translator11.png")no-repeat center center;background-size: 90%;}
+.org li:nth-child(12) a{background: url("/image/Translator12.png")no-repeat center center;background-size: 90%;}
+.org li:nth-child(13) a{background: url("/image/Translator13.png")no-repeat center center;background-size: 90%;}
+
+
+/* 2017.08.07 메인 개편 - spacemonkey */
+.cont-row {width: 1175px;height: 238px;clear: both;overflow: hidden;}
+.cont-row li{position: relative;float: left;}
+.cont-row li img{max-width:100%;border:0;}
+
+/*2017.10.12 - spacemonnkey*/
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+.consult-label{ font-family:'Noto Sans KR'; width: 100px; }

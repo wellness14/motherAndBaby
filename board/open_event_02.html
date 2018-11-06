@@ -1,0 +1,143 @@
+ 
+
+<%
+
+ dim strBrowser
+'strBrowser = Request.servervariables("HTTP_USER_AGENT")
+
+'If InStr(strBrowser, "Mozilla/5.0") > 0 Then
+'    strUserBrowser = "FireFox"
+'else
+'	strUserBrowser = "IE 11"
+'End if
+ 
+ 
+strBrowser = Request.servervariables("HTTP_USER_AGENT")
+If InStr(strBrowser, "MSIE7") > 0 Then
+    strUserBrowser = "IE 7"
+Elseif InStr(strBrowser, "Mozilla/5.0") > 0 Then
+    strUserBrowser = "FireFox"
+End if
+
+
+url_add =  "http://mothernbaby.co.kr/board/board_01_view.asp?idx=37&brd_id=EVENT&sec_flg=Y"
+'"<a href='http://me2.do/5FLhYmYv'><img src='http://mothernbaby.co.kr/image/open_event_02.jpg'></a>"
+'"http://mothernbaby.co.kr/board/board_01_view.asp?idx=37&brd_id=EVENT&sec_flg=Y" '"http://www.mothernbaby.co.kr/board/open_event_02.html"  
+
+ 
+
+%>
+
+
+ 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0 ,user-scalable=no , target-densitydpi=medium-dpi" />
+ 
+<title>마더앤베이비</title>
+
+
+<script type="text/javascript" language="javascript">
+
+	 
+function copy(){
+	//var url = "http://mothernbaby.co.kr/board/board_01_view_test.asp?idx=37&brd_id=EVENT&sec_flg=Y";
+	//var url = "http://mothernbaby.co.kr/board/board_01_view.asp?idx=37&brd_id=EVENT&sec_flg=Y";
+	//var url =	"http://me2.do/G69ffQ9O";
+		var str = "<%=url_add%>";
+		window.clipboardData.setData('Text',str);
+		alert("소스가 복사되었습니다. 내 블로그에서 ctrl+v로 붙여 넣어주세요.");
+}
+
+
+
+
+function SNSScrap(){
+
+		htmlenct = htmlenct = encodeURIComponent("맞춤형 산후관리서비스 마더앤베이비 수원·동작·관악·금천지사 오픈이벤트");
+		htmlencu = encodeURIComponent("http://me2.do/5FLhYmYv");
+
+
+		gourl="http://twitter.com/home?status="+ htmlenct + " " + htmlencu;
+		window.open(gourl);
+			 
+}
+
+</script>
+ 
+</head>
+<div class="code">
+    <code>
+        <script type="text/javascript"><!--
+            function copy_trackback(trb) {
+                var IE=(document.all)?true:false;
+                if (IE) {
+                    if(confirm("이 글의 트랙백 주소를 클립보드에 복사하시겠습니까?"))
+                        window.clipboardData.setData("Text", trb);
+                } else {
+                    temp = prompt("Ctrl+C를 눌러 복사하시고, 내 블로그에 붙여 넣어주세요.",trb);
+                }
+            }
+        //--></script>
+    </code>
+</div>
+
+<script>//alert("<%=is_mobile%>");</script>
+<body>
+
+
+
+ 
+<img src="http://mothernbaby.co.kr/image/open_event_02.jpg" style="width:100%;height:100%;" scroll="no" usemap="#Map" border="0" />	
+ <!-- width="740" height="3409" -->
+
+
+
+<map name="Map" id="Map">
+ <area shape="rect" coords="3,3298,741,3410" href="http://me2.do/GiueemnJ" target="_blank" /><!-- 이벤트 링크 -->
+
+<% If strBrowser = "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:40.0) Gecko/20100101 Firefox/40.0" then%>
+  <area shape="rect" coords="229,2054,303,2127" href="https://twitter.com/intent/tweet?url=http://me2.do/G69ffQ9O&text=맞춤형 산후관리서비스 마더앤베이비 수원·동작·관악·금천지사 오픈이벤트" target="_blank" />
+
+<% ElseIf strBrowser = "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36" then %>
+ <area shape="rect" coords="229,2054,303,2127" href="https://twitter.com/intent/tweet?text=맞춤형 산후관리서비스 마더앤베이비 수원·동작·관악·금천지사 오픈이벤트&url=http://me2.do/5FLhYmYv" target="_blank" />
+
+
+
+<% Else ' "Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko" %>
+<area shape="rect" coords="229,2054,303,2127" onclick="SNSScrap();" href="#" target="_self" />
+
+<% End if%>
+  <area shape="rect" coords="229,2054,303,2127" href="https://twitter.com/intent/tweet?text=맞춤형 산후관리서비스 마더앤베이비 수원·동작·관악·금천지사 오픈이벤트&url=http://me2.do/5FLhYmYv" target="_blank" />
+  
+  <% If strBrowser = "Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko" then%>
+
+  <area shape="rect" coords="329,2054,396,2126" onclick="copy();"href="#" />
+  <% Else %>
+	<div class="entry fix" style="padding: 0 5px; border: solid 1px #CCCCCC">
+		<code>
+			<a href="http://mothernbaby.co.kr/board/board_01_view.asp?idx=37&brd_id=EVENT&sec_flg=Y" onclick="copy_trackback(this.href); return false;"><area shape="rect" coords="329,2054,396,2126" href="#" /></a>
+		</code> 
+	</div>
+
+  <% End if%>
+  
+  <area shape="rect" coords="423,2055,496,2126" href="http://www.facebook.com/sharer/sharer.php?u=http://me2.do/5FLhYmYv" target="_blank"/>
+
+ 
+  <!--
+
+  <area shape="rect" coords="3,3298,741,3410" href="여기에 페이지 링크값" target="_blank" />
+  <area shape="rect" coords="229,2054,303,2127" href="https://twitter.com/intent/tweet?text=맞춤형 산후관리서비스 마더앤베이비 수원·동작·관악·금천지사 오픈이벤트&url=http://mothernbaby.co.kr/board/board_01_view_test.asp" target="_blank" />
+  <area shape="rect" coords="329,2054,396,2126" href="#" onClick="copy();"/>
+  <area shape="rect" coords="423,2055,496,2126" href="http://www.facebook.com/sharer/sharer.php?u=http://mothernbaby.co.kr/board/board_01_view_test.asp" target="_blank"/>
+
+	http://mothernbaby.co.kr/board/board_01_view_test.asp?idx=35&brd_id=EVENT&sec_flg=Y
+  -->
+
+
+</map>
+</body>
+
+
+ 

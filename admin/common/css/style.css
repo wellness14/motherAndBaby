@@ -1,0 +1,89 @@
+form {
+    margin: 0;
+    padding: 0;
+}
+img {
+	border: 0;
+}
+td {
+	font-size: 9pt;
+	color: #3f3f3f;
+	text-decoration: none;
+	font-family: ±¼¸²,arial;
+	line-height: 11pt
+}
+a:link		{ text-decoration:none; color:#003AC0; letter-spacing:0pt; line-height:140%; }
+a:visited	{ text-decoration:none; color:#003AC0; letter-spacing:0pt; line-height:140%; }
+a:hover		{ text-decoration:underline; color:black; letter-spacing:0pt; line-height:140%; }
+a:active	{ text-decoration:none; color:#58595B; letter-spacing:0pt; line-height:140%; }
+a font:hover	{ text-decoration:none; color:black; letter-spacing:0pt; line-height:140%; }
+
+.divNavi {
+	width: 100%;
+	height: auto;
+	background-color: #90bcd8;
+	color: white;
+	font-size: 10pt;
+	padding: 5px 0 5px 20px;
+}
+.divMain {
+	width: 100%;
+	height: 100%;
+	padding: 10px 0px 0px 10px;
+}
+.tbl01 {
+	border-bottom: 2px solid black;
+	margin: 10px;
+}
+.tbl02 {
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	margin: 10px;
+}
+
+.tblth01 {
+	font-size: 9pt;
+	padding: 5px 0px 5px 0px;
+	border-top: 2px solid black;
+	border-bottom: 1px solid black;
+}
+.tblth02 {
+	font-size: 9pt;
+	padding: 5px 0px 5px 0px;
+	border-bottom: 1px dotted black;
+}
+
+.tblTd01 {
+	font-size: 9pt;
+	text-align: center;
+	padding: 5px 0px 5px 0px;
+	border-bottom: 1px dotted black;
+}
+.tblTd02 {
+	font-size: 9pt;
+	text-align: left;
+	padding: 5px 0px 5px 5px;
+	border-bottom: 1px dotted black;
+}
+.btnAdd {
+	font-size: 9pt;
+	color: blue;
+}
+.btnDelete {
+	font-size: 9pt;
+	color: red;
+}
+.btnOpenFlg {
+	font-size: 9pt;
+	color: blue;
+}
+.spnModify {
+	cursor: pointer;
+	text-decoration: underline;
+}
+.spnOrd {
+	cursor: pointer;
+}
+
+
+

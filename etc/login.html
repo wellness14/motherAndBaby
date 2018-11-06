@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<link href="style.css" rel="stylesheet"> 
+    <title> admin </title>
+    <style> 
+    </style>
+ 
+	<script> 
+			$(document).ready(function() {	 
+				  
+				$(".mig_close_btn").click(function() { 
+					$(".jb-left-container").hide();
+					$(".mig_close_btn").hide();
+					$(".jb-left-sidebar").hide();
+					$(".mig_open_btn").show();
+					$(".jb-left-container-close").show(); 
+				}).css("cursor", "pointer");
+
+				$(".mig_open_btn").click(function() { 
+					$(".mig_close_btn").show();
+					$(".mig_open_btn").hide();
+					$(".jb-left-sidebar").show();
+					$(".jb-left-container").show();
+					$(".jb-left-container-close").hide();
+				}).css("cursor", "pointer"); 
+ 
+			});
+	</script> 
+  </head>
+
+
+  <body class="login_body">  
+	  <div class="login_container"> 
+		<div class="login_view">
+			<div class="login_menu">
+				<span class="login_span1">I’M PLATFORM</span> <br>
+				<span class="login_span2">(integrated Management) </span> <br>
+				<p><span class="login_span3">통합관리자 시스템 </span> </p>
+			</div> 
+		</div>
+			
+			<div class="input_button"> 
+				<div class="login_input"> 
+					<input type="text" name="user_id" id="user_id" class="login_input_01" placeholder="아이디" />
+				</div>
+				<div class="login_input"> 
+					<input type="password" name="user_pass" id="user_pass" class="login_input_01" placeholder="비밀번호" />
+				</div>
+				<div class="login_btn"> 
+					<img src="/etc/image/main_login_bt.jpg" />
+					<div class="login_text"> 
+						로그인을 하시면 관리서비스를 이용할 수 있습니다.
+						<p>문의전화02)557-3579<p>
+					</div>
+				</div>
+				<div class="login_bg">
+					<img src="/etc/image/login_bg.png" />
+				</div> 
+			</div> 
+
+      </div> 
+		  <div class="jb-footer">
+				2015 Wellness Intelligence <br>
+				copyright Wellness Intelligence Corp. All rights reserved.
+		  </div>
+  </body>
+</html>

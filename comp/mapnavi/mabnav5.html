@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>daum map</title>
+<style type="text/css">
+	.exmap{
+		width:369px;
+		height:419px;
+		background:url(img/bg_map00.jpg) no-repeat;
+	}
+	.mama4{float:left;}
+	#con4{margin-left:10px;}
+	
+	.submap{
+		width:730px;
+		height:593px;
+		background:url(img/gyeongbuk/gyeongbuk.png) no-repeat;
+	}
+
+	
+
+</style>
+</head>
+
+<body>
+
+
+<div class="mama4" id="ppp">
+	<div class="exmap">
+    	<img src="img/blank.png" border="0" alt="blank" width="370" height="420" usemap="#map" class="blank_nav"/>
+        
+              <map name="map" id="map">
+        	<area shape="poly" data-title="-1166px 0" coords="97,106,97,96,105,95,108,89,106,85,111,85,117,78,114,75,120,67,131,66,136,71,145,72,158,82,156,104,164,109,171,115,168,121,168,127,169,131,169,132,169,135,169,143,156,149,143,162,124,160,112,159,107,152,99,142,105,139,105,133,111,129,113,118,119,122,123,119,129,123,134,117,134,112,131,109,131,104,125,98,117,107,111,111,101,111" href="mabnav2.html" alt="경기도">
+        	<area shape="poly"  data-title="-782px -456px" coords="10,18,20,17,27,19,35,23,47,22,55,21,62,20,57,14,71,20,81,5,81,23,91,30,75,28,65,34,88,49,83,50,73,48,65,45,62,46,57,49,53,45,55,41,50,40,46,40,42,43,42,44,43,42,42,42,42,43,42,45,42,42,42,43,39,43,35,45,28,46,22,46,16,42,19,34,23,26,17,23" href="mabnav0.html" alt="해외파견">
+<!--         	<area shape="poly" data-title="0 -456px" coords="146,211,141,209,138,206,137,198,146,190,155,195,155,207" href="mabnav4.html" alt="대전"> -->
+          <area shape="poly" data-title="-782px 0" coords="77,109,92,125,98,120,106,129,111,127,112,111,100,112,96,106,96,94,87,90,76,103" href="mabnav3.html" alt="인천">
+          <area shape="poly" data-title="-398px 0" coords="119,105,114,108,111,115,115,120,119,122,121,120,128,123,131,120,134,116,134,111,130,108,130,103,126,101,123,100" href="mabnav1.html" alt="서울">
+                    
+<!--           <area shape="poly" data-title="-398px -456px" coords="206,151,207,163,196,162,182,170,173,179,175,190,171,205,182,209,177,218,174,225,174,232,189,237,195,251,201,251,204,242,204,233,213,223,225,225,228,236,217,248,229,254,236,247,243,252,253,244,269,248,277,226,276,221,269,223,264,201,269,193,266,181,271,174,266,161,267,153,259,141,251,148,237,147,223,148" href="mabnav5.html" alt="경상북도"> -->
+        </map>    
+  </div>
+</div>
+
+<div id="con4" class="mama4">
+<a href ="http://mothernbaby.co.kr/comp/comp_15_05.asp" target="_blank"><img src="img/mapside.jpg" width="361" height="420" usemap="#Map2"  border="0" /></a>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="mama4" id="ppp3">
+	<div class="submap">
+    	<img src="img/blank.png" border="0" name="sub_img"  alt="blank" width="725" height="588" usemap="#detail_Map" class="blank_nav"/>
+        
+        <map name="detail_Map" id="2">
+          
+		  <!--김천-->
+         <area shape="poly"onmouseover="if(document.images) sub_img.src='img/gyeongbuk/gyeongbuk_gimcheon_Rov.png'"  onmouseout="if(document.images) 
+		 data-title="-797px 0px" coords="166,330,165,337,168,344,163,347,156,344,138,390,107,399,124,424,115,443,135,466,149,462,159,474,176,470,182,457,171,433,182,437,186,429,199,428,205,419,203,408,212,399,237,393,240,389,234,379,236,354,227,344,227,335,197,322" href="http://mothernbaby.co.kr/comp/mapnavi/gyeongbuk/gimcheon.html">
+        <!--구미-->
+		<area shape="poly"onmouseover="if(document.images) sub_img.src='img/gyeongbuk/gyeongbuk_gumi_Rov.png'"  onmouseout="if(document.images) 
+		data-title="-1598px 0px" coords="199,322,223,313,228,293,236,292,245,303,258,297,266,305,280,310,274,319,280,340,290,337,299,350,309,348,321,385,304,378,293,388,277,385,267,392,238,387,239,380,241,358,230,346,230,335" href="http://mothernbaby.co.kr/comp/mapnavi/gyeongbuk/gumi.html">
+      </map>     
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<script src="navicommon/jss/jquery-1.11.0.min.js"></script>
+
+<script>
+	$("#ppp").prepend("<img class='info' src='img/map_layer_select.png' alt='지역을 선택하세요'>")
+	.children("img").css({
+		"position":"absolute",
+		"left":90,
+		"top":150
+	})
+	//마우스가 지도 위로 올라가면 설명 사라지도록
+	$(".exmap").mouseenter(function(){
+		$(".info").fadeOut(500);
+	})
+	//마우스가 지도에서 떠나면 설명이 사라지도록
+	$(".exmap").mouseleave(function(){
+		$(".info").fadeIn(500);
+		$(".exmap").css("background-position","0 0")
+	})
+	//지역에 마우스가 들어가면 해당 지역이 보이도록
+	$(".exmap map area").mouseenter(function(){
+		$(".exmap").css("background-position",$(this).data("title"))
+	})
+	$(".submap map area").mouseenter(function(){
+		$(".submap").css("background-position",$(this).data("title"))
+	})
+</script>
+
+</body>
+
+</html>
+
+

@@ -1,0 +1,18 @@
+#loginWrap{width:500px;margin: 50px auto 0;}
+#loginWrap h2{font-size: 30px;}
+#loginWrap form{position: relative;margin-top: 50px;}
+#loginWrap fieldset{}
+#loginWrap fieldset legend{text-indent: -9999px;overflow: hidden;}
+#loginWrap fieldset h3{text-align: center;font-size: 22px;}
+#loginWrap fieldset h4{text-align: center;font-size: 12px;}
+#loginWrap fieldset input{padding: 16px;border-radius:7px;display: block;margin: 15px;width: 300px;font-size:18px;height: 18px;}
+#loginWrap fieldset input:focus{outline: none;}
+#loginWrap fieldset input#adminId{margin-top: 35px;}
+#loginWrap fieldset input#adminPw{}
+#loginWrap fieldset button#loginBtn{position:absolute;top:137px;right:20px;height: 121px;width: 100px;background: #e74c3c;border-radius:7px;padding: 10px;color:white;font-size:22px;cursor: pointer;}
+#loginWrap fieldset button#loginBtn:active{outline: none;}
+#loginWrap fieldset button#loginBtn i.fa-lock{font-size: 30px;}
+#loginWrap > p{text-align: center;/*padding:3px;*/}
+#loginWrap > p#first-line{margin-top: 30px;}
+#loginWrap #loginFooter{margin-top: 150px;}
+#loginWrap #loginFooter p{text-align: center;}

@@ -1,0 +1,37 @@
+.contentWrap{width:100%;}
+.contentWrap img{width:100%;}
+form table{width:100%;padding:10px;background-color: #ededed;margin-top: -8px;}	
+form table tr{}	
+form table tr label{font-size: 1.2em;display: block;padding:5px 0;color:#606060;font-weight: 300;}	
+form table tr input[type="text"]{border:1px solid #eaeaea;padding:5px;width:100%;font-size: 1.1em;color:#b8b8b8;font-weight: 300;height:40px;}	
+form table tr:nth-child(3) select{border:1px solid #eaeaea;padding:5px;width:80px;font-size: 1.1em;color:#b8b8b8;font-weight: 300;height:36px;font-size: 1.1em;text-align: center;color:#191919;background-color: white;border:none;font-weight: 400;}	
+form table tr:nth-child(3) input{border:1px solid #eaeaea;padding:5px;width:80px;font-size: 1.1em;color:#b8b8b8;font-weight: 300;height:40px;}	
+form table tr:nth-child(3) span{padding:0 10px;}	
+form table tr:nth-child(4) select{border:1px solid #eaeaea;padding:5px;width:80px;height:36px;font-size: 1.1em;text-align: center;color:#191919;background-color: white;border:none;font-weight: 400;}	
+form table tr:nth-child(4) input{border:1px solid #eaeaea;padding:5px;width:80px;font-size: 1.1em;color:#b8b8b8;font-weight: 300;height:40px;}	
+form table tr:nth-child(4) span{padding:0 10px;}
+form table tr:nth-child(5) input.postalcode{width:50%;}
+form table tr:nth-child(5) a{display: inline-block;width:30%;margin-left: 10%;background-color: white;color:#ee4d37;border-radius: 5px;border:1px solid #ee4d37;font-weight: 400;font-size: 1.3em;text-align: center;height:40px;line-height: 40px;}
+form table tr:nth-child(5) input.addr01{margin:20px 0;}
+form table tr:nth-child(5) input.addr02{}
+form table tr:nth-child(6) textarea{width:100%;padding:10px;height:200px;border:1px solid #eaeaea;}
+form table tr:nth-child(7) .agreeCheck{width:100%;padding:10px;background-color: white;margin: 10px 0;color:#606060;font-weight: 300;font-size: 1.2em;}
+form table tr:nth-child(7) .agreeCheck input{width:25px;height:25px;float: right;vertical-align: middle;border:1px solid rgba(0,0,0,0.1);margin-top: -2px;}
+
+.contentWrap > a{display: block;width:100%;padding:20px;border-bottom:1px solid rgba(0,0,0,0.1);background-color: white;}
+.contentWrap > a p{font-weight: bold;margin-bottom: 5px;font-size: 1.3em;}
+.contentWrap > a p strong{margin-right: 10px;}
+.contentWrap > a span.name{display: inline-block;font-weight: bold;color:gray;padding-right: 10px;border-right:1px solid rgba(0,0,0,0.1);line-height: 10px;}
+.contentWrap > a span.date{display: inline-block;color:#838383;padding-left: 10px;}
+/*.contentWrap > span.lazyload{display: block;margin:30px auto;width:40px;height:40px;line-height: 40px;background-color: gray;text-align: center;border-radius: 40px;color:white;font-size: 1.6em;}*/
+.contentWrap > ul{width:240px;margin:30px auto;padding-bottom: 30px;}
+.contentWrap > ul li{float: left;width:80px;height:40px;line-height: 40px;text-align: center;}
+.contentWrap > ul li strong.color{color:blue;}
+.contentWrap > ul li:nth-child(2){font-size: 1.2em;}
+.contentWrap > ul li a{display: inline-block;text-align: center;width:80%;height:40px;background-color: #eaeaea;border-radius: 5px;line-height: 40px;font-size: 1.2em;margin:0 auto;}
+.contentWrap.bg{background-color: #ededed;}
+.content{margin-top: 10px;width:100%;padding:20px;background-color: white;line-height: 30px;font-size: 1.2em;text-align: justify;}
+.content ul{width:270px;margin:30px auto;height:50px;}
+.content ul li{float: left;width:90px;}
+.content ul li a{display: block;width:70px;height:70px;text-align: center;border:1px solid #eaeaea;border-radius: 70px;color:#838383;margin:0 auto;}
+.content ul li a i{margin-top: 11px;font-size: 18px;}

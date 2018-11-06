@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+<title>맘초 이벤트</title>
+
+<link href="css/jquery.fancybox.css" rel="stylesheet" />
+<style>
+	@charset "utf-8";
+	/* reset */
+	*{box-sizing: border-box;}
+	body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,dl,dt,form,input,button,fieldset,textarea,select{margin:0; padding:0;letter-spacing: -1px;}
+	body,h1,h2,h3,h4,h5,h6,th,td,input,button,textarea,select,option{font:12px/1.5 'NotoRegular','NotoMedium','NotoBold',sans-serif;}
+	ul,ol,li{list-style:none;}
+	img,button,fieldset{border:none;}
+	a{text-decoration:none; color:black;}
+	
+	/*body{background-color: #FFE4B9;}*/
+	#wrap{width:100%;}
+	.page02{width:740px;height:452px;background: url("img/page021.jpg") no-repeat center center; background-size: cover;margin:0 auto;background-color: #FFE4B9;}
+	.page02 > input[type="checkbox"]{margin-left: 470px;vertical-align: middle;}
+	.page02 > span{display: inline-block;line-height: 20px;margin-top: 15px;}
+	.page02 > a{display: inline-block;margin-left: 20px;padding: 3px;background-color: #999;color:white;border-radius: 5px;}
+	/*#wrap form{width:680px;height:405px;padding-left: 270px;margin-top: -10px;}
+	#wrap form input[type="text"]{height:30px;width:105px;border:none;text-indent: 10px;}
+	#wrap form select{text-indent: 10px;}
+	#wrap form select.phone01{margin-top:81px;width:105px;height:30px;border:none;}
+	#wrap form input.phone02[type="text"]{margin-left: 40px;}
+	#wrap form input.phone03[type="text"]{margin-left: 33px;}
+	#wrap form input.name[type="text"]{margin-top: 15px;width:393px;}
+	#wrap form input.year[type="text"]{margin-top: 15px;}
+	#wrap form input.month[type="text"]{margin-left:40px;}
+	#wrap form input.day[type="text"]{margin-left:33px;}
+	#wrap form select.year{margin-top: 19px;width:105px;height:30px;border:none;}
+	#wrap form select.month{margin-left:40px;width:105px;height:30px;border:none;}
+	#wrap form select.day{margin-left:33px;width:105px;height:30px;border:none;}
+	#wrap form input.address01[type="text"]{margin-top: 19px;width:105px;}
+	#wrap form input.address02[type="text"]{margin-top: 19px;width:105px;}
+	#wrap form input.address03[type="text"]{margin-top: 10px;width:393px;}
+	#wrap form img{display: inline-block;vertical-align: middle;margin-left: 20px;}
+	#wrap form input.address04[type="text"]{margin-top: 10px;width:393px;}
+	#wrap form input.radio01[type="radio"]{margin-top: 21px;margin-left: 15px;}
+	#wrap form input.radio02[type="radio"]{margin-top: 21px;margin-left: 124px;}*/
+	#wrap img{display: block;margin:0 auto;}
+	#wrap .page02 table{display: none;}
+	#wrap input[type="checkbox"]{}
+	#wrap p{display: none;}
+	#wrap form a{display:inline-block;width:80px;height:20px;border-radius: 20px;text-align: center;line-height: 20px;background-color: #38291f;color:white;margin-top: 5px;font-size: 12px;margin-left: 20px;}
+
+	@media (max-width: 480px){
+		#wrap{width:100%;}
+		form.web{display: none;}
+		#wrap .page02 table{display: block;}
+		#wrap img{width:100%;}
+		.page02{width:100%;height:270px;background: url("img/page02_header.jpg") no-repeat;background-size: 100%;background-color: #FFE4B9;padding-top: 30px;}
+		.page02 > input[type="checkbox"]{display: none;}
+		.page02 > span{display: none;}
+		.page02 > a{display: none;}
+		#wrap table{width:80%;margin:0 auto;height:170px;border-collapse: collapse;}
+		#wrap table a{}
+		#wrap table tr{}
+		#wrap table th{width:30%;background-color: transparent;text-align: left;height:30px;color:#38291f;font-weight: bold;}
+		#wrap table td{height:30px;margin-bottom: 10px;}
+		#wrap table td input[type="text"]{border:none;height:27px;}
+		#wrap table td select{border:none;height:30px;background: white;}
+		#wrap table tr th img{}
+		#wrap table tr.first td input[type="text"]{width:50px;margin: 5px 0;}
+		#wrap table tr.first td select{width:50px;}
+		#wrap table tr.third td select{width:36px;}
+		#wrap table tr.third td select.month{margin: 5px 0 5px 10px;}
+		#wrap table tr.third td select.day{margin-left: 10px;}
+		#wrap table tr.second td input[type="text"]{width:177px;margin: 5px 0;}
+		#wrap table tr.fourth td a{display:inline-block;width:70px;height:20px;border-radius: 20px;text-align: center;line-height: 20px;background-color: #38291f;color:white;margin-top: 5px;font-size: 10px;}
+		#wrap table tr.fourth td input.address01[type="text"]{width:40px;margin-bottom: 5px;}
+		#wrap table tr.fourth td input.address02[type="text"]{width:40px;}
+		#wrap table tr.fourth td input.address03[type="text"]{width:180px;}
+		#wrap table tr.fourth td input.address04[type="text"]{width:180px;margin-top: 5px;}
+		#wrap table tr.fifth td input[type="radio"]{vertical-align: middle;margin-right: 5px;display: inline-block;}
+		#wrap table tr.fifth td input.radio02[type="radio"]{margin-left: 15px;}
+		#wrap p{width:100%;background-color: #ffe4b9;display: block;text-indent: 10%;font-size: 10px;color:#38291f;padding: 30px 0;}
+		#wrap table tr.fifth td span{height:30px;line-height: 30px;display: inline-block;}
+		#wrap table tr.sixth input[type="checkbox"]{vertical-align: middle;margin-right: 5px;}
+		#wrap table tr.sixth span{vertical-align: middle;margin-right: 5px;}
+		#wrap table tr.sixth a{display: inline-block;margin-left: 30px;background-color: #999;height:20px;width:40px;border-radius: 5px;color:white;text-align: center;margin-top:10px;line-height: 20px;}
+	}
+
+</style>
+
+<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var isMobile = {
+			Android: function() {
+				return navigator.userAgent.match(/Android/i);
+			},
+			BlackBerry: function() {
+				return navigator.userAgent.match(/BlackBerry/i);
+			},
+			iOS: function() {
+				return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+			},
+			Opera: function() {
+				return navigator.userAgent.match(/Opera Mini/i);
+			},
+			Windows: function() {
+				return navigator.userAgent.match(/IEMobile/i);
+			},
+			any: function() {
+				return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+			}
+		};
+
+		var d = new Date();
+
+		for (var i = d.getFullYear(); i <= d.getFullYear() + 10; i++) {
+			var year = i;
+
+			$("#year").append("<option value=\"" + year + "\">" + year + "</option>");
+		}
+
+		for (var i = 1; i <= 12; i++) {
+			var month = i;
+
+			if (month < 10) {
+				month = "0" + month;
+			}
+
+			$("#month").append("<option value=\"" + month + "\">" + month + "</option>");
+		}
+
+		for (var i = 1; i <= 31; i++) {
+			var day = i;
+
+			if (day < 10) {
+				day = "0" + day;
+			}
+
+			$("#day").append("<option value=\"" + day + "\">" + day + "</option>");
+		}
+
+		$("#consultRequest").click(function() {
+			consultRequest();
+		}).css("cursor", "pointer");
+
+		$("#postSearch").click(function() {
+			postSearch();
+		}).css("cursor", "pointer");
+
+		$("#phone02, #phone03").keyup(function(event) {
+			var val = $(this).val();
+			val = val.replace(/([ㄱ-ㅎ|ㅏ-ㅣ|가-힣])/g,"");
+			$(this).val(val);
+		});
+
+		$("#phone02, #phone03").keypress(function(event) {
+			var code = event.keyCode;
+			
+			if (code > 47 && code < 58) {
+				return;
+			}
+			
+			event.preventDefault();
+		});
+
+		$(".agree").fancybox({
+			type: "iframe",
+			href : $(this).attr("href"),
+			fitToView : false,
+			autoSize : false,
+			openEffect : "elastic",
+			closeEffect : "elastic",
+			showCloseButton: true,
+			scrolling : "auto",
+			width: "300",
+			height: "400",
+		});
+	});
+
+	function consultRequest() {
+		var saveFlag = true;
+
+		$("#frm input, #frm select").each(function() {
+			var type = $(this).attr("type");
+			var val = $(this).val();
+			var msg = $(this).attr("msg");
+			var id = $(this).attr("id");
+			var name = $(this).attr("name");
+			var required = $(this).attr("required");
+			
+			if (required == "required") {
+				if (type == "text" || type == "select") {
+					if (val == "") {
+						alert(msg);
+						$(this).focus();
+						saveFlag = false;
+						return false;
+					}
+				}
+
+				if (type == "radio" || type == "checkbox") {
+					var chkVal = $("input[type=" + type + "][name=" + name + "]:checked").val();
+
+					if (chkVal == undefined) {
+						chkVal = "";
+					}
+					
+					if (chkVal == "") {
+						alert(msg);
+						$(this).focus();
+						saveFlag = false;
+						return false;
+					}
+				}
+			}
+		});
+
+		if (saveFlag) {
+			$("#frm").submit();
+		
+			$("#consultRequest").unbind("click");
+			$("#consultRequest").click(function() {
+				alert("상담 신청 처리 중입니다. 잠시만 기다려 주세요.");
+				return false;
+			}).css("cursor", "pointer");
+		}
+	}
+
+	function postSearch() {
+		new daum.Postcode({
+			shorthand: false,
+			oncomplete: function(data) {
+				// 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+				// 각 주소의 노출 규칙에 따라 주소를 조합한다.
+				// 내려오는 변수가 값이 없는 경우엔 공백("")값을 가지므로, 이를 참고하여 분기 한다.
+				var fullAddr = ""; // 최종 주소 변수
+				var extraAddr = ""; // 조합형 주소 변수
+
+				// 사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+				if (data.userSelectedType === "R") { // 사용자가 도로명 주소를 선택했을 경우
+					fullAddr = data.roadAddress;
+
+				} else { // 사용자가 지번 주소를 선택했을 경우(J)
+					fullAddr = data.jibunAddress;
+				}
+
+				// 사용자가 선택한 주소가 도로명 타입일때 조합한다.
+				if(data.userSelectedType === "R"){
+					//법정동명이 있을 경우 추가한다.
+					if(data.bname !== ""){
+						extraAddr += data.bname;
+					}
+					// 건물명이 있을 경우 추가한다.
+					if(data.buildingName !== ""){
+						extraAddr += (extraAddr !== "" ? ", " + data.buildingName : data.buildingName);
+					}
+					// 조합형주소의 유무에 따라 양쪽에 괄호를 추가하여 최종 주소를 만든다.
+					fullAddr += (extraAddr !== "" ? " ("+ extraAddr +")" : "");
+				}
+
+				// 우편번호와 주소 정보를 해당 필드에 넣는다.
+				//$("#address01").val(data.zonecode); //5자리 새우편번호 사용
+				//$("#address02").val(data.postcode);
+
+				var postcodeArr = data.postcode.split("-");
+				$("#address01").val(postcodeArr[0]);
+				$("#address02").val(postcodeArr[1]);
+
+				$("#address03").val(fullAddr);
+
+				// 커서를 상세주소 필드로 이동한다.
+				$("#address04").val("");
+				$("#address04").focus();
+
+				// iframe을 넣은 element를 안보이게 한다.
+				// (autoClose:false 기능을 이용한다면, 아래 코드를 제거해야 화면에서 사라지지 않는다.)
+				document.getElementById("layer").style.display = "none";
+				$("body").css("overflow", "visible");
+			},
+			width : "100%",
+			height : "100%"
+		}).embed(document.getElementById("layer"));
+
+		document.getElementById("layer").style.display = "block";
+		$("body").css("overflow", "hidden");
+
+		initLayerPosition();
+	}
+
+	function closeDaumPostcode() {
+		// iframe을 넣은 element를 안보이게 한다.
+		document.getElementById('layer').style.display = 'none';
+		$("body").css("overflow", "visible");
+	}
+
+	function initLayerPosition(){
+		var width = 300; //우편번호서비스가 들어갈 element의 width
+		var height = 460; //우편번호서비스가 들어갈 element의 height
+		var borderWidth = 1; //샘플에서 사용하는 border의 두께
+
+		// 위에서 선언한 값들을 실제 element에 넣는다.
+		document.getElementById('layer').style.width = width + 'px';
+		document.getElementById('layer').style.height = height + 'px';
+		document.getElementById('layer').style.border = borderWidth + 'px solid';
+		// 실행되는 순간의 화면 너비와 높이 값을 가져와서 중앙에 뜰 수 있도록 위치를 계산한다.
+		document.getElementById('layer').style.left = (((window.innerWidth || document.documentElement.clientWidth) - width)/2 - borderWidth) + 'px';
+		document.getElementById('layer').style.top = (((window.innerHeight || document.documentElement.clientHeight) - height)/2 - borderWidth) + 'px';
+	}
+
+	function saveOk() {
+		$("#consultRequest").unbind("click");
+		$("#consultRequest").click(function() {
+			alert("상담 신청이 이미 완료되었습니다.");
+			return false;
+		}).css("cursor", "pointer");
+
+		alert("상담 신청이 완료되었습니다.");
+		return false;
+	}
+</script>
+
+</head>
+<body>
+	<div id="wrap">
+		<img src="img/page01.jpg" alt="">
+		<div class="page02">
+			<form name="frm" id="frm" class="frm" method="post" target="hiddenFrm" action="momtalk_event_ok.asp">
+			<table cellpadding="0" cellspacing="0">
+				<tr class="first">
+					<th>연락처</th>
+					<td>
+						<select type="select" name="phone01" id="phone01" class="phone01" msg="휴대폰번호를 선택해 주세요." required>
+							<option value="">휴대폰</option>
+							<option value="010">010</option>
+							<option value="011">011</option>
+							<option value="016">016</option>
+							<option value="017">017</option>
+							<option value="018">018</option>
+							<option value="019">019</option>
+						</select>&nbsp;-&nbsp;
+						<input type="text" name="phone02" id="phone02" class="phone02" placeholder="ex) 1234" maxlength="4" msg="휴대폰번호를 입력해 주세요." required>&nbsp;-&nbsp;
+						<input type="text" name="phone03" id="phone03" class="phone03" placeholder="ex) 5678" maxlength="4" msg="휴대폰번호를 입력해 주세요." required>
+					</td>
+				</tr>
+				<tr class="second">
+					<th>이름</th>
+					<td>
+						<input type="text" name="name" id="name" class="name" placeholder="ex) 송혜교" maxlength="10" msg="이름을 입력해 주세요." required>
+					</td>
+				</tr>
+				<tr class="third">
+					<th>출산예정일</th>
+					<td>
+						<select type="select" name="year" id="year" class="year" style="width:50px;" msg="출산예정일(년)을 선택해 주세요." required>
+							<option value="">년</option>
+						</select>년
+						<select type="select" name="month" id="month" class="month" msg="출산예정일(월)을 선택해 주세요." required>
+							<option value="">월</option>
+						</select>월
+						<select type="select" name="day" id="day" class="day" msg="출산예정일(일)을 선택해 주세요." required>
+							<option value="">일</option>
+						</select>일
+					</td>
+				</tr>
+				<tr class="fourth">
+					<th>주소지</th>
+					<td>
+						<input type="text" name="address01" id="address01" class="address01" placeholder="ex) 464" readonly="true" maxlength="3" msg="우편번호를 검색해 주세요." required> &nbsp; - &nbsp;
+						<input type="text" name="address02" id="address02" class="address02" placeholder="ex) 880" readonly="true" maxlength="3" msg="우편번호를 검색해 주세요." required>
+						<a id="postSearch">우편번호 검색</a>	
+						<input type="text" name="address03" id="address03" class="address03" placeholder="ex) 서울특별시 강남구" readonly="true" maxlength="50" msg="우편번호를 검색해 주세요." required>
+						<input type="text" name="address04" id="address04" class="address04" placeholder="ex) 논현로87길 19 3,4층 " maxlength="50" msg="상세주소를 입력해 주세요." required>
+					</td>
+				</tr>
+				<tr class="fifth">
+					<th>도우미형태</th>
+					<td>
+						<input type="radio" name="want" id="want1" class="radio01" value="출퇴근" msg="산후도우미 희망형태를 선택해 주세요." required><span>출퇴근</span>
+						<input type="radio" name="want" id="want2" class="radio02" value="입주" msg="산후도우미 희망형태를 선택해 주세요." required><span>입주</span>
+					</td>
+				</tr>
+				<tr class="sixth">
+					<th colspan="2">
+						<input type="checkbox" id="agree" name="agree" value="ok" msg="이용약관, 개인정보취급방침에 동의해 주세요." required><span>이용약관, 개인정보취급방침 동의</span>
+						<a href="agree.html" class="agree">내용</a>				
+					</th>
+				</tr>
+			</table>
+			</form>
+		</div>
+		<p>*담당자가 확인 후 별도의 연락을 드립니다.</p>
+
+		<img src="img/page02-1.jpg" />
+		<a id="consultRequest">
+			<img src="img/page03.jpg" />
+		</a>
+		<a href="http://www.mothernbaby.co.kr/" target="_blank">
+			<img src="img/page04.jpg" />
+		</a>
+	</div>
+
+	<div id="layer" style="display:none;position:fixed;overflow:hidden;z-index:1;-webkit-overflow-scrolling:touch;">
+		<img src="http://i1.daumcdn.net/localimg/localimages/07/postcode/320/close.png" id="btnCloseLayer" style="cursor:pointer;position:absolute;right:-3px;top:-3px;z-index:1" onclick="closeDaumPostcode()" alt="닫기 버튼">
+	</div>
+
+	<iframe name="hiddenFrm" id="hiddenFrm" class="hiddenFrm" frameborder="0" style="height:0px;width:0px;display:none;"></iframe>
+</body>
+</html>

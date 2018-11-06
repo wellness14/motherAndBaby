@@ -1,0 +1,335 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+.notice_text{
+ line-height:20px; 
+}
+.notice_text:link, .notice_text:visited{
+ color:#FFFFFF; text-decoration:none;
+}
+
+.notice_text:hover{
+ color:#000000; text-decoration:none;
+}
+
+
+.white_text{
+ color:#FFFFFF; 
+}
+
+
+.post_text{
+ line-height:22px; 
+}
+.post_text:link, .post_text:visited{
+ color:#666; text-decoration:none;
+}
+.post_text:hover{
+ color:#000000; text-decoration:none;
+}
+
+
+.bbs_list{
+ line-height:22px;
+ color:#4c4c4c;
+}
+.bbs_list:link, .bbs_list:visited{
+ color:#4c4c4c; text-decoration:none;
+}
+.bbs_list:hover{
+ color:#000000; text-decoration:none;
+}
+
+
+.page_text{
+ color:#666; 
+ font-size:14px;
+ letter-spacing:12px;
+}
+.page_text:link, .page_text:visited{
+ color:#666; text-decoration:none;
+}
+.page_text:hover{
+ color:#000000; text-decoration:none;
+}
+
+.page_text_on{
+ color:#000000; 
+ font-size:14px;
+ letter-spacing:12px;
+ font-weight:bold;
+}
+
+.event_text{
+ color:#666; 
+ font-size:11px;
+ line-height:20px;
+}
+
+.event_text_1{
+ color:#000000; 
+ font-size:11px;
+ font-weight:bold;
+}
+
+
+
+.textarea {
+    border: 1px solid #cacaca; 
+  font-size: 16px;
+  height:30px;
+    vertical-align: middle;
+  padding-left: 8px;
+  padding-top: 4px; 
+}
+
+.textarea2 {
+    border: 1px solid #cacaca; 
+  font-size: 16px;
+  height:200px;
+  width:500px;
+  vertical-align: middle;
+  padding-left: 8px;    
+  padding-top: 8px;     
+}
+
+.textarea3 {
+    border: 1px solid #cacaca; 
+  font-size: 12px;
+  height:200px;
+  width:350px;
+  vertical-align: middle;
+  padding-left: 8px;    
+  padding-top: 8px;     
+}
+
+.textarea4 {
+    border: 1px solid #cacaca; 
+  font-size: 12px;
+  height:800px;
+  width:760px;
+  vertical-align: middle;
+  padding-left: 8px;    
+  padding-top: 8px;     
+}
+
+.textarea5 {
+    border: 1px solid #cacaca; 
+  font-size: 12px;
+  height:400px;
+  width:760px;
+  vertical-align: middle;
+  padding-left: 8px;    
+  padding-top: 8px;     
+}
+
+.textarea6 {
+    border: 1px solid #cacaca; 
+  font-size: 12px;
+  height:250px;
+  width:760px;
+  vertical-align: middle;
+  padding-left: 8px;    
+  padding-top: 8px;     
+}
+
+.bbs_view {
+    border: 1px solid #e1e1e1;
+  padding-left:30px;
+  padding-top:30px;
+  padding-right:30px;
+  padding-bottom:30px;
+  line-height:20px;
+}
+
+/* 20140718 메인 수정 */
+#showcase {width:100%; height:529px; position:absolute; text-align:center; }
+#showcase a {position:absolute; display:block; width:100%; height:529px;}
+
+/* 20140728 이벤트 수정 */
+#eventArea {margin:0 0 60px 40px; border-collapse:collapse}
+#eventArea td {vertical-align:top; padding:0; width:255px; border:1px solid #e0e0e0; background:#f4f4f4;}
+#eventArea td img {width:255px; height:178px; border-bottom:1px solid #e0e0e0;}
+#eventArea td .event_text {margin:12px 26px;}
+#eventArea td .event_text .event_text_1 {color:#3b3b3b}
+
+
+
+
+
+/*
+
+html,body {position:relative;width:100%; min-height:100%; margin:0; padding:0;}
+body {font:12px/1.4 Dotum,'돋움'; line-height:1.5; color:#666; line-height:1.5; -webkit-text-size-adjust:none; min-height:400px; overflow-y:auto; overflow-x:hidden;}
+img {max-width:100%}
+ul {list-style:none; margin:0;padding:0}
+
+*/
+
+
+
+/* Reset */
+::selection{color:#fff; background:#000000;}
+html,body{width:100%;height:100%}
+html{}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,form,fieldset,p,button{margin:0;padding:0; color:#000000}
+body,h1,h2,h3,h4,input,button{font-family: "Nanum Gothic", sans-serif;font-size:12px;color:#000000}
+body{background-color:#fff;text-align:center;*word-break:break-all;-ms-word-break:break-all}
+img,fieldset,iframe{border:0 none}
+ul {list-style:none; margin:0;padding:0}
+li{list-style:none}
+input,select,button{vertical-align:middle}
+img{vertical-align:top}
+i,em,address{font-style:normal}
+em{color:#898989; display:block;}
+label,button{cursor:pointer}
+button{margin:0;padding:0}
+a{color:#000;text-decoration:none}
+a:hover{ color:#2268bf; text-decoration:none;}
+button *{position:relative}
+button img{left:-3px;*left:auto}
+html:first-child select{height:20px;padding-right:6px}
+option{padding-right:6px}
+hr{display:none}
+legend{*width:0}
+table{border-collapse:collapse;border-spacing:0}
+strong{ font-weight:bold; color:#e44315}
+/* layout */
+
+
+#wrap{ width:1050px; margin:0 auto;}
+#wrap2{ width:1300px; margin:0 auto;}
+#header{position:relative;}
+#container{position:relative; overflow:hidden;}
+#footer{ clear:left; width:1050px; }
+
+/* top */
+#top{ width:100%; background:#f1f1f1;}
+#cont{position:relative;top:410px; z-index:999;text-align:left;}
+#cont .cont-row {clear:left;}
+#cont .cont-row .span {float:left; display:block; }
+#cont .cont-row .span a {display:block}
+#cont .cont-row .span a img {max-width:none;}
+#cont .cont-row h3 {margin:0;padding:0;}
+#cont .notice-list {background:#c0c060}
+#cont .faq-list {background:#c19c60}
+#cont .cont-row .cont-list {height:60px; padding:14px 0 14px 20px;}
+
+
+
+/* header */
+#gnb{height:39px; overflow:hidden; width:1050px; margin:0 auto; }
+.rel{ float:left;width:193px;}
+.rel ul {overflow:hidden;}
+.rel ul li{float:left;}
+.relmenu{ overflow:hidden; width:222px; float:left;}
+/*
+.relmenu{ overflow:hidden; width:122px; float:left;}
+*/
+.k_menu{float:left; height:32px;}
+.h_menu{float:left; height:32px;}
+.logo{ width:196px;
+	height:83px;
+	overflow:hidden;
+	position:relative;}
+.logo a{display:inline-block; width:196px; height:83px;}
+.logo_sec{position:relative;}
+
+
+
+
+
+
+.ani-bg{
+	position:absolute;
+	top:-73px;
+	left:0;
+	z-index:1;
+}
+
+
+
+
+.frame{
+	position:relative;
+	top:0;
+	left:0;
+	z-index:1000000!important;
+}
+
+
+
+
+
+
+
+
+.menu{position:absolute; right:0px; top:0px;}
+.lnb{ width:950px; background:#363836; height:41px;}
+.lnb ul li{float:left;}
+.lnb ul li a span{text-indent:-9999px;}
+.lnb ul li a{display:inline-block; height:41px;}
+.lnb ul{overflow:hidden;}
+.re_s{ width:88px; background:url(../img/spr.png) 0px 0px;}
+.re_hotel{ width:58px; background:url(../img/spr.png) -88px 0px;}
+.re_leso{ width:108px; background:url(../img/spr.png) -146px 0px;}
+.re_resi{ width:86px; background:url(../img/spr.png) -254px 0px;}
+.re_re{ width:86px; background:url(../img/spr.png) -340px 0px;}
+.re_local{ width:110px; background:url(../img/spr.png) -425px 0px;}
+.re_nh{ width:91px; background:url(../img/spr.png) -535px 0px;}
+.re_hg{ width:162px; background:url(../img/spr.png) -789px 0px;}
+/* color */
+.red{color:#bd1313;}
+/* etc */
+.fr{float:right !important;}
+.fl{float:left !important;}
+.cl{clear:both;}
+.pdl1{padding-left:1px;}
+.pdl10{padding-left:10px;}
+.pdl125{padding-left:125px;}
+.pdl20{padding-left:610px;}
+/*.pdl20{padding-left:710px;}  */
+.pdr10{padding-right:10px;}
+.pdr20{padding-right:20px;}
+.pdt1{padding-top:1px;}
+.pdt10{padding-top:4px;}
+.pdt15{padding-top:15px;}
+.pdt20{padding-top:20px;}
+.bb0{border-bottom:0px !important;}
+.bb1{border-bottom:1px solid #ccc;}
+.br0{border-right:0px !important;}
+.bl0{border-left:0px !important;}
+.bt0{border-top:0px !important;}
+.on{border-bottom:0px !important; background:#fff !important;}
+
+/*<img src="image/top_navi.jpg" width="601px" height="83px" border="0" id="top_menu" style="cursor:pointer;"  onload="this.style.filter='alpha(opacity=60)'" onmouseover="this.style.filter='alpha(opacity=100)'" onmouseout="this.style.filter='alpha(opacity=60)'" usemap="#top_navi"/>
+
+#al{width:601px; height:83px; border:0; cursor:pointer; 
+	
+}
+
+onMouseOver="this.style.backgroundColor='#FEDDAF'" onMouseOut="this.style.backgroundColor
+#al:hover{*/
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+.cont-row {width: 1175px;height: 238px;clear: both;overflow: hidden;}
+.cont-row li{position: relative;float: left;}
+.cont-row li img{max-width:100%;border:0;}
+
+/*2017.10.11 spacemonkey*/
+.cont-list span{color:#fff !important;}
+.notice-list .cont-list {padding-bottom: 24px !important; margin-top: -10px !important;}
+.notice-list .cont-list > a {color:#fff !important; font-size:22px; font-weight:bold;}
+.notice-list h3 {height:31px !important;}
+
+
+/*2018.04.16 세월호참사 추모 리본 추가- 구충모*/
+.sewol { display: block; position: absolute; width: 50px; top: 18px; left: 226px;}
+.sewol img { width: 100%; }
+
+
+
+
+

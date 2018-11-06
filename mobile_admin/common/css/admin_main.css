@@ -1,0 +1,59 @@
+@charset "euc-kr";
+/* CSS Document */
+
+body{margin: 0 auto;text-align:center; background:url(/image/admin/bg.gif) repeat-x;font-family: Tahoma, Geneva, sans-serif; font-size:12px!important; color:#555; position: relative}
+h1{margin:0px; padding:0;height:57px}
+p{margin:0; padding:0}
+img {border: none;}
+* {padding: 0;margin: 0;}
+li{ list-style:none}
+.blind, legend, thead,  th, h2{display:none;overflow:hidden;position:absolute;left:0;top:-5000px;width:0;height:0;}
+.green{ color:#090}
+fieldset{border:none}
+#wrap{width:459px;margin:0 auto; padding-top:303px; position:relative;}
+#content{ background:url(/image/admin/bg_login.gif) no-repeat bottom; width:459px; height:187px;text-align:left}
+#login-form{width:320px;margin:0 auto;  text-align:left; padding-top:60px}
+.id{ width:215px; text-align:right; color:#333; font-weight:bold;  display:block ; height:26px}
+.pw{ width:215px; text-align:right; color:#333; font-weight:bold; display:block }
+.button{position:absolute;top:386px;left:310px;vertical-align: middle;}
+.inputtxt{ width:170px; height:20px; margin:0 0 0 5px; border:1px solid #ccc}
+.white{#000}
+.b{ font-weight:bold}
+.mess{ text-align:center; margin-top:20px}
+#copyright{width:459px; text-align:center; color:#ccc; padding-top:10px}
+
+#popup {background:#FFF; border:5px solid #666;width:405px;z-index:1000; text-align:right; padding:2px}
+#popup .bt{ text-align:center; margin-top:10px}
+#popup .tab{ margin:20px}
+#popup .tab_tit{ width:100%; float:left; margin-bottom:-2px}
+#popup .tab_tit_L{float:left; width:49%; }
+#popup .tab_tit_R{float: right;; width:49%}
+#popup .on {display:inline; height:32px; display:block;line-height:30px; text-decoration:none; text-align:center; font-weight:bold; color:#4fa40a; border-bottom:2px solid #fff; border-top:2px solid #6C3;border-right:2px solid #6C3; border-left:2px solid #6C3} 
+#popup .off{ display:inline; height:30px; display:block; line-height:30px; text-decoration:none; text-align:center; font-weight:bold; color:#666;border:2px solid #ccc; background:url(/image/admin/bg_tab_off.gif) repeat-x bottom} 
+#popup .tab_body{ clear:both; text-align:left ; padding:10px; margin-top:-20px; border-top:2px solid #6C3;}
+#popup .tab_body label{ margin-right:10px; width:100px; float:left}
+#popup p{ height:25px}
+
+
+
+#popup2 {background:#FFF; border:5px solid #666;width:405px; height:200px; z-index:1000; padding:2px; text-align:right;}
+
+#popup2 .fail{ background:url(/image/admin/bg_fail.gif) no-repeat; margin:20px; font-size:14px!important; line-height:20px}
+#popup2 .fail p{ text-align:left;padding-top:50px}
+/*CSS Hacks for Internet Explorer  익스플로러를 위한 핵*/
+
+
+#backblock {position: fixed;top: 0px;bottom: 0px;left: 0px;right: 0px;overflow: hidden; padding: 0; margin: 0; background-color: #000; filter: alpha(opacity=15); opacity: 0.5;z-index: 1000;}
+
+#processMessage { position:absolute; top: 370px; left: 600px;padding: 10px;width: 150px; z-index: 1001; background-color: #fff;border: solid 1px #000;text-align: center;}
+
+
+/* fix the over extended h2 borders */
+* html h2 {
+	zoom: 1;/*익스플로러용, 비표준이라 validator돌리면 에러나옴 overflow: hidden*/
+}
+
+* html{
+/* double margin bug fix 플로트된 방향으로 마진값이 있을경우 익스플로러에서는 두배로 보여진다 . 이런현상을 막기 위해 쓴다.*/
+	display: inline;/*표준  없으면 익스플로러에서 overflow: hidden없을때와 같은 현상*/
+}

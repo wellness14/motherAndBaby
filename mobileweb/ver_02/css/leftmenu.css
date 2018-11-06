@@ -1,0 +1,172 @@
+  #sidebar-wrapper {
+    margin-left: -252px;
+	top: 0;
+    left: 0;
+    width: 252px;
+    background: #ffffff;
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 1000;
+    transition: all 0.5s ease-in 0s;
+    -webkit-transition: all 0.5s ease-in 0s;
+    -moz-transition: all 0.5s ease-in 0s;
+    -ms-transition: all 0.5s ease-in 0s;
+    -o-transition: all 0.5s ease-in 0s;
+	border:1px solid #eeeeee;
+	overflow-x:hidden;
+  }
+
+  .sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+	text-align: left;
+	font-weight: bold;
+	font-size: 15pt;
+  }
+
+  .sidebar-nav li {
+    line-height: 30px;
+    text-indent: 20px;
+	padding-left: 10px;
+  }
+
+  .sidebar-nav li a {
+    color: #444444;
+    display: block;
+    text-decoration: none;
+  }
+ 
+  .sidebar-nav li a:hover {
+    color: #ffffff;
+    background: rgba(255,255,255,0.2);
+    text-decoration: none;
+  }
+
+  .sidebar-nav li div:hover { 
+
+	color: #ffffff;
+    background: #ef4e6f;
+    text-decoration: none;
+  }
+    .sidebar-nav li div a span:hover { 
+	color: #ffffff;
+    text-decoration: none;
+  }
+ 
+  .sidebar-nav li a:active, .sidebar-nav li a:focus {
+    text-decoration: none;
+  }
+
+  .sidebar-nav > .sidebar-brand {
+    height: 130px;
+    line-height: 55px;
+    font-size: 18px;
+	padding-top: 40px;
+  }
+
+  .sidebar-nav > .sidebar-brand a {
+    color: #444444;
+  }
+
+  .sidebar-nav > .sidebar-brand a:hover {
+    color: #ffffff;
+    background: none;
+  }
+
+  #menu-toggle {
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 1;
+  }
+
+  #sidebar-wrapper.active {
+    left: 252px;
+    width: 252px;
+
+    transition: all 0.5s ease-out 0s;
+    -webkit-transition: all 0.5s ease-out 0s;
+    -moz-transition: all 0.5s ease-out 0s;
+    -ms-transition: all 0.5s ease-out 0s;
+    -o-transition: all 0.5s ease-out 0s;
+  }
+
+  .toggle {
+    margin: 2px 5px 0 0;
+  }
+
+  .sidebar-nav-sub {
+	font-weight: bold;
+	line-height: 20px;
+    text-indent: 20px;
+	color: #888888;
+	font-size: 10pt;
+  }
+
+  .sidebar-nav-sub li{
+	padding-left: 20px;
+  }
+
+  .sidebar-nav li a {
+    color: #888888;
+    display: block;
+    text-decoration: none;
+  }
+
+  .sidebar-nav-sub li a:hover {
+    color: #ffffff;
+    background: #ef4e6f;
+    text-decoration: none;
+  }
+
+  .nav-btn-grp {
+	display: inline-block;
+	width: 100%;
+	height:auto;
+	margin:0 auto;
+	line-height:1;
+	text-align:center;
+	padding:30px;
+	margin-bottom:50px;
+  }
+
+  .nav-btn-grp span {
+	display: inline-block;
+	line-height: 28px;
+	height: 28px;
+	border:1px solid #b7b7b7;
+	width:80px;
+	font-size:13px;
+	text-align:center;
+	border-radius:5px;
+	font-weight:bold;
+	background-color:#f4f4f4;
+  }
+
+  .nav-btn-grp span a {
+	color:#3b3b3b; 
+	text-decoration: none;
+  }
+
+  .nav-btn-grp span a:hover {
+	color:#3b3b3b; 
+	text-decoration: none;
+  }
+
+  /*2017.10.12 - spacemonnkey*/
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+.consult-label{ font-family:'Noto Sans KR'; width:95px; }
+.go-call, .go-consult{ display: block !important; width:40px; height:30px; line-height:30px; background-color:#5bb75b; border-radius:4px; font-size:12px; }
+.go-call a, .go-consult a{ color:#fff; }
+.go-consult { right: 55px !important; background-color:#3498db; }
+.go-call { right: 10px !important; }
+.topbar .btn-right{ top:16px !important; }
+
+/*2018.05.03 - 정부지원 계산기 버튼 추가*/
+.go-calc {left: 42px;position: absolute; display: block !important; width:70px; height:30px; line-height:11px; background-color:#5bb75b; border-radius:4px; font-size:12px; }
+.go-calc a {color: #fff; font-size: 10px;display: block; padding-top: 6px; }

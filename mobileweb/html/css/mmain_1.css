@@ -1,0 +1,74 @@
+@charset "UTF-8";
+/* mobile style */
+*{-webkit-text-size-adjust:none; margin:0; padding:0;}
+body{margin:0 auto; overflow:hidden; width:360px; heigth:989px;}
+body{-webkit-user-select:none;-webkit-touch-callout:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+li{list-style:none}
+a{text-decoration:none; color:#FFF;}
+address, caption, em, var{font-style:normal; font-weight:normal}
+input, textarea, select{letter-spacing:normal}
+ol, ul, dl{list-style:none}
+img {display:block; max-width:100%; border:0; vertical-align:top;}
+
+#wrap{margin:0 auto; width:360px;}
+/*헤더*/
+#mheader{position:relative; width:360px; height:54px; background-color:#FFF;}
+#mtop{position:absolute; top:2px;left:9px;}
+.mmtop{float:left;}
+#mtop1{width:30px; margin-top:10px; margin-right:68px;}
+#mlogo{ width:118px; height:50px; overflow:hidden; position:relative; margin-right:98px; top:-4px; left:11px;}
+#mtop3{width: 30px; margin-top:10px;}
+#mlogo a{display:inline-block; width:118px; height:50px;}
+.ani-bg{position:absolute; top:-71px;left:0; z-index:1;}
+.frame{position:relative; top:2px; left:0; z-index:1000000!important;}
+/*메뉴*/
+#mnav{z-index:1000001!important;}
+.menu{	font: 16px RIXGOM; 	text-align:center;}
+.menu a:hover{background-color:#de407d;color:#FFF;}
+.menu ul{list-style: none; margin:0;}
+.menu ul li{float:left;}
+.menu ul li ul li{    float:none;    width:360px; }
+.menu ul li ul{position: absolute; display:none; margin-top:-51px;}
+#menu01{ padding-top:11px;	width:360px;	height:29px;	background-color:#de407d;}
+#menu01 a:hover{color:#FFF;}
+#menu02{padding-top:11px; width:319px; height:29px; margin-left:2px; background-color:#de407d;}
+#menu02 a:hover{color:#FFF;}
+.active ul{display:block !important; }
+.active a{background-color: #de407d; padding-top:11px; display: block;height: 29px; position:relative; z-index: 23; color:#FFF;}
+.active a:hover{background-color:#de407d;}
+.active ul a:hover{background-color:#96a0a9;}
+.active ul a{border: 0 !important; border:0;width: 360px;}
+.arrow {     border-color: white transparent transparent;    border-style: solid dashed dashed;	border-width:7px;    margin-left: 5px;    position: relative;    top: 13px;}
+/*슬라이드*/
+#mslide{ position:relative;	width:360px; padding-top:1px; padding-bottom:1px;}
+img {border:0;}
+.slider {	width:360px;min-width:360px;height:226px;position:relative;overflow:hidden;background:#fff;text-align:center;}
+.slider .bd {width:360px; position:absolute; margin-left:360px}
+.slider .bd li {width:360px; overflow:hidden;}
+.slider .bd li img {display:block; width:360px;	height:226px;}
+.slider .tempWrap {overflow:visible !important}
+.slider .tempWrap ul {margin-left:0px !important;}
+.slider .hd {position:absolute; width:100%; left:0; z-index:1; height:8px; bottom:20px; text-align:center;}
+.slider .hd li {z-index:10; display:inline-block; *display:inline; zoom:1; width:8px; height:8px; line-height:99px; overflow:hidden;
+	background:url(../images/slider-btn.png) 0 -10px no-repeat; margin:0 5px; cursor:pointer;}
+.slider .hd li.on {background-position:0 0;}
+.slider .pnBtn {position: absolute; z-index: 1; top: -3px; width: 100%; height: 398px; cursor: pointer;}
+.slider {margin-top: 20px;}
+.slider  {margin-top:20px;}
+.slider .pnBtn .blackBg {display: block; position: absolute;top: 7px; width: 100%; height: 398px;}
+.slider .pnBtn .arw {display:none;position:absolute;top:0;z-index:1;width:60px;height:398px;}
+.slider .pnBtn .arw:hover {filter:alpha(opacity=60);opacity:0.6;}
+.slider .prev .arw {right:0;background:url(../images/slider-arrow.png) -120px 0 no-repeat; top:-50px;}
+.slider .next .arw {left:0;background:url(../images/slider-arrow.png) 0 0 no-repeat; top:-50px;}
+/*컨테이너*/
+#mcontainer{width:360px; position:relative; }
+.mcon0{float:left;} .mcon1{float:left;} .mcon2{ float:left;}
+/*#conmm1 img{width:180px; height:126px;} #conmm2 img{width:90px;height:126px;} #conmm3 img{width:90px;height:63px;} 
+#conmm5 img{width:90px; height:126px;} #conmm6 img{width:90px; height:126px;} #conmm7 img{width:90px; height:126px;}   #conmm8 img{width:90px;height:63px;}
+#conmm9{width:360px;position:relative;}*/
+/*푸터*/
+#mfooter{position:relative; margin-top:6px;}
+#mf1{position:absolute; left:79px;}
+.mf0{width: 60px; float:left; margin-right:10px; }
+#nmf{width:360px; position:relative; top:28px;}
+

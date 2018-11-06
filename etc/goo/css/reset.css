@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* reset */
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,dl,dt,form,input,button,fieldset,textarea,select{margin:0; padding:0;letter-spacing: -0.5px;}
+body,h1,h2,h3,h4,h5,h6,th,td,input,button,textarea{font:12px/1.5 'NanumBarunGothic',sans-serif;}
+
+ul,ol,li{list-style:none;}
+img,button,fieldset{border:none;}
+a{text-decoration:none; color:#666;}
+
