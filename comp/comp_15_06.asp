@@ -81,7 +81,7 @@
 						   </tr>
 						   <tr style="width:150px;height:30px; border:1px solid #d3d3d3;">
 								<td><span style="margin-left:20px;">전화번호</span></td> 
-								<td width="400">02-557-3579<span style="margin-left:250px;">상담시간</span></td> 
+								<td width="400">02-557-3580<span style="margin-left:250px;">상담시간</span></td> 
 								<td align="left">AM 09:00 ~ PM 06:00</td> 
 						   </tr>
 						 </table>
@@ -104,7 +104,7 @@
 						 <table align="center" class="tb_style01" >
 						   <tr style="width:150px;height:30px; border:1px solid #d3d3d3;">
 								<td><span style="margin-left:20px;">주소</span></td> 
-								<td width="300" colspan="2">서울특별시 강남구 역삼동 혜림빌딩 3층 마더앤베이비<span style="margin-left:200px;"><!--<a href="#" targrt="new"><img src="/comp/mapnavi/img/social_link_facebook.png" width="20" height="20"></a></img></span><span style="margin-left:20px;"><a href="#" targrt="new"><img src="/comp/mapnavi/img/social_link_twitter.png"width="20" height="20"></a></img></span><span style="margin-left:20px;"><a href="#" targrt="new"><img src="/comp/mapnavi/img/social_link_kakao.png"width="20" height="20"></a></img>--></span></td> 
+								<td width="300" colspan="2">서울특별시 강남구 선릉로120길 5 동곡빌딩 3층 마더앤베이비<span style="margin-left:200px;"><!--<a href="#" targrt="new"><img src="/comp/mapnavi/img/social_link_facebook.png" width="20" height="20"></a></img></span><span style="margin-left:20px;"><a href="#" targrt="new"><img src="/comp/mapnavi/img/social_link_twitter.png"width="20" height="20"></a></img></span><span style="margin-left:20px;"><a href="#" targrt="new"><img src="/comp/mapnavi/img/social_link_kakao.png"width="20" height="20"></a></img>--></span></td> 
 						   </tr>
 						   <tr style="width:150px;height:30px; border:1px solid #d3d3d3;">
 								<td><span style="margin-left:20px;">전화번호</span></td> 

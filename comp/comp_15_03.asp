@@ -67,7 +67,9 @@
 				 <!--box_01 -->
 				 <table align="center" class="tb_style01">
 					<tr style="width:150px;height:30px; border:1px solid #d3d3d3; background:#f1f1f1;">
-						<td width="500"><span style="font-size:15px; font-weight:bold;margin-left:20px;">강화군지역</span>&nbsp;<a href="http://www.mothernbaby.co.kr/board/board_01_view.asp?mOne=4&mTwo=5&brd_id=EVENT&idx=63" target="_blank"><img src="/comp/mapnavi/img/gift.png" width="23" height="23" align="center" alt="클릭하시면 이벤트 페이지로 이동합니다.">[EVENT]</a></img></td>  <td colspan="2"> <span style="margin-left:150px;cursor:pointer;" class="detail_28"> 자세히보기 </span>
+						<td width="500"><span style="font-size:15px; font-weight:bold;margin-left:20px;">강화군지역</span>&nbsp;<a href="http://www.mothernbaby.co.kr/board/board_01_view.asp?mOne=4&mTwo=5&brd_id=EVENT&idx=63" target="_blank">
+<!-- 						<img src="/comp/mapnavi/img/gift.png" width="23" height="23" align="center" alt="클릭하시면 이벤트 페이지로 이동합니다.">[EVENT]</a></img> -->
+						</td>  <td colspan="2"> <span style="margin-left:150px;cursor:pointer;" class="detail_28"> 자세히보기 </span>
 							<span style="margin-left:150px; display:none;cursor:pointer;" class="closed_28"> 닫기 </span>
 						</td> 
 					</tr>
@@ -76,11 +78,11 @@
 					<table align="center" class="tb_style01" >
 					   <tr style="width:150px;height:30px; border:1px solid #d3d3d3;">
 							<td ><span style="margin-left:20px;">주소</span></td> 
-							<td width="300" colspan="2"><span style="bold">인천광역시 계양구 계산새로87번길 15, 409호(용종동, 강남오피스텔)</span><span style="margin-left:160px;"><!--<a href="https://www.facebook.com/mothernbabycare" targrt="new"><img src="/comp/mapnavi/img/social_link_facebook.png" width="20" height="20"></a></img></span><span style="margin-left:20px;"><a href="#" targrt="new"><img src="/comp/mapnavi/img/social_link_twitter.png"width="20" height="20"></a></img></span><span style="margin-left:20px;"><a href="#" targrt="new"><img src="/comp/mapnavi/img/social_link_kakao.png"width="20" height="20"></a></img>-->  </span></td>
+							<td width="300" colspan="2"><span style="bold">서울특별시 강남구 선릉로120길 5 동곡빌딩 3층 마더앤베이비</span><span style="margin-left:160px;"><!--<a href="https://www.facebook.com/mothernbabycare" targrt="new"><img src="/comp/mapnavi/img/social_link_facebook.png" width="20" height="20"></a></img></span><span style="margin-left:20px;"><a href="#" targrt="new"><img src="/comp/mapnavi/img/social_link_twitter.png"width="20" height="20"></a></img></span><span style="margin-left:20px;"><a href="#" targrt="new"><img src="/comp/mapnavi/img/social_link_kakao.png"width="20" height="20"></a></img>-->  </span></td>
 					   </tr>
 					   <tr style="width:150px;height:30px; border:1px solid #d3d3d3;">
 							<td><span style="margin-left:20px;">전화번호</span></td> 
-							<td width="400">032-549-3579 <span style="margin-left:250px;">상담시간</span></td> 
+							<td width="400">02-557-3580  <span style="margin-left:250px;">상담시간</span></td> 
 							<td align="left">AM 09:00 ~ PM 06:00</td> 
 					   </tr>
 					 </table>
@@ -95,7 +97,10 @@
 				 <!--box_01 -->
 				 <table align="center" class="tb_style01">
 					<tr style="width:150px;height:30px; border:1px solid #d3d3d3; background:#f1f1f1;">
-						<td width="500"><span style="font-size:15px; font-weight:bold;margin-left:20px;">계양구지역</span>&nbsp;<a href="http://www.mothernbaby.co.kr/board/board_01_view.asp?mOne=4&mTwo=5&brd_id=EVENT&idx=63" target="_blank"><img src="/comp/mapnavi/img/gift.png" width="23" height="23" align="center" alt="클릭하시면 이벤트 페이지로 이동합니다.">[EVENT]</a></img></td>  <td colspan="2"> <span style="margin-left:150px;cursor:pointer;" class="detail"> 자세히보기 </span>
+						<td width="500"><span style="font-size:15px; font-weight:bold;margin-left:20px;">계양구지역</span>&nbsp;<a href="http://www.mothernbaby.co.kr/board/board_01_view.asp?mOne=4&mTwo=5&brd_id=EVENT&idx=63" target="_blank">
+<!-- 						<img src="/comp/mapnavi/img/gift.png" width="23" height="23" align="center" alt="클릭하시면 이벤트 페이지로 이동합니다.">[EVENT]</a></img> -->
+						</td>  <td colspan="2"> 
+						<span style="margin-left:150px;cursor:pointer;" class="detail"> 자세히보기 </span>
 							<span style="margin-left:150px; display:none;cursor:pointer;" class="closed"> 닫기 </span>
 						</td> 
 					</tr>
@@ -104,11 +109,11 @@
 					<table align="center" class="tb_style01" >
 					   <tr style="width:150px;height:30px; border:1px solid #d3d3d3;">
 							<td ><span style="margin-left:20px;">주소</span></td> 
-							<td width="300" colspan="2"><span style="bold">인천광역시 계양구 계산새로87번길 15, 409호(용종동, 강남오피스텔)</span><span style="margin-left:160px;"><!--<a href="https://www.facebook.com/mothernbabycare" targrt="new"><img src="/comp/mapnavi/img/social_link_facebook.png" width="20" height="20"></a></img></span><span style="margin-left:20px;"><a href="#" targrt="new"><img src="/comp/mapnavi/img/social_link_twitter.png"width="20" height="20"></a></img></span><span style="margin-left:20px;"><a href="#" targrt="new"><img src="/comp/mapnavi/img/social_link_kakao.png"width="20" height="20"></a></img>-->  </span></td>
+							<td width="300" colspan="2"><span style="bold">서울특별시 강남구 선릉로120길 5 동곡빌딩 3층 마더앤베이비</span><span style="margin-left:160px;"><!--<a href="https://www.facebook.com/mothernbabycare" targrt="new"><img src="/comp/mapnavi/img/social_link_facebook.png" width="20" height="20"></a></img></span><span style="margin-left:20px;"><a href="#" targrt="new"><img src="/comp/mapnavi/img/social_link_twitter.png"width="20" height="20"></a></img></span><span style="margin-left:20px;"><a href="#" targrt="new"><img src="/comp/mapnavi/img/social_link_kakao.png"width="20" height="20"></a></img>-->  </span></td>
 					   </tr>
 					   <tr style="width:150px;height:30px; border:1px solid #d3d3d3;">
 							<td><span style="margin-left:20px;">전화번호</span></td> 
-							<td width="400">032-549-3579 <span style="margin-left:250px;">상담시간</span></td> 
+							<td width="400">02-557-3580  <span style="margin-left:250px;">상담시간</span></td> 
 							<td align="left">AM 09:00 ~ PM 06:00</td> 
 					   </tr>
 					 </table>
@@ -207,7 +212,9 @@
 					  <!--box_05 -->
 					 <table align="center" class="tb_style01">
 						<tr style="width:150px;height:30px; border:1px solid #d3d3d3; background:#f1f1f1;">
-								<td width="500"><span style="font-size:15px; font-weight:bold;margin-left:20px;">부평구지역</span>&nbsp;<a href="http://www.mothernbaby.co.kr/board/board_01_view.asp?mOne=4&mTwo=5&brd_id=EVENT&idx=63" target="_blank"><img src="/comp/mapnavi/img/gift.png" width="23" height="23" align="center" alt="클릭하시면 이벤트 페이지로 이동합니다.">[EVENT]</a></img></td> <td  colspan="2"> <span style="margin-left:150px;cursor:pointer;" class="detail_5"> 자세히보기 </span>
+								<td width="500"><span style="font-size:15px; font-weight:bold;margin-left:20px;">부평구지역</span>&nbsp;<a href="http://www.mothernbaby.co.kr/board/board_01_view.asp?mOne=4&mTwo=5&brd_id=EVENT&idx=63" target="_blank">
+<!-- 								<img src="/comp/mapnavi/img/gift.png" width="23" height="23" align="center" alt="클릭하시면 이벤트 페이지로 이동합니다.">[EVENT]</a></img> -->
+								</td> <td  colspan="2"> <span style="margin-left:150px;cursor:pointer;" class="detail_5"> 자세히보기 </span>
 								<span style="margin-left:150px; display:none;cursor:pointer;" class="closed_5"> 닫기 </span></td> 
 						   </tr>
 						    
@@ -217,11 +224,11 @@
 						<table align="center" class="tb_style01" >
 						   <tr style="width:150px;height:30px; border:1px solid #d3d3d3;">
 								<td><span style="margin-left:20px;">주소</span></td> 
-								<td width="300" colspan="2">인천광역시 계양구 계산새로87번길 15, 409호(용종동, 강남오피스텔)<span style="margin-left:230px;"><!--<a href="https://www.facebook.com/mothernbabycare" targrt="new"><img src="/comp/mapnavi/img/social_link_facebook.png" width="20" height="20"></a></img></span><span style="margin-left:20px;"><a href="#" targrt="new"><img src="/comp/mapnavi/img/social_link_twitter.png"width="20" height="20"></a></img></span><span style="margin-left:20px;"><a href="#" targrt="new"><img src="/comp/mapnavi/img/social_link_kakao.png"width="20" height="20"></a></img>--></span></td> 
+								<td width="300" colspan="2">서울특별시 강남구 선릉로120길 5 동곡빌딩 3층 마더앤베이비<span style="margin-left:230px;"><!--<a href="https://www.facebook.com/mothernbabycare" targrt="new"><img src="/comp/mapnavi/img/social_link_facebook.png" width="20" height="20"></a></img></span><span style="margin-left:20px;"><a href="#" targrt="new"><img src="/comp/mapnavi/img/social_link_twitter.png"width="20" height="20"></a></img></span><span style="margin-left:20px;"><a href="#" targrt="new"><img src="/comp/mapnavi/img/social_link_kakao.png"width="20" height="20"></a></img>--></span></td> 
 						   </tr>
 						   <tr style="width:150px;height:30px; border:1px solid #d3d3d3;">
 								<td><span style="margin-left:20px;">전화번호</span></td> 
-								<td width="400">032-549-3579 <span style="margin-left:250px;">상담시간</span></td> 
+								<td width="400">02-557-3580  <span style="margin-left:250px;">상담시간</span></td> 
 								<td align="left">AM 09:00 ~ PM 06:00</td> 
 						   </tr>
 					  </table>
@@ -234,7 +241,9 @@
 					  <!--box_06 -->
 					 <table align="center" class="tb_style01">
 						<tr style="width:150px;height:30px; border:1px solid #d3d3d3; background:#f1f1f1;">
-								<td width="500"><span style="font-size:15px; font-weight:bold;margin-left:20px;">서구지역</span>&nbsp;<a href="http://www.mothernbaby.co.kr/board/board_01_view.asp?mOne=4&mTwo=5&brd_id=EVENT&idx=63" target="_blank"><img src="/comp/mapnavi/img/gift.png" width="23" height="23" align="center" alt="클릭하시면 이벤트 페이지로 이동합니다.">[EVENT]</a></img></td> <td  colspan="2"><span style="margin-left:150px;cursor:pointer;" class="detail_6"> 자세히보기 </span>
+								<td width="500"><span style="font-size:15px; font-weight:bold;margin-left:20px;">서구지역</span>&nbsp;<a href="http://www.mothernbaby.co.kr/board/board_01_view.asp?mOne=4&mTwo=5&brd_id=EVENT&idx=63" target="_blank">
+<!-- 								<img src="/comp/mapnavi/img/gift.png" width="23" height="23" align="center" alt="클릭하시면 이벤트 페이지로 이동합니다.">[EVENT]</a></img> -->
+								</td> <td  colspan="2"><span style="margin-left:150px;cursor:pointer;" class="detail_6"> 자세히보기 </span>
 								<span style="margin-left:150px; display:none;cursor:pointer;" class="closed_6"> 닫기 </span></td> 
 						   </tr>
 						    
@@ -243,11 +252,11 @@
 						<table align="center" class="tb_style01" >
 						   <tr style="width:150px;height:30px; border:1px solid #d3d3d3;">
 								<td><span style="margin-left:20px;">주소</span></td> 
-								<td width="300" colspan="2">인천광역시 계양구 계산새로87번길 15, 409호(용종동, 강남오피스텔)<span style="margin-left:160px;"><!--<a href="https://www.facebook.com/mothernbabycare" targrt="new"><img src="/comp/mapnavi/img/social_link_facebook.png" width="20" height="20"></a></img></span><span style="margin-left:20px;"><a href="#" targrt="new"><img src="/comp/mapnavi/img/social_link_twitter.png"width="20" height="20"></a></img></span><span style="margin-left:20px;"><a href="#" targrt="new"><img src="/comp/mapnavi/img/social_link_kakao.png"width="20" height="20"></a></img>--></span></td> 
+								<td width="300" colspan="2">서울특별시 강남구 선릉로120길 5 동곡빌딩 3층 마더앤베이비<span style="margin-left:160px;"><!--<a href="https://www.facebook.com/mothernbabycare" targrt="new"><img src="/comp/mapnavi/img/social_link_facebook.png" width="20" height="20"></a></img></span><span style="margin-left:20px;"><a href="#" targrt="new"><img src="/comp/mapnavi/img/social_link_twitter.png"width="20" height="20"></a></img></span><span style="margin-left:20px;"><a href="#" targrt="new"><img src="/comp/mapnavi/img/social_link_kakao.png"width="20" height="20"></a></img>--></span></td> 
 						   </tr>
 						   <tr style="width:150px;height:30px; border:1px solid #d3d3d3;">
 								<td><span style="margin-left:20px;">전화번호</span></td> 
-								<td width="400">032-549-3579<span style="margin-left:250px;">상담시간</span></td> 
+								<td width="400">02-557-3580 <span style="margin-left:250px;">상담시간</span></td> 
 								<td align="left">AM 09:00 ~ PM 06:00</td> 
 						   </tr>
 					  </table>

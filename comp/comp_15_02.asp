@@ -136,7 +136,7 @@
 						   </tr>
 						   <tr style="width:150px;height:30px; border:1px solid #d3d3d3;">
 								<td><span style="margin-left:20px;">전화번호</span></td> 
-								<td width="400">02-557-3580 <span style="margin-left:250px;">상담시간</span></td> 
+								<td width="400">02-557-3579 <span style="margin-left:250px;">상담시간</span></td> 
 								<td align="left">AM 09:00 ~ PM 06:00</td> 
 						   </tr>
 					  </table>
@@ -166,7 +166,7 @@
 						   </tr>
 						   <tr style="width:150px;height:30px; border:1px solid #d3d3d3;">
 								<td><span style="margin-left:20px;">전화번호</span></td> 
-								<td width="400">02-557-3580 <span style="margin-left:250px;">상담시간</span></td> 
+								<td width="400">02-557-3579 <span style="margin-left:250px;">상담시간</span></td> 
 								<td align="left">AM 09:00 ~ PM 06:00</td> 
 						   </tr>
 					  </table>
@@ -306,7 +306,7 @@
 						   </tr>
 						   <tr style="width:150px;height:30px; border:1px solid #d3d3d3;">
 								<td><span style="margin-left:20px;">전화번호</span></td> 
-								<td width="400">02-557-3580 <span style="margin-left:245px;">상담시간</span></td> 
+								<td width="400">02-557-3579 <span style="margin-left:245px;">상담시간</span></td> 
 								<td align="left">AM 09:00 ~ PM 06:00</td> 
 						   </tr>
 					  </table>
@@ -333,7 +333,7 @@
 						   </tr>
 						   <tr style="width:150px;height:30px; border:1px solid #d3d3d3;">
 								<td><span style="margin-left:20px;">전화번호</span></td> 
-								<td width="400">02-557-3580 <span style="margin-left:250px;">상담시간</span></td> 
+								<td width="400">02-557-3579 <span style="margin-left:250px;">상담시간</span></td> 
 								<td align="left">AM 09:00 ~ PM 06:00</td> 
 						   </tr>
 					  </table>
@@ -361,7 +361,7 @@
 						   </tr>
 						   <tr style="width:150px;height:30px; border:1px solid #d3d3d3;">
 								<td><span style="margin-left:20px;">전화번호</span></td> 
-								<td width="400">02-557-3580 <span style="margin-left:250px;">상담시간</span></td> 
+								<td width="400">02-557-3579 <span style="margin-left:250px;">상담시간</span></td> 
 								<td align="left">AM 09:00 ~ PM 06:00</td> 
 						   </tr>
 					  </table>
@@ -418,7 +418,7 @@
 						   </tr>
 						   <tr style="width:150px;height:30px; border:1px solid #d3d3d3;">
 								<td><span style="margin-left:20px;">전화번호</span></td> 
-								<td width="400">02-557-3580 <span style="margin-left:250px;">상담시간</span></td> 
+								<td width="400">02-557-3579 <span style="margin-left:250px;">상담시간</span></td> 
 								<td align="left">AM 09:00 ~ PM 06:00</td> 
 						   </tr>
 					  </table>
@@ -445,7 +445,7 @@
 						   </tr>
 						   <tr style="width:150px;height:30px; border:1px solid #d3d3d3;">
 								<td><span style="margin-left:20px;">전화번호</span></td> 
-								<td width="400">02-557-3580 <span style="margin-left:250px;">상담시간</span></td> 
+								<td width="400">02-557-3579 <span style="margin-left:250px;">상담시간</span></td> 
 								<td align="left">AM 09:00 ~ PM 06:00</td> 
 						   </tr>
 					  </table>
@@ -499,7 +499,7 @@
 						   </tr>
 						   <tr style="width:150px;height:30px; border:1px solid #d3d3d3;">
 								<td><span style="margin-left:20px;">전화번호</span></td> 
-								<td width="400">02-557-3580 <span style="margin-left:250px;">상담시간</span></td> 
+								<td width="400">02-557-3579 <span style="margin-left:250px;">상담시간</span></td> 
 								<td align="left">AM 09:00 ~ PM 06:00</td> 
 						   </tr>
 					  </table>
@@ -525,7 +525,7 @@
 						   </tr>
 						   <tr style="width:150px;height:30px; border:1px solid #d3d3d3;">
 								<td><span style="margin-left:20px;">전화번호</span></td> 
-								<td width="400">02-557-3580 <span style="margin-left:250px;">상담시간</span></td> 
+								<td width="400">02-557-3579 <span style="margin-left:250px;">상담시간</span></td> 
 								<td align="left">AM 09:00 ~ PM 06:00</td> 
 						   </tr>
 					  </table>
@@ -553,7 +553,7 @@
 						   </tr>
 						   <tr style="width:150px;height:30px; border:1px solid #d3d3d3;">
 								<td><span style="margin-left:20px;">전화번호</span></td> 
-								<td width="400">02-557-3580 <span style="margin-left:250px;">상담시간</span></td> 
+								<td width="400">02-557-3579 <span style="margin-left:250px;">상담시간</span></td> 
 								<td align="left">AM 09:00 ~ PM 06:00</td> 
 						   </tr>
 					  </table>
@@ -607,7 +607,7 @@
 						   </tr>
 						   <tr style="width:150px;height:30px; border:1px solid #d3d3d3;">
 								<td><span style="margin-left:20px;">전화번호</span></td> 
-								<td width="400">02-557-3580 <span style="margin-left:245px;">상담시간</span></td> 
+								<td width="400">02-557-3579 <span style="margin-left:245px;">상담시간</span></td> 
 								<td align="left">AM 09:00 ~ PM 06:00</td> 
 						   </tr>
 					  </table>
@@ -634,7 +634,7 @@
 						   </tr>
 						   <tr style="width:150px;height:30px; border:1px solid #d3d3d3;">
 								<td><span style="margin-left:20px;">전화번호</span></td> 
-								<td width="400">02-557-3580   <span style="margin-left:243px;">상담시간</span></td> 
+								<td width="400">02-557-3579   <span style="margin-left:243px;">상담시간</span></td> 
 								<td align="left">AM 09:00 ~ PM 06:00</td> 
 						   </tr>
 					  </table>
@@ -689,7 +689,7 @@
 						   </tr>
 						   <tr style="width:150px;height:30px; border:1px solid #d3d3d3;">
 								<td><span style="margin-left:20px;">전화번호</span></td> 
-								<td width="400">02-557-3580  <span style="margin-left:241px;">상담시간</span></td> 
+								<td width="400">02-557-3579  <span style="margin-left:241px;">상담시간</span></td> 
 								<td align="left">AM 09:00 ~ PM 06:00</td> 
 						   </tr>
 					  </table>
@@ -716,7 +716,7 @@
 						   </tr>
 						   <tr style="width:150px;height:30px; border:1px solid #d3d3d3;">
 								<td><span style="margin-left:20px;">전화번호</span></td> 
-								<td width="400">02-557-3580 <span style="margin-left:245px;">상담시간</span></td> 
+								<td width="400">02-557-3579 <span style="margin-left:245px;">상담시간</span></td> 
 								<td align="left">AM 09:00 ~ PM 06:00</td> 
 						   </tr>
 					  </table>
@@ -743,7 +743,7 @@
 						   </tr>
 						   <tr style="width:150px;height:30px; border:1px solid #d3d3d3;">
 								<td><span style="margin-left:20px;">전화번호</span></td> 
-								<td width="400">02-557-3580 <span style="margin-left:245px;">상담시간</span></td> 
+								<td width="400">02-557-3579 <span style="margin-left:245px;">상담시간</span></td> 
 								<td align="left">AM 09:00 ~ PM 06:00</td> 
 						   </tr>
 					  </table>
