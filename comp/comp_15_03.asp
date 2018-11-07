@@ -119,7 +119,7 @@
 					 </table>
 				  </div>
 				  <div class="box_1" style="display:none">
-					  <div style="ppadding-top:20px;width:770px;border:1px solid #D1D1D1;height:auto;overflow-x:hidden;overflow-y:auto;scrollbar-face-color:#FFFFFF;scrollbar-highlight-color: #FFFFFF;scrollbar-3dlight-color: #E3E3E3;scrollbar-shadow-color: #FFFFFF;scrollbar-darkshadow-color: #E3E3E3;scrollbar-track-color: #E3E3E3;scrollbar-arrow-color: #B7B7B7;"><img src="/comp/mapnavi/img/incheon/gyeyanggu_simple.jpg"></img>
+					  <div style="ppadding-top:20px;width:770px;border:1px solid #D1D1D1;height:auto;overflow-x:hidden;overflow-y:auto;scrollbar-face-color:#FFFFFF;scrollbar-highlight-color: #FFFFFF;scrollbar-3dlight-color: #E3E3E3;scrollbar-shadow-color: #FFFFFF;scrollbar-darkshadow-color: #E3E3E3;scrollbar-track-color: #E3E3E3;scrollbar-arrow-color: #B7B7B7;"><img src="/comp/mapnavi/img/incheon/gyeyang_simple.jpg"></img>
 					  </div>
 				  </div>
 
@@ -234,7 +234,7 @@
 					  </table>
 					 </div>
 			 <div class="box_5" style="display:none">
-				    <div style="ppadding-top:20px;width:770px;border:1px solid #D1D1D1;height:auto;overflow-x:hidden;overflow-y:auto;scrollbar-face-color:#FFFFFF;scrollbar-highlight-color: #FFFFFF;scrollbar-3dlight-color: #E3E3E3;scrollbar-shadow-color: #FFFFFF;scrollbar-darkshadow-color: #E3E3E3;scrollbar-track-color: #E3E3E3;scrollbar-arrow-color: #B7B7B7;"><img src="/comp/mapnavi/img/incheon/bupyeonggu_simple.jpg"></img>
+				    <div style="ppadding-top:20px;width:770px;border:1px solid #D1D1D1;height:auto;overflow-x:hidden;overflow-y:auto;scrollbar-face-color:#FFFFFF;scrollbar-highlight-color: #FFFFFF;scrollbar-3dlight-color: #E3E3E3;scrollbar-shadow-color: #FFFFFF;scrollbar-darkshadow-color: #E3E3E3;scrollbar-track-color: #E3E3E3;scrollbar-arrow-color: #B7B7B7;"><img src="/comp/mapnavi/img/incheon/bupyeong_simple.jpg"></img>
 					  </div>
 					 </div>
 
